@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare+ | Analytics & Insights</title>
+    <link rel="stylesheet" href="../css/analytics.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ==========================
+            SIDEBAR
+    ========================== -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-user-doctor"></i>
+            <h2>Medicare+</h2>
+        </div>
+
+        <ul class="menu">
+            <li>
+                <i class="fa-solid fa-house"></i>
+                  <a href="Doctor_Dashboard.html"> <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <i class="fa-solid fa-calendar-check"></i>
+                 <a href="appointments.html"><span>Appointments</span>   
+                  </a>
+            </li>
+            <li>
+                <i class="fa-solid fa-users"></i>
+               <a href="patients.html"><span>My Patients</span>
+                </a>
+            </li>
+            <li>
+                <i class="fa-solid fa-file-medical"></i>
+                <a href="records.html"><span>Medical Records</span>
+                </a>
+            </li>
+            <li>
+                <i class="fa-solid fa-prescription-bottle-medical"></i>
+                <a href="prescriptions.html"><span>Prescriptions</span>
+                </a>
+            </li>
+            <li>
+                <i class="fa-solid fa-flask-vial"></i>
+               <a href="lab-reports.html"><span>Lab Reports</span>
+                </a>
+            </li>
+            <li>
+                <i class="fa-solid fa-heart-pulse"></i>
+                    <a href="emergency.html"><span>Emergency</span>
+                </a>
+            </li>
+            <li class="active">
+                <i class="fa-solid fa-chart-line"></i>
+                 <a href="analytics.html"><span>Analytics</span>
+                </a>
+            </li>
+            <li>
+                <i class="fa-solid fa-gear"></i>
+                 <a href="Doctor_Settings.html"><span>Settings</span>
+                </a>
+            </li>
+        </ul>
+
+          <div class="logout">
+
+<a href="Doctor_Login.html">
+ <button id="logoutBtn">
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+</button>
+</a>
+</div>
+    </aside>
+
+    <!-- ==========================
+            MAIN CONTENT
+    ========================== -->
+    <main class="main-content">
+
+        <!-- ==========================
+                TOPBAR
+        ========================== -->
+        <header class="topbar">
+            <div class="welcome">
+                <h1>
+                    Analytics & Insights
+                </h1>
+                <p>
+                    Clinical metrics, departmental performance, patient throughput, and revenue insights.
+                </p>
+            </div>
+
+            <div class="top-actions">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="analyticsSearchHeader" placeholder="Search report, metric, department...">
+                </div>
+
+                <button class="icon-btn" title="Notifications">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+
+                <button class="icon-btn">
+                    <i class="fa-solid fa-envelope"></i>
+                </button>
+
+                <button class="icon-btn" id="themeToggle">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <div class="profile">
+                    <img src="https://ui-avatars.com/api/?name=Doctor&background=059669&color=ffffff" alt="Doctor">
+                    <div>
+                        <h4>Cardiologist</h4>
+                        <small>ID : DOC-101</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ==========================
+            ANALYTICS CONTENT
+        ========================== -->
+        <section class="content">
+
+            <!-- METRIC CARDS -->
+            <div class="cards">
+                <div class="card patient-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Total Consultations</h3>
+                        <h2>1,428</h2>
+                        <p><i class="fa-solid fa-arrow-up text-success"></i> +14.2% vs last month</p>
+                    </div>
+                </div>
+
+                <div class="card appointment-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Avg. Wait Time</h3>
+                        <h2>18 Min</h2>
+                        <p><i class="fa-solid fa-arrow-down text-success"></i> -4 min reduction</p>
+                    </div>
+                </div>
+
+                <div class="card report-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Patient Satisfaction</h3>
+                        <h2>96.4%</h2>
+                        <p><i class="fa-solid fa-star text-warning"></i> 4.8 / 5.0 Rating</p>
+                    </div>
+                </div>
+
+                <div class="card emergency-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Monthly Revenue</h3>
+                        <h2>₹8.45 L</h2>
+                        <p><i class="fa-solid fa-arrow-up text-success"></i> +8.6% Target met</p>
+                    </div>
+                </div>
+            </div>
+
+<!-- ANALYTICS CHARTS & INSIGHTS GRID -->
+            <div class="management-grid">
+
+                <!-- MAIN CHART PANEL: CONSULTATION TRENDS & PATIENT VOLUME -->
+                <div class="panel">
+                    <div class="section-title">
+                        <h2><i class="fa-solid fa-chart-area"></i> Patient Volume Trends</h2>
+                        <div class="filter-controls">
+                            <button class="view-btn active-filter-btn" id="filterMonthly">Monthly</button>
+                            <button class="view-btn" id="filterWeekly">Weekly</button>
+                            <button class="view-btn" id="exportAnalyticsBtn">
+                                <i class="fa-solid fa-file-pdf"></i> Export PDF
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- CSS VISUAL BAR CHART GRAPH -->
+                    <div class="analytics-chart-container">
+                        <div class="chart-y-axis">
+                            <span>400</span>
+                            <span>300</span>
+                            <span>200</span>
+                            <span>100</span>
+                            <span>0</span>
+                        </div>
+                        <div class="chart-bars-group">
+                            <div class="chart-bar-col">
+                                <div class="bar-fill" style="height: 65%;" data-val="260">
+                                    <span class="bar-tooltip">260 Patients</span>
+                                </div>
+                                <small>Jan</small>
+                            </div>
+                            <div class="chart-bar-col">
+                                <div class="bar-fill" style="height: 72%;" data-val="288">
+                                    <span class="bar-tooltip">288 Patients</span>
+                                </div>
+                                <small>Feb</small>
+                            </div>
+                            <div class="chart-bar-col">
+                                <div class="bar-fill" style="height: 80%;" data-val="320">
+                                    <span class="bar-tooltip">320 Patients</span>
+                                </div>
+                                <small>Mar</small>
+                            </div>
+                            <div class="chart-bar-col">
+                                <div class="bar-fill" style="height: 70%;" data-val="280">
+                                    <span class="bar-tooltip">280 Patients</span>
+                                </div>
+                                <small>Apr</small>
+                            </div>
+                            <div class="chart-bar-col">
+                                <div class="bar-fill" style="height: 88%;" data-val="352">
+                                    <span class="bar-tooltip">352 Patients</span>
+                                </div>
+                                <small>May</small>
+                            </div>
+                            <div class="chart-bar-col">
+                                <div class="bar-fill" style="height: 95%;" data-val="380">
+                                    <span class="bar-tooltip">380 Patients</span>
+                                </div>
+                                <small>Jun</small>
+                            </div>
+                            <div class="chart-bar-col active-month">
+                                <div class="bar-fill highlight" style="height: 100%;" data-val="410">
+                                    <span class="bar-tooltip">410 Patients (Peak)</span>
+                                </div>
+                                <small>Jul</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-legend">
+                        <span class="legend-chip primary"><i class="fa-solid fa-square"></i> Outpatient Consultations</span>
+                        <span class="legend-chip info"><i class="fa-solid fa-square"></i> Emergency Admissions</span>
+                    </div>
+                </div>
+
+                <!-- DEPARTMENTAL SHARE & BREAKDOWN -->
+                <div class="panel">
+                    <div class="section-title">
+                        <h2><i class="fa-solid fa-chart-pie"></i> Department Share</h2>
+                        <select class="filter-select" id="deptTimeSelect">
+                            <option value="q3">Q3 2026</option>
+                            <option value="q2">Q2 2026</option>
+                            <option value="q1">Q1 2026</option>
+                        </select>
+                    </div>
+
+                    <!-- PROGRESS METRIC BARS FOR DEPARTMENTS -->
+                    <div class="dept-progress-list">
+                        <div class="dept-item">
+                            <div class="dept-info">
+                                <span><i class="fa-solid fa-heart-pulse text-danger"></i> Cardiology</span>
+                                <strong>38% (542)</strong>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill fill-danger" style="width: 38%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="dept-item">
+                            <div class="dept-info">
+                                <span><i class="fa-solid fa-brain text-primary"></i> Neurology</span>
+                                <strong>24% (342)</strong>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill fill-primary" style="width: 24%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="dept-item">
+                            <div class="dept-info">
+                                <span><i class="fa-solid fa-bone text-warning"></i> Orthopedics</span>
+                                <strong>20% (285)</strong>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill fill-warning" style="width: 20%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="dept-item">
+                            <div class="dept-info">
+                                <span><i class="fa-solid fa-child text-success"></i> Pediatrics</span>
+                                <strong>18% (259)</strong>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill fill-success" style="width: 18%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="divider">
+
+                    <!-- KEY PERFORMANCE HIGHLIGHTS -->
+                    <div class="kpi-mini-grid">
+                        <div class="kpi-box">
+                            <small>Bed Turnover Rate</small>
+                            <h4>4.2 Days</h4>
+                        </div>
+                        <div class="kpi-box">
+                            <small>Readmission Rate</small>
+                            <h4>2.1% (Low)</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="dashboard-footer">
+                <p>© 2026 Medicare+ Hospital Management System</p>
+                <p>Analytics & Department Insights Console | Version 1.0</p>
+            </footer>
+
+        </section>
+    </main>
+</div>
+
+<!-- Analytics JS -->
+<script src="../js/analytics.js"></script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare+ | Notifications & Alert Center</title>
+    <link rel="stylesheet" href="../css/Receptionist_Dashbaord.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ==========================
+            SIDEBAR
+    ========================== -->
+       <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-hospital-user"></i>
+
+            <h2>Medicare+</h2>
+
+        </div>
+
+        <ul class="menu">
+<li>
+                <a href="Receptionist_Dashboard.html">
+                  
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+                </a>
+
+            </li>
+
+              <li>
+                <a href="Register_Patient.html">
+
+                <i class="fa-solid fa-user-plus"></i>
+                
+
+                <span>Register Patient</span>
+                   </a>
+            </li>
+
+            <li>
+                <a href="Patients_List.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>Patients</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Appointments_List.html">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>Appointments</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Doctors_List.html">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <span>Doctors</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Billing_List.html">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>Billing</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Beds_List.html">
+
+                <i class="fa-solid fa-bed"></i>
+
+                <span>Hospital Beds</span>
+                </a>
+
+            </li>
+
+            <li class="active">
+                <a href="Notification.html">
+                       <i class="fa-solid fa-bell"></i>
+
+                <span>Notifications</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Setting.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+                </a>
+
+            </li>
+
+        </ul>
+
+        <div class="logout">
+            <a href="Reciptionist_login.html">
+            <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+                </button>
+                </a>
+
+        </div>
+
+    </aside>
+
+    <!-- ==========================
+            MAIN CONTENT
+    ========================== -->
+    <main class="main-content">
+
+        <!-- ==========================
+                TOPBAR
+        ========================== -->
+        <header class="topbar">
+            <div class="welcome">
+                <h1>Notifications & Alert Center</h1>
+                <p>Real-time system updates, emergency ER arrival alerts, doctor shift changes, and queue warnings.</p>
+            </div>
+
+            <div class="top-actions">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="notificationSearch" placeholder="Search alerts, messages, tags...">
+                </div>
+
+                <button class="icon-btn" aria-label="Notifications">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+
+                <button class="icon-btn" aria-label="Messages">
+                    <i class="fa-solid fa-envelope"></i>
+                </button>
+
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <div class="profile">
+                    <img src="https://ui-avatars.com/api/?name=Receptionist&background=7c3aed&color=ffffff" alt="Receptionist Avatar">
+                    <div>
+                        <h4>Reception Desk</h4>
+                        <small>ID : REC-101</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ==========================
+                NOTIFICATIONS CONTENT
+        ========================== -->
+        <section class="content">
+
+            <!-- Summary Cards -->
+            <div class="cards">
+                <div class="card bed-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Critical Alerts</h3>
+                        <h2>3 Emergency</h2>
+                        <p>Requires immediate desk action</p>
+                    </div>
+                </div>
+
+                <div class="card appointment-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Unread Notifications</h3>
+                        <h2>8 Unread</h2>
+                        <p>Updated 2 mins ago</p>
+                    </div>
+                </div>
+
+                <div class="card patient-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Total Resolved</h3>
+                        <h2>24 Today</h2>
+                        <p>All queue issues cleared</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Control Panel -->
+            <div class="panel" style="margin-top: 25px;">
+                <div class="section-title">
+                    <h2>Filter & Manage Notifications</h2>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="view-btn" style="background: #e2e8f0; color: #1e293b;" id="btnMarkAllRead">
+                            <i class="fa-solid fa-check-double"></i> Mark All as Read
+                        </button>
+                        <button class="btn-primary-gradient" style="padding: 10px 18px; font-size: 13px;" id="btnClearAlerts">
+                            <i class="fa-solid fa-trash-can"></i> Clear Read
+                        </button>
+                    </div>
+                </div>
+
+                <div class="status-grid" style="grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; color: var(--text-light); display: block; margin-bottom: 5px;">Priority Level</label>
+                        <select id="filterPriority" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 10px;">
+                            <option value="all">All Priorities</option>
+                            <option value="critical">Critical / Emergency</option>
+                            <option value="warning">Warning / Attention</option>
+                            <option value="info">Informational</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; color: var(--text-light); display: block; margin-bottom: 5px;">Category</label>
+                        <select id="filterCategory" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 10px;">
+                            <option value="all">All Categories</option>
+                            <option value="emergency">Emergency Intake</option>
+                            <option value="opd">OPD & Doctors</option>
+                            <option value="billing">Billing & Claims</option>
+                            <option value="beds">Bed Transfers</option>
+                        </select>
+                    </div>
+
+                    <div style="display: flex; align-items: flex-end;">
+                        <button class="view-btn" style="width: 100%; padding: 11px; text-align: center;" id="btnApplyNotificationFilter">
+                            <i class="fa-solid fa-filter"></i> Apply Filter
+                        </button>
+                    </div>
+                </div>
+            </div>
+<!-- Notifications Stream Panel -->
+            <div class="panel" style="margin-top: 25px;">
+                <div class="section-title">
+                    <h2>Live Activity & Alert Stream</h2>
+                    <div style="font-size: 13px; color: var(--text-light);">
+                        <i class="fa-solid fa-rotate" style="margin-right: 5px;"></i> Auto-syncing live feed
+                    </div>
+                </div>
+
+                <div class="notification-feed" style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
+                    
+                    <!-- Emergency Alert -->
+                    <div class="notification-item critical" style="display: flex; justify-content: space-between; align-items: center; padding: 16px; background: rgba(239, 68, 68, 0.08); border-left: 4px solid var(--danger); border-radius: 12px;">
+                        <div style="display: flex; gap: 15px; align-items: center;">
+                            <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(239, 68, 68, 0.15); color: var(--danger); display: flex; align-items: center; justify-content: center; font-size: 18px;">
+                                <i class="fa-solid fa-truck-medical"></i>
+                            </div>
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <strong style="font-size: 15px; color: var(--text-dark);">Incoming Trauma Bay Emergency Intake</strong>
+                                    <span class="busy-status" style="padding: 2px 8px; font-size: 11px;">Critical</span>
+                                </div>
+                                <p style="font-size: 13px; color: var(--text-light); margin-top: 4px;">Ambulance ETA 5 mins. Patient UHID: MED-2026-8942 requires immediate Bed Assignment in Trauma Bay.</p>
+                                <small style="font-size: 11px; color: var(--text-light); opacity: 0.8;">Category: Emergency Intake • 2 mins ago</small>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 8px;">
+                            <button class="btn-primary-gradient" style="padding: 6px 14px; font-size: 12px; background: var(--danger);" title="Assign Bed">
+                                <i class="fa-solid fa-bed"></i> Assign Bed
+                            </button>
+                            <button class="view-btn" style="padding: 6px 10px; font-size: 12px;" title="Dismiss">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Warning Alert -->
+                    <div class="notification-item warning" style="display: flex; justify-content: space-between; align-items: center; padding: 16px; background: rgba(245, 158, 11, 0.08); border-left: 4px solid var(--warning); border-radius: 12px;">
+                        <div style="display: flex; gap: 15px; align-items: center;">
+                            <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(245, 158, 11, 0.15); color: var(--warning); display: flex; align-items: center; justify-content: center; font-size: 18px;">
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                            </div>
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <strong style="font-size: 15px; color: var(--text-dark);">High Consultation Queue Threshold Exceeded</strong>
+                                    <span class="pending-status" style="padding: 2px 8px; font-size: 11px;">Warning</span>
+                                </div>
+                                <p style="font-size: 13px; color: var(--text-light); margin-top: 4px;">Dr. Sarah Wilson's Cardiology OPD token queue exceeds 10 waiting patients. Consider re-routing token generation.</p>
+                                <small style="font-size: 11px; color: var(--text-light); opacity: 0.8;">Category: OPD & Doctors • 12 mins ago</small>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 8px;">
+                            <button class="view-btn" style="padding: 6px 14px; font-size: 12px;" title="View Queue">
+                                <i class="fa-solid fa-users"></i> Manage Queue
+                            </button>
+                            <button class="view-btn" style="padding: 6px 10px; font-size: 12px;" title="Dismiss">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Info Alert -->
+                    <div class="notification-item info" style="display: flex; justify-content: space-between; align-items: center; padding: 16px; background: rgba(59, 130, 246, 0.08); border-left: 4px solid var(--primary); border-radius: 12px;">
+                        <div style="display: flex; gap: 15px; align-items: center;">
+                            <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(59, 130, 246, 0.15); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 18px;">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <strong style="font-size: 15px; color: var(--text-dark);">Insurance Claim Authorization Approved</strong>
+                                    <span class="available-status" style="padding: 2px 8px; font-size: 11px;">Info</span>
+                                </div>
+                                <p style="font-size: 13px; color: var(--text-light); margin-top: 4px;">Claim #STAR-9081 for Rohan Gupta (₹ 45,000.00) pre-approval verified by Star Health Insurance.</p>
+                                <small style="font-size: 11px; color: var(--text-light); opacity: 0.8;">Category: Billing & Claims • 35 mins ago</small>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 8px;">
+                            <button class="view-btn" style="padding: 6px 14px; font-size: 12px; background: var(--secondary);" title="Print Receipt">
+                                <i class="fa-solid fa-receipt"></i> Print Voucher
+                            </button>
+                            <button class="view-btn" style="padding: 6px 10px; font-size: 12px;" title="Dismiss">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Info Alert 2 -->
+                    <div class="notification-item info" style="display: flex; justify-content: space-between; align-items: center; padding: 16px; background: rgba(59, 130, 246, 0.08); border-left: 4px solid var(--primary); border-radius: 12px;">
+                        <div style="display: flex; gap: 15px; align-items: center;">
+                            <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(59, 130, 246, 0.15); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 18px;">
+                                <i class="fa-solid fa-broom"></i>
+                            </div>
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <strong style="font-size: 15px; color: var(--text-dark);">Deluxe Private Suite #BED-PVT-101 Ready</strong>
+                                    <span class="available-status" style="padding: 2px 8px; font-size: 11px;">Info</span>
+                                </div>
+                                <p style="font-size: 13px; color: var(--text-light); margin-top: 4px;">Sanitization completed by Housekeeping. Bed is now available for patient intake.</p>
+                                <small style="font-size: 11px; color: var(--text-light); opacity: 0.8;">Category: Bed Transfers • 1 hour ago</small>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 8px;">
+                            <button class="view-btn" style="padding: 6px 14px; font-size: 12px; background: var(--success);" title="Assign Bed">
+                                <i class="fa-solid fa-user-plus"></i> Assign Patient
+                            </button>
+                            <button class="view-btn" style="padding: 6px 10px; font-size: 12px;" title="Dismiss">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Dashboard Footer -->
+            <footer class="dashboard-footer">
+                <p>© 2026 Medicare+ Hospital Management System</p>
+                <p>Notifications & Alert Center | Version 1.0</p>
+            </footer>
+
+        </section>
+    </main>
+</div>
+
+<!-- Connect Engine JS -->
+<script src="../js/Notification.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare+ | Medical Records</title>
+    <link rel="stylesheet" href="../css/records.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ==========================
+            SIDEBAR
+    ========================== -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-user-doctor"></i>
+            <h2>Medicare+</h2>
+        </div>
+
+        <ul class="menu">
+            <li>
+                <i class="fa-solid fa-house"></i>
+                
+               <a href="Doctor_Dashboard.html"> <span>Dashboard</span></a>
+            </li>
+            <li>
+                <i class="fa-solid fa-calendar-check"></i>
+                <a href="appointments.html"><span>Appointments</span></a>
+            </li>
+            <li>
+                <i class="fa-solid fa-users"></i>
+                 <a href="patients.html"><span>My Patients</span>
+                </a>
+            </li>
+            <li class="active">
+                <i class="fa-solid fa-file-medical"></i>
+                <a href="records.html"><span>Medical Records</span>
+                </a>
+            </li>
+            <li>
+                <i class="fa-solid fa-prescription-bottle-medical"></i>
+                 <a href="prescriptions.html"><span>Prescriptions</span>
+                </a>
+            </li>
+            <li>
+                <i class="fa-solid fa-flask-vial"></i>
+                <a href="lab-reports.html"><span>Lab Reports</span>
+                </a>
+            </li>
+            <li>
+                <i class="fa-solid fa-heart-pulse"></i>
+                 <a href="emergency.html"><span>Emergency</span>
+                </a>
+            </li>
+            <li>
+                <i class="fa-solid fa-chart-line"></i>
+                 <a href="analytics.html"><span>Analytics</span>
+                </a>
+            </li>
+            <li>
+                <i class="fa-solid fa-gear"></i>
+                <a href="Doctor_Settings.html"><span>Settings</span>
+                </a>
+            </li>
+        </ul>
+
+       <div class="logout">
+
+<a href="Doctor_Login.html">
+ <button id="logoutBtn">
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+</button>
+</a>
+</div>
+    </aside>
+
+    <!-- ==========================
+            MAIN CONTENT
+    ========================== -->
+    <main class="main-content">
+
+        <!-- ==========================
+                TOPBAR
+        ========================== -->
+        <header class="topbar">
+            <div class="welcome">
+                <h1>
+                    Medical Records Hub
+                </h1>
+                <p>
+                    Manage EHR documents, clinical notes, and patient diagnosis histories.
+                </p>
+            </div>
+
+            <div class="top-actions">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="recordSearchHeader" placeholder="Search record ID, diagnosis, patient...">
+                </div>
+
+                <button class="icon-btn">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+
+                <button class="icon-btn">
+                    <i class="fa-solid fa-envelope"></i>
+                </button>
+
+                <button class="icon-btn" id="themeToggle">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <div class="profile">
+                    <img src="https://ui-avatars.com/api/?name=Doctor&background=059669&color=ffffff" alt="Doctor">
+                    <div>
+                        <h4>Cardiologist</h4>
+                        <small>ID : DOC-101</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ==========================
+                RECORDS CONTENT
+        ========================== -->
+        <section class="content">
+
+            <!-- SUMMARY CARDS -->
+            <div class="cards">
+                <div class="card patient-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Total Active Files</h3>
+                        <h2>3,842</h2>
+                        <p>Archived & active EHRs</p>
+                    </div>
+                </div>
+
+                <div class="card appointment-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-file-waveform"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>ECG & Diagnostic Tests</h3>
+                        <h2>512</h2>
+                        <p>Uploaded this month</p>
+                    </div>
+                </div>
+
+                <div class="card report-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Verified Discharges</h3>
+                        <h2>89</h2>
+                        <p>Completed discharge summaries</p>
+                    </div>
+                </div>
+
+                <div class="card emergency-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-file-circle-exclamation"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Pending Sign-offs</h3>
+                        <h2>14</h2>
+                        <p>Requires doctor review</p>
+                    </div>
+                </div>
+            </div>
+<!-- MEDICAL RECORDS TABLE & UPLOAD SECTION -->
+            <div class="panel">
+                <div class="section-title">
+                    <h2><i class="fa-solid fa-file-medical"></i> EHR & Clinical Records</h2>
+                    <div class="filter-controls">
+                        <select id="recordCategoryFilter" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="cardiology">Cardiology</option>
+                            <option value="radiology">Radiology</option>
+                            <option value="lab">Lab Results</option>
+                            <option value="discharge">Discharge Summary</option>
+                        </select>
+
+                        <select id="recordStatusFilter" class="filter-select">
+                            <option value="all">All Statuses</option>
+                            <option value="verified">Verified</option>
+                            <option value="pending">Pending Sign-off</option>
+                        </select>
+
+                        <button class="view-btn" id="uploadRecordBtn">
+                            <i class="fa-solid fa-cloud-arrow-up"></i> Upload Record
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="management-table" id="recordsTable">
+                        <thead>
+                            <tr>
+                                <th>Record ID</th>
+                                <th>Patient Name</th>
+                                <th>Document Type</th>
+                                <th>Primary Diagnosis</th>
+                                <th>Date Added</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>#REC-8801</strong></td>
+                                <td>
+                                    <div class="patient-cell">
+                                        <img src="https://ui-avatars.com/api/?name=Rahul+Sharma&background=dbeafe&color=1d4ed8" alt="Rahul Sharma">
+                                        <div>
+                                            <strong>Rahul Sharma</strong>
+                                            <small>PT-101 | Male, 35</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="type-badge in-person"><i class="fa-solid fa-heart-pulse"></i> 12-Lead ECG</span></td>
+                                <td>Hypertension & Mild Arrhythmia</td>
+                                <td>Jul 10, 2026</td>
+                                <td><span class="completed-status">Verified</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="action-icon-btn view" title="View Document"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="action-icon-btn edit" title="Download PDF"><i class="fa-solid fa-download"></i></button>
+                                        <button class="action-icon-btn complete" title="Share Record"><i class="fa-solid fa-share-nodes"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>#REC-8802</strong></td>
+                                <td>
+                                    <div class="patient-cell">
+                                        <img src="https://ui-avatars.com/api/?name=Anjali+Mehta&background=fce7f3&color=be185d" alt="Anjali Mehta">
+                                        <div>
+                                            <strong>Anjali Mehta</strong>
+                                            <small>PT-102 | Female, 29</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="type-badge online"><i class="fa-solid fa-compact-disc"></i> 2D Echocardiogram</span></td>
+                                <td>Mitral Valve Prolapse</td>
+                                <td>Jul 18, 2026</td>
+                                <td><span class="waiting-status">Pending Sign-off</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="action-icon-btn view" title="View Document"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="action-icon-btn edit" title="Download PDF"><i class="fa-solid fa-download"></i></button>
+                                        <button class="action-icon-btn complete" title="Share Record"><i class="fa-solid fa-share-nodes"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>#REC-8803</strong></td>
+                                <td>
+                                    <div class="patient-cell">
+                                        <img src="https://ui-avatars.com/api/?name=Rohan+Gupta&background=ecfdf5&color=047857" alt="Rohan Gupta">
+                                        <div>
+                                            <strong>Rohan Gupta</strong>
+                                            <small>PT-103 | Male, 41</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="type-badge in-person"><i class="fa-solid fa-notes-medical"></i> Discharge Summary</span></td>
+                                <td>Post-Angioplasty Recovery</td>
+                                <td>Jul 02, 2026</td>
+                                <td><span class="completed-status">Verified</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="action-icon-btn view" title="View Document"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="action-icon-btn edit" title="Download PDF"><i class="fa-solid fa-download"></i></button>
+                                        <button class="action-icon-btn complete" title="Share Record"><i class="fa-solid fa-share-nodes"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>#REC-8804</strong></td>
+                                <td>
+                                    <div class="patient-cell">
+                                        <img src="https://ui-avatars.com/api/?name=Neha+Verma&background=fef3c7&color=b45309" alt="Neha Verma">
+                                        <div>
+                                            <strong>Neha Verma</strong>
+                                            <small>PT-104 | Female, 52</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="type-badge online"><i class="fa-solid fa-flask-vial"></i> Renal Panel & Electrolytes</span></td>
+                                <td>Congestive Heart Failure</td>
+                                <td>Jul 20, 2026</td>
+                                <td><span class="waiting-status">Pending Sign-off</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="action-icon-btn view" title="View Document"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="action-icon-btn edit" title="Download PDF"><i class="fa-solid fa-download"></i></button>
+                                        <button class="action-icon-btn complete" title="Share Record"><i class="fa-solid fa-share-nodes"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- PAGINATION -->
+                <div class="pagination-container">
+                    <span class="pagination-info">Showing 1 to 4 of 3,842 Medical Records</span>
+                    <div class="pagination">
+                        <button class="page-btn disabled"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="dashboard-footer">
+                <p>© 2026 Medicare+ Hospital Management System</p>
+                <p>Medical Records Module | Version 1.0</p>
+            </footer>
+
+        </section>
+    </main>
+</div>
+
+<!-- Medical Records JS -->
+<script src="../js/records.js"></script>
+</body>
+</html>

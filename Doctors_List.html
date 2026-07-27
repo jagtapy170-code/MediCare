@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare+ | Doctors Directory</title>
+    <link rel="stylesheet" href="../css/Receptionist_Dashbaord.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ==========================
+            SIDEBAR
+    ========================== -->
+      <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-hospital-user"></i>
+
+            <h2>Medicare+</h2>
+
+        </div>
+
+        <ul class="menu">
+<li>
+                <a href="Receptionist_Dashboard.html">
+                  
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+                </a>
+
+            </li>
+
+              <li>
+                <a href="Register_Patient.html">
+
+                <i class="fa-solid fa-user-plus"></i>
+                
+
+                <span>Register Patient</span>
+                   </a>
+            </li>
+
+            <li>
+                <a href="Patients_List.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>Patients</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Appointments_List.html">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>Appointments</span>
+                </a>
+
+            </li>
+
+            <li class="active">
+                <a href="Doctors_List.html">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <span>Doctors</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Billing_List.html">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>Billing</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Beds_List.html">
+
+                <i class="fa-solid fa-bed"></i>
+
+                <span>Hospital Beds</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Notification.html">
+                       <i class="fa-solid fa-bell"></i>
+
+                <span>Notifications</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Setting.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+                </a>
+
+            </li>
+
+        </ul>
+
+        <div class="logout">
+            <a href="Reciptionist_login.html">
+            <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+                </button>
+                </a>
+
+        </div>
+
+    </aside>
+
+    <!-- ==========================
+            MAIN CONTENT
+    ========================== -->
+    <main class="main-content">
+
+        <!-- ==========================
+                TOPBAR
+        ========================== -->
+        <header class="topbar">
+            <div class="welcome">
+                <h1>Doctors Directory & Roster</h1>
+                <p>Track attending physicians, OPD consultation hours, and real-time availability.</p>
+            </div>
+
+            <div class="top-actions">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="doctorSearch" placeholder="Search Doctor, Department, Specialization...">
+                </div>
+
+                <button class="icon-btn" aria-label="Notifications">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+
+                <button class="icon-btn" aria-label="Messages">
+                    <i class="fa-solid fa-envelope"></i>
+                </button>
+
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <div class="profile">
+                    <img src="https://ui-avatars.com/api/?name=Receptionist&background=7c3aed&color=ffffff" alt="Receptionist Avatar">
+                    <div>
+                        <h4>Reception Desk</h4>
+                        <small>ID : REC-101</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ==========================
+                DOCTORS CONTENT
+        ========================== -->
+        <section class="content">
+
+            <!-- Doctor Roster Overview -->
+            <div class="cards">
+                <div class="card doctor-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Total On Duty</h3>
+                        <h2>24 Physicians</h2>
+                        <p>18 Available in OPD</p>
+                    </div>
+                </div>
+
+                <div class="card appointment-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Active Consultations</h3>
+                        <h2>14 Doctors</h2>
+                        <p>Currently seeing patients</p>
+                    </div>
+                </div>
+
+                <div class="card bed-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-calendar-xmark"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>On Leave / Off Shift</h3>
+                        <h2>4 Doctors</h2>
+                        <p>Next shift starts 02:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Panel -->
+            <div class="panel" style="margin-top: 25px;">
+                <div class="section-title">
+                    <h2>Roster Search & Filters</h2>
+                    <button class="btn-primary-gradient" style="padding: 10px 18px; font-size: 13px;" id="btnAddDoctor">
+                        <i class="fa-solid fa-plus"></i> Add New Doctor
+                    </button>
+                </div>
+
+                <div class="status-grid" style="grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; color: var(--text-light); display: block; margin-bottom: 5px;">Department</label>
+                        <select id="filterDept" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 10px;">
+                            <option value="all">All Departments</option>
+                            <option value="cardiology">Cardiology</option>
+                            <option value="neurology">Neurology</option>
+                            <option value="orthopedics">Orthopedics</option>
+                            <option value="pediatrics">Pediatrics</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; color: var(--text-light); display: block; margin-bottom: 5px;">Availability Status</label>
+                        <select id="filterDocStatus" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 10px;">
+                            <option value="all">All Statuses</option>
+                            <option value="available">Available</option>
+                            <option value="busy">In Consultation</option>
+                            <option value="leave">On Leave</option>
+                        </select>
+                    </div>
+
+                    <div style="display: flex; align-items: flex-end;">
+                        <button class="view-btn" style="width: 100%; padding: 11px; text-align: center;" id="btnApplyDocFilter">
+                            <i class="fa-solid fa-filter"></i> Apply Filter
+                        </button>
+                    </div>
+                </div>
+            </div>
+<!-- Doctors Directory Table Panel -->
+            <div class="panel" style="margin-top: 25px;">
+                <div class="section-title">
+                    <h2>Physician Directory & Rostering Table</h2>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="view-btn" style="background: #e2e8f0; color: #1e293b;" aria-label="Export Roster">
+                            <i class="fa-solid fa-file-csv"></i> Export Roster
+                        </button>
+                        <button class="view-btn" aria-label="Print Directory">
+                            <i class="fa-solid fa-print"></i> Print Roster
+                        </button>
+                    </div>
+                </div>
+
+                <table class="management-table">
+                    <thead>
+                        <tr>
+                            <th>Doctor Name</th>
+                            <th>Department & Title</th>
+                            <th>OPD Room / Cabin</th>
+                            <th>Shift Timings</th>
+                            <th>Active Queue</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div>
+                                    <strong style="font-size: 15px;">Dr. Sarah Wilson</strong>
+                                    <div style="font-size: 12px; color: var(--text-light);">ID: DOC-101</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>Cardiology</div>
+                                <small style="color: var(--text-light);">Senior Interventional Cardiologist</small>
+                            </td>
+                            <td><strong>Cabin 102</strong> (OPD Block A)</td>
+                            <td>08:00 AM - 02:00 PM</td>
+                            <td><strong style="color: var(--primary);">4 Patients</strong></td>
+                            <td><span class="available-status">Available</span></td>
+                            <td>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px;" title="Book Appointment">
+                                    <i class="fa-solid fa-calendar-plus"></i>
+                                </button>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px; background: var(--secondary);" title="View Schedule">
+                                    <i class="fa-solid fa-clock"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div>
+                                    <strong style="font-size: 15px;">Dr. Amit Sharma</strong>
+                                    <div style="font-size: 12px; color: var(--text-light);">ID: DOC-102</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>Neurology</div>
+                                <small style="color: var(--text-light);">Consultant Neurosurgeon</small>
+                            </td>
+                            <td><strong>Cabin 204</strong> (OPD Block B)</td>
+                            <td>09:00 AM - 03:00 PM</td>
+                            <td><strong style="color: var(--warning);">2 Patients</strong></td>
+                            <td><span class="busy-status">In Consultation</span></td>
+                            <td>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px;" title="Book Appointment">
+                                    <i class="fa-solid fa-calendar-plus"></i>
+                                </button>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px; background: var(--secondary);" title="View Schedule">
+                                    <i class="fa-solid fa-clock"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div>
+                                    <strong style="font-size: 15px;">Dr. James Anderson</strong>
+                                    <div style="font-size: 12px; color: var(--text-light);">ID: DOC-103</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>Orthopedics</div>
+                                <small style="color: var(--text-light);">Orthopedic Surgeon</small>
+                            </td>
+                            <td><strong>Cabin 108</strong> (OPD Block A)</td>
+                            <td>10:00 AM - 04:00 PM</td>
+                            <td><strong style="color: var(--primary);">6 Patients</strong></td>
+                            <td><span class="available-status">Available</span></td>
+                            <td>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px;" title="Book Appointment">
+                                    <i class="fa-solid fa-calendar-plus"></i>
+                                </button>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px; background: var(--secondary);" title="View Schedule">
+                                    <i class="fa-solid fa-clock"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div>
+                                    <strong style="font-size: 15px;">Dr. Priya Patel</strong>
+                                    <div style="font-size: 12px; color: var(--text-light);">ID: DOC-104</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>Pediatrics</div>
+                                <small style="color: var(--text-light);">Consultant Pediatrician</small>
+                            </td>
+                            <td><strong>Cabin 301</strong> (OPD Block C)</td>
+                            <td>Off Shift (Next: 02:00 PM)</td>
+                            <td><strong style="color: var(--text-light);">0 Patients</strong></td>
+                            <td><span class="leave-status">On Leave / Off Shift</span></td>
+                            <td>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px; background: var(--text-light);" title="View Schedule">
+                                    <i class="fa-solid fa-clock"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Dashboard Footer -->
+            <footer class="dashboard-footer">
+                <p>© 2026 Medicare+ Hospital Management System</p>
+                <p>Doctors Directory & Roster | Version 1.0</p>
+            </footer>
+
+        </section>
+    </main>
+</div>
+
+<!-- Connect Engine JS -->
+<script src="../js/Doctors_List.js"></script>
+</body>
+</html>

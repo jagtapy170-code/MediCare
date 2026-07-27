@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Medical Records | Medicare+</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="../css/Medical_Records.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- =========================
+        SIDEBAR
+========================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-heart-pulse"></i>
+
+<h2>Medicare<span>+</span></h2>
+
+</div>
+
+<ul class="menu">
+
+<li>
+<a href="Patient_dashboard.html">
+<i class="fa-solid fa-house"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li>
+<a href="Appointment.html">
+<i class="fa-solid fa-calendar-check"></i>
+<span>Appointments</span>
+</a>
+</li>
+
+<li class="active">
+<a href="Medical_Records.html">
+<i class="fa-solid fa-file-medical"></i>
+<span>Medical Records</span>
+</a>
+</li>
+
+
+<li>
+<a href="Health_Tracker.html">
+<i class="fa-solid fa-file-medical"></i>
+<span>Health Tracker</span>
+</a>
+</li>
+
+<li>
+<a href="Prescription.html">
+<i class="fa-solid fa-prescription-bottle-medical"></i>
+<span>Prescriptions</span>
+</a>
+</li>
+
+<li>
+<a href="lab-reports.html">
+<i class="fa-solid fa-vial"></i>
+<span>Lab Reports</span>
+</a>
+</li>
+
+<li>
+<a href="Billing.html">
+<i class="fa-solid fa-wallet"></i>
+<span>Billing</span>
+</a>
+</li>
+
+<li>
+<a href="Notifications.html">
+<i class="fa-solid fa-bell"></i>
+<span>Notifications</span>
+</a>
+</li>
+
+<li>
+<a href="AI Assistant.html">
+<i class="fa-solid fa-robot"></i>
+<span>AI Assistant</span>
+</a>
+</li>
+
+<li>
+<a href="Settings.html">
+<i class="fa-solid fa-gear"></i>
+<span>Settings</span>
+</a>
+</li>
+
+<div class="logout">
+
+<a href="patient-login.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+</div>
+
+
+</ul>
+
+</aside>
+
+<!-- =========================
+        MAIN CONTENT
+========================= -->
+
+<main class="main-content">
+
+<!-- =========================
+        TOPBAR
+========================= -->
+
+<header class="topbar">
+
+<div class="welcome">
+
+<h1>
+
+Medical Records
+
+<span>Dashboard</span>
+
+</h1>
+
+<p>
+
+Securely access your complete healthcare history.
+
+</p>
+
+</div>
+
+<div class="top-actions">
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search doctor, hospital, disease...">
+
+</div>
+
+<button class="icon-btn">
+
+<i class="fa-solid fa-bell"></i>
+
+</button>
+
+<div class="profile">
+
+<img src="https://i.pravatar.cc/150?img=15">
+
+<div>
+
+<h4>Steve Smith</h4>
+
+<p>Patient ID : MDR-20458</p>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- =========================
+        HERO
+========================= -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>
+
+Your Complete
+
+<span>Medical History</span>
+
+</h1>
+
+<p>
+
+View diagnoses, prescriptions, laboratory reports, surgeries,
+vaccinations and doctor consultations in one secure digital health record.
+
+</p>
+
+<div class="hero-buttons">
+
+<button class="primary-btn">
+
+<i class="fa-solid fa-upload"></i>
+
+Upload Record
+
+</button>
+
+<button class="secondary-btn">
+
+<i class="fa-solid fa-download"></i>
+
+Download Records
+
+</button>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="patient-card">
+
+<img src="https://i.pravatar.cc/200?img=15">
+
+<h2>Steve Smith</h2>
+
+<p>Premium Healthcare Member</p>
+
+<div class="patient-info">
+
+<div>
+
+<h4>Blood Group</h4>
+
+<span>B+</span>
+
+</div>
+
+<div>
+
+<h4>Age</h4>
+
+<span>20 Years</span>
+
+</div>
+
+<div>
+
+<h4>Height</h4>
+
+<span>175 cm</span>
+
+</div>
+
+<div>
+
+<h4>Weight</h4>
+
+<span>69 kg</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+        MEDICAL OVERVIEW
+========================= -->
+
+<section class="overview">
+
+<div class="section-title">
+
+<h2>Medical Overview</h2>
+
+<p>Your healthcare statistics at a glance.</p>
+
+</div>
+
+<div class="overview-grid">
+
+<div class="overview-card blue">
+
+<div class="icon">
+
+<i class="fa-solid fa-file-medical"></i>
+
+</div>
+
+<h2>126</h2>
+
+<p>Total Records</p>
+
+</div>
+
+<div class="overview-card green">
+
+<div class="icon">
+
+<i class="fa-solid fa-vial"></i>
+
+</div>
+
+<h2>34</h2>
+
+<p>Lab Reports</p>
+
+</div>
+
+<div class="overview-card orange">
+
+<div class="icon">
+
+<i class="fa-solid fa-pills"></i>
+
+</div>
+
+<h2>15</h2>
+
+<p>Active Medicines</p>
+
+</div>
+
+<div class="overview-card red">
+
+<div class="icon">
+
+<i class="fa-solid fa-heart-pulse"></i>
+
+</div>
+
+<h2>92%</h2>
+
+<p>Health Score</p>
+
+</div>
+
+<div class="overview-card purple">
+
+<div class="icon">
+
+<i class="fa-solid fa-hospital"></i>
+
+</div>
+
+<h2>18</h2>
+
+<p>Hospital Visits</p>
+
+</div>
+
+<div class="overview-card cyan">
+
+<div class="icon">
+
+<i class="fa-solid fa-user-doctor"></i>
+
+</div>
+
+<h2>12</h2>
+
+<p>Doctors Consulted</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+        SEARCH & FILTERS
+========================= -->
+
+<section class="filters">
+
+<div class="section-title">
+
+<h2>Search Medical Records</h2>
+
+<p>Quickly find your reports and prescriptions.</p>
+
+</div>
+
+<div class="filter-row">
+
+<input
+type="text"
+placeholder="Search by disease, doctor or hospital">
+
+<select>
+
+<option>All Categories</option>
+
+<option>Prescription</option>
+
+<option>Lab Report</option>
+
+<option>Diagnosis</option>
+
+<option>Surgery</option>
+
+<option>Vaccination</option>
+
+</select>
+
+<select>
+
+<option>All Status</option>
+
+<option>Completed</option>
+
+<option>Pending</option>
+
+<option>Critical</option>
+
+</select>
+
+<select>
+
+<option>Latest First</option>
+
+<option>Oldest First</option>
+
+</select>
+
+<button>
+
+<i class="fa-solid fa-filter"></i>
+
+Apply Filter
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        MEDICAL RECORDS TABLE
+========================================== -->
+
+<section class="records-section">
+
+    <div class="section-title">
+
+        <h2>Electronic Medical Records</h2>
+
+        <p>Complete history of your healthcare records.</p>
+
+    </div>
+
+    <div class="table-container">
+
+        <table class="records-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Record ID</th>
+                    <th>Date</th>
+                    <th>Doctor</th>
+                    <th>Hospital</th>
+                    <th>Department</th>
+                    <th>Diagnosis</th>
+                    <th>Treatment</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>MR-1001</td>
+                    <td>12 Jan 2026</td>
+                    <td>Dr. Sarah Wilson</td>
+                    <td>Apollo Hospital</td>
+                    <td>Cardiology</td>
+                    <td>Hypertension</td>
+                    <td>Medication</td>
+
+                    <td>
+
+                        <span class="status completed">
+
+                            Completed
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                        <button class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button class="print-btn">
+
+                            <i class="fa-solid fa-print"></i>
+
+                        </button>
+
+                        <button class="share-btn">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>MR-1002</td>
+                    <td>28 Feb 2026</td>
+                    <td>Dr. Michael Brown</td>
+                    <td>Fortis Hospital</td>
+                    <td>Orthopedic</td>
+                    <td>Knee Pain</td>
+                    <td>Physiotherapy</td>
+
+                    <td>
+
+                        <span class="status pending">
+
+                            Pending
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                        <button class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button class="print-btn">
+
+                            <i class="fa-solid fa-print"></i>
+
+                        </button>
+
+                        <button class="share-btn">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>MR-1003</td>
+                    <td>17 Mar 2026</td>
+                    <td>Dr. Emily Johnson</td>
+                    <td>Ruby Hall Clinic</td>
+                    <td>Dermatology</td>
+                    <td>Skin Allergy</td>
+                    <td>Prescription</td>
+
+                    <td>
+
+                        <span class="status completed">
+
+                            Completed
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                        <button class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button class="print-btn">
+
+                            <i class="fa-solid fa-print"></i>
+
+                        </button>
+
+                        <button class="share-btn">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>MR-1004</td>
+                    <td>22 Apr 2026</td>
+                    <td>Dr. David Miller</td>
+                    <td>Sahyadri Hospital</td>
+                    <td>Neurology</td>
+                    <td>Migraine</td>
+                    <td>Medication</td>
+
+                    <td>
+
+                        <span class="status critical">
+
+                            Critical
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                        <button class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button class="print-btn">
+
+                            <i class="fa-solid fa-print"></i>
+
+                        </button>
+
+                        <button class="share-btn">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>MR-1005</td>
+                    <td>05 May 2026</td>
+                    <td>Dr. Olivia Davis</td>
+                    <td>Jehangir Hospital</td>
+                    <td>General Medicine</td>
+                    <td>Viral Fever</td>
+                    <td>Medication</td>
+
+                    <td>
+
+                        <span class="status completed">
+
+                            Completed
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                        <button class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button class="print-btn">
+
+                            <i class="fa-solid fa-print"></i>
+
+                        </button>
+
+                        <button class="share-btn">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        RECORD DETAILS MODAL
+========================================== -->
+
+<div class="record-modal" id="recordModal">
+
+    <!-- ==========================================
+        PREMIUM MEDICAL RECORD MODAL
+========================================== -->
+
+<div class="record-modal" id="recordModal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <div class="header-left">
+
+                <div class="header-icon">
+
+                    <i class="fa-solid fa-file-medical"></i>
+
+                </div>
+
+                <h2>Medical Record Details</h2>
+
+            </div>
+
+            <button class="close-modal">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+        <hr>
+
+        <div class="detail-grid">
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div>
+
+                    <h5>Patient Name</h5>
+
+                    <p>Steve Smith</p>
+
+                </div>
+
+            </div>
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+
+                    <i class="fa-solid fa-user-doctor"></i>
+
+                </div>
+
+                <div>
+
+                    <h5>Doctor</h5>
+
+                    <p>Dr. Sarah Wilson</p>
+
+                </div>
+
+            </div>
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+
+                    <i class="fa-solid fa-hospital"></i>
+
+                </div>
+
+                <div>
+
+                    <h5>Hospital</h5>
+
+                    <p>Apollo Hospital</p>
+
+                </div>
+
+            </div>
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                </div>
+
+                <div>
+
+                    <h5>Department</h5>
+
+                    <p>Cardiology</p>
+
+                </div>
+
+            </div>
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+
+                    <i class="fa-solid fa-notes-medical"></i>
+
+                </div>
+
+                <div>
+
+                    <h5>Diagnosis</h5>
+
+                    <p>Hypertension</p>
+
+                </div>
+
+            </div>
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+
+                    <i class="fa-solid fa-kit-medical"></i>
+
+                </div>
+
+                <div>
+
+                    <h5>Treatment</h5>
+
+                    <p>Medication & Lifestyle Changes</p>
+
+                </div>
+
+            </div>
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+
+                    <i class="fa-solid fa-stethoscope"></i>
+
+                </div>
+
+                <div>
+
+                    <h5>Symptoms</h5>
+
+                    <p>Headache, High BP, Fatigue</p>
+
+                </div>
+
+            </div>
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+
+                    <i class="fa-solid fa-capsules"></i>
+
+                </div>
+
+                <div>
+
+                    <h5>Prescribed Medicines</h5>
+
+                    <p>Amlodipine, Vitamin D</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="doctor-notes">
+
+            <div class="notes-title">
+
+                <i class="fa-solid fa-file-signature"></i>
+
+                <h4>Doctor Notes</h4>
+
+            </div>
+
+            <div class="notes-box">
+
+                Continue medication for 30 days.
+
+                Reduce salt intake.
+
+                Exercise daily.
+
+                Return after one month for follow-up.
+
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+
+            <button class="download-record">
+
+                <i class="fa-solid fa-download"></i>
+
+                Download Record
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+        LAB REPORTS
+========================================== -->
+
+<section class="lab-reports">
+
+    <div class="section-title">
+
+        <h2>Laboratory Reports</h2>
+
+        <p>Your latest diagnostic reports.</p>
+
+    </div>
+
+    <div class="lab-grid">
+
+        <div class="lab-card">
+
+            <div class="lab-icon">
+                <i class="fa-solid fa-flask"></i>
+            </div>
+
+            <h3>Complete Blood Count (CBC)</h3>
+
+            <p>15 June 2026</p>
+
+            <span class="report-status normal">Normal</span>
+
+            <div class="lab-actions">
+                <button><i class="fa-solid fa-eye"></i> View</button>
+                <button><i class="fa-solid fa-download"></i> Download</button>
+            </div>
+
+        </div>
+
+        <div class="lab-card">
+
+            <div class="lab-icon">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+
+            <h3>ECG Report</h3>
+
+            <p>10 May 2026</p>
+
+            <span class="report-status reviewed">Reviewed</span>
+
+            <div class="lab-actions">
+                <button><i class="fa-solid fa-eye"></i> View</button>
+                <button><i class="fa-solid fa-download"></i> Download</button>
+            </div>
+
+        </div>
+
+        <div class="lab-card">
+
+            <div class="lab-icon">
+                <i class="fa-solid fa-x-ray"></i>
+            </div>
+
+            <h3>Chest X-Ray</h3>
+
+            <p>18 April 2026</p>
+
+            <span class="report-status normal">Normal</span>
+
+            <div class="lab-actions">
+                <button><i class="fa-solid fa-eye"></i> View</button>
+                <button><i class="fa-solid fa-download"></i> Download</button>
+            </div>
+
+        </div>
+
+        <div class="lab-card">
+
+            <div class="lab-icon">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+
+            <h3>Blood Sugar Test</h3>
+
+            <p>28 March 2026</p>
+
+            <span class="report-status warning">Monitor</span>
+
+            <div class="lab-actions">
+                <button><i class="fa-solid fa-eye"></i> View</button>
+                <button><i class="fa-solid fa-download"></i> Download</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        CURRENT MEDICATIONS
+========================================== -->
+
+<section class="medicines">
+
+    <div class="section-title">
+
+        <h2>Current Medications</h2>
+
+        <p>Medicines currently prescribed.</p>
+
+    </div>
+
+    <div class="medicine-grid">
+
+        <div class="medicine-card">
+
+            <div class="medicine-top">
+
+                <i class="fa-solid fa-capsules"></i>
+
+                <span class="days-left">15 Days Left</span>
+
+            </div>
+
+            <h3>Paracetamol 650 mg</h3>
+
+            <p>Morning • Afternoon • Night</p>
+
+            <button class="refill-btn">
+
+                Request Refill
+
+            </button>
+
+        </div>
+
+        <div class="medicine-card">
+
+            <div class="medicine-top">
+
+                <i class="fa-solid fa-pills"></i>
+
+                <span class="days-left">8 Days Left</span>
+
+            </div>
+
+            <h3>Vitamin D3</h3>
+
+            <p>Morning</p>
+
+            <button class="refill-btn">
+
+                Request Refill
+
+            </button>
+
+        </div>
+
+        <div class="medicine-card">
+
+            <div class="medicine-top">
+
+                <i class="fa-solid fa-tablets"></i>
+
+                <span class="days-left">22 Days Left</span>
+
+            </div>
+
+            <h3>Metformin 500 mg</h3>
+
+            <p>Morning • Night</p>
+
+            <button class="refill-btn">
+
+                Request Refill
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        VACCINATION HISTORY
+========================================== -->
+
+<section class="vaccination">
+
+    <div class="section-title">
+
+        <h2>Vaccination History</h2>
+
+        <p>Your completed immunizations.</p>
+
+    </div>
+
+    <div class="vaccination-table">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Vaccine</th>
+                    <th>Date</th>
+                    <th>Hospital</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>COVID-19 Booster</td>
+                    <td>12 Feb 2026</td>
+                    <td>Apollo Hospital</td>
+                    <td>
+
+                        <span class="status completed">
+
+                            Completed
+
+                        </span>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Hepatitis B</td>
+                    <td>10 Aug 2025</td>
+                    <td>Fortis Hospital</td>
+                    <td>
+
+                        <span class="status completed">
+
+                            Completed
+
+                        </span>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Tetanus</td>
+                    <td>15 Jan 2024</td>
+                    <td>Ruby Hall Clinic</td>
+                    <td>
+
+                        <span class="status completed">
+
+                            Completed
+
+                        </span>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        HEALTH TIMELINE
+========================================== -->
+
+<section class="health-timeline">
+
+    <div class="section-title">
+
+        <h2>Health Timeline</h2>
+
+        <p>Your complete healthcare journey.</p>
+
+    </div>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-icon">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+
+            <div class="timeline-content">
+
+                <h3>Cardiology Consultation</h3>
+
+                <p>12 January 2026</p>
+
+                <span>
+                    Diagnosed with mild hypertension. Medication prescribed.
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-icon">
+                <i class="fa-solid fa-vial"></i>
+            </div>
+
+            <div class="timeline-content">
+
+                <h3>Blood Test</h3>
+
+                <p>18 February 2026</p>
+
+                <span>
+                    CBC and Sugar Test completed successfully.
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-icon">
+                <i class="fa-solid fa-syringe"></i>
+            </div>
+
+            <div class="timeline-content">
+
+                <h3>COVID Booster Vaccination</h3>
+
+                <p>22 March 2026</p>
+
+                <span>
+                    Booster dose administered.
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-icon">
+                <i class="fa-solid fa-notes-medical"></i>
+            </div>
+
+            <div class="timeline-content">
+
+                <h3>Annual Health Checkup</h3>
+
+                <p>15 June 2026</p>
+
+                <span>
+                    Overall health condition stable.
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        AI HEALTH INSIGHTS
+========================================== -->
+
+<section class="ai-insights">
+
+    <div class="section-title">
+
+        <h2>AI Health Insights</h2>
+
+        <p>Personalized recommendations based on your medical history.</p>
+
+    </div>
+
+    <div class="insight-grid">
+
+        <div class="insight-card">
+
+            <i class="fa-solid fa-heart-circle-check"></i>
+
+            <h3>Health Score</h3>
+
+            <h1>92%</h1>
+
+            <p>
+                Your overall health is excellent.
+                Continue regular exercise and healthy eating.
+            </p>
+
+        </div>
+
+        <div class="insight-card">
+
+            <i class="fa-solid fa-pills"></i>
+
+            <h3>Medication Reminder</h3>
+
+            <p>
+
+                You have medicines remaining for
+
+                <strong>8 Days.</strong>
+
+            </p>
+
+            <button>
+
+                Set Reminder
+
+            </button>
+
+        </div>
+
+        <div class="insight-card">
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+            <h3>Upcoming Checkup</h3>
+
+            <p>
+
+                Annual Health Checkup
+
+                <strong>28 July 2026</strong>
+
+            </p>
+
+            <button>
+
+                Book Appointment
+
+            </button>
+
+        </div>
+
+        <div class="insight-card">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            <h3>AI Recommendation</h3>
+
+            <p>
+
+                Walk at least
+
+                <strong>30 minutes daily</strong>
+
+                and reduce sodium intake for improved heart health.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        UPLOAD MEDICAL RECORDS
+========================================== -->
+
+<section class="upload-records">
+
+    <div class="section-title">
+
+        <h2>Upload Medical Records</h2>
+
+        <p>Add reports, scans and prescriptions securely.</p>
+
+    </div>
+
+    <div class="upload-box">
+
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+
+        <h3>Drag & Drop Files Here</h3>
+
+        <p>
+
+            Supported Files
+
+            PDF • JPG • PNG • DOCX
+
+        </p>
+
+        <button>
+
+            Choose Files
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        HEALTH ANALYTICS
+========================================== -->
+
+<section class="analytics">
+
+    <div class="section-title">
+
+        <h2>Health Analytics</h2>
+
+        <p>Your latest health measurements.</p>
+
+    </div>
+
+    <div class="analytics-grid">
+
+        <div class="analytics-card">
+
+            <h3>Blood Pressure</h3>
+
+            <h1>120 / 80</h1>
+
+            <span>Normal</span>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <h3>Heart Rate</h3>
+
+            <h1>72 BPM</h1>
+
+            <span>Healthy</span>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <h3>Blood Sugar</h3>
+
+            <h1>95 mg/dL</h1>
+
+            <span>Normal</span>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <h3>BMI</h3>
+
+            <h1>22.4</h1>
+
+            <span>Healthy Weight</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        FOOTER
+========================================== -->
+
+<footer class="footer">
+
+    <p>
+
+        © 2026 Medicare+ Healthcare Management System
+
+    </p>
+
+</footer>
+
+<!-- END OF HTML -->
+
+</main>
+
+</div>
+
+<script src="../js/Medical_Records.js"></script>
+
+</body>
+
+</html>

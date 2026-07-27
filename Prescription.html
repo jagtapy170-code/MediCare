@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prescriptions | Medicare+</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="../css/Prescription.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-heart-pulse"></i>
+
+<h2>Medicare<span>+</span></h2>
+
+</div>
+
+<ul class="menu">
+
+<li>
+<a href="Patient_dashboard.html">
+<i class="fa-solid fa-house"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li>
+<a href="Appointment.html">
+<i class="fa-solid fa-calendar-check"></i>
+<span>Appointments</span>
+</a>
+</li>
+
+<li>
+<a href="Medical_Records.html">
+<i class="fa-solid fa-file-medical"></i>
+<span>Medical Records</span>
+</a>
+</li>
+
+<li>
+<a href="Health_Tracker.html">
+<i class="fa-solid fa-file-medical"></i>
+<span>Health Tracker</span>
+</a>
+</li>
+
+<li class="active">
+<a href="Prescription.html">
+<i class="fa-solid fa-prescription-bottle-medical"></i>
+<span>Prescriptions</span>
+</a>
+</li>
+
+<li>
+<a href="Patient_Lab_Report.html">
+<i class="fa-solid fa-flask"></i>
+<span>Lab Reports</span>
+</a>
+</li>
+
+<li>
+<a href="Billing.html">
+<i class="fa-solid fa-wallet"></i>
+<span>Billing</span>
+</a>
+</li>
+
+<li>
+<a href="Notifications.html">
+<i class="fa-solid fa-bell"></i>
+<span>Notifications</span>
+</a>
+</li>
+
+<li>
+<a href="AI Assistant.html">
+<i class="fa-solid fa-robot"></i>
+<span>AI Assistant</span>
+</a>
+</li>
+
+<li>
+<a href="Settings.html">
+<i class="fa-solid fa-gear"></i>
+<span>Settings</span>
+</a>
+</li>
+
+<div class="logout">
+
+<a href="patient-login.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+</div>
+
+</ul>
+
+</aside>
+
+<!-- ================= MAIN ================= -->
+
+<main class="main-content">
+
+<!-- ================= TOPBAR ================= -->
+
+<header class="topbar">
+
+<div class="welcome">
+
+<h1>Prescriptions <span>Dashboard</span></h1>
+
+<p>Manage all your prescriptions and medications securely.</p>
+
+</div>
+
+<div class="top-actions">
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search medicine, doctor...">
+
+</div>
+
+<button class="icon-btn">
+
+<i class="fa-solid fa-bell"></i>
+
+</button>
+
+<div class="profile">
+
+<img src="https://i.pravatar.cc/150?img=15">
+
+<div>
+
+<h4>Krishna Agrawal</h4>
+
+<p>Patient ID : MDR-20458</p>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>
+
+Manage Your
+
+<span>Prescriptions</span>
+
+</h1>
+
+<p>
+
+Access all your prescriptions, refill medicines, download prescriptions and
+keep track of your medication schedule from one secure place.
+
+</p>
+
+<div class="hero-buttons">
+
+<button class="primary-btn">
+
+<i class="fa-solid fa-upload"></i>
+
+Upload Prescription
+
+</button>
+
+<button class="secondary-btn">
+
+<i class="fa-solid fa-download"></i>
+
+Download All
+
+</button>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="patient-card">
+
+<img src="https://i.pravatar.cc/200?img=15">
+
+<h2>Krishna Agrawal</h2>
+
+<p>Premium Healthcare Member</p>
+
+<div class="patient-info">
+
+<div>
+
+<h4>Blood Group</h4>
+
+<span>B+</span>
+
+</div>
+
+<div>
+
+<h4>Age</h4>
+
+<span>20 Years</span>
+
+</div>
+
+<div>
+
+<h4>Active Medicines</h4>
+
+<span>05</span>
+
+</div>
+
+<div>
+
+<h4>Refills Left</h4>
+
+<span>08</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= OVERVIEW ================= -->
+
+<section class="overview">
+
+<div class="section-title">
+
+<h2>Prescription Overview</h2>
+
+<p>Medication summary and prescription statistics.</p>
+
+</div>
+
+<div class="overview-grid">
+
+<div class="overview-card blue">
+
+<div class="icon">
+
+<i class="fa-solid fa-prescription"></i>
+
+</div>
+
+<h2>48</h2>
+
+<p>Total Prescriptions</p>
+
+</div>
+
+<div class="overview-card green">
+
+<div class="icon">
+
+<i class="fa-solid fa-capsules"></i>
+
+</div>
+
+<h2>05</h2>
+
+<p>Active Medicines</p>
+
+</div>
+
+<div class="overview-card orange">
+
+<div class="icon">
+
+<i class="fa-solid fa-clock"></i>
+
+</div>
+
+<h2>08</h2>
+
+<p>Refills Left</p>
+
+</div>
+
+<div class="overview-card red">
+
+<div class="icon">
+
+<i class="fa-solid fa-calendar-xmark"></i>
+
+</div>
+
+<h2>03</h2>
+
+<p>Expired</p>
+
+</div>
+
+<div class="overview-card purple">
+
+<div class="icon">
+
+<i class="fa-solid fa-user-doctor"></i>
+
+</div>
+
+<h2>11</h2>
+
+<p>Doctors</p>
+
+</div>
+
+<div class="overview-card cyan">
+
+<div class="icon">
+
+<i class="fa-solid fa-store"></i>
+
+</div>
+
+<h2>06</h2>
+
+<p>Pharmacies</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SEARCH ================= -->
+
+<section class="filters">
+
+<div class="section-title">
+
+<h2>Search Prescriptions</h2>
+
+<p>Find medicines quickly.</p>
+
+</div>
+
+<div class="filter-row">
+
+<input
+type="text"
+placeholder="Search by medicine or doctor">
+
+<select>
+
+<option>All Categories</option>
+
+<option>Tablet</option>
+
+<option>Capsule</option>
+
+<option>Syrup</option>
+
+<option>Injection</option>
+
+</select>
+
+<select>
+
+<option>All Status</option>
+
+<option>Active</option>
+
+<option>Expired</option>
+
+<option>Completed</option>
+
+</select>
+
+<select>
+
+<option>Latest First</option>
+
+<option>Oldest First</option>
+
+</select>
+
+<button>
+
+<i class="fa-solid fa-filter"></i>
+
+Apply Filter
+
+</button>
+
+</div>
+
+</section>
+<!-- ==========================================
+        PRESCRIPTION TABLE
+========================================== -->
+
+<section class="prescriptions-section">
+
+    <div class="section-title">
+
+        <h2>Prescription History</h2>
+
+        <p>View and manage all your prescriptions.</p>
+
+    </div>
+
+    <div class="table-container">
+
+        <table class="prescriptions-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Doctor</th>
+                    <th>Medicine</th>
+                    <th>Dosage</th>
+                    <th>Frequency</th>
+                    <th>Duration</th>
+                    <th>Refills</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>RX-1021</td>
+                    <td>12 Jan 2026</td>
+                    <td>Dr. Sarah Wilson</td>
+                    <td>Amlodipine</td>
+                    <td>5 mg</td>
+                    <td>Once Daily</td>
+                    <td>30 Days</td>
+                    <td>2</td>
+
+                    <td>
+
+                        <span class="status active-status">
+
+                            Active
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                        <button class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button class="print-btn">
+
+                            <i class="fa-solid fa-print"></i>
+
+                        </button>
+
+                        <button class="share-btn">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>RX-1022</td>
+                    <td>20 Feb 2026</td>
+                    <td>Dr. Michael Lee</td>
+                    <td>Vitamin D3</td>
+                    <td>1000 IU</td>
+                    <td>Twice Daily</td>
+                    <td>60 Days</td>
+                    <td>5</td>
+
+                    <td>
+
+                        <span class="status completed-status">
+
+                            Completed
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                        <button class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button class="print-btn">
+
+                            <i class="fa-solid fa-print"></i>
+
+                        </button>
+
+                        <button class="share-btn">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>RX-1023</td>
+                    <td>18 Mar 2026</td>
+                    <td>Dr. Emily Brown</td>
+                    <td>Paracetamol</td>
+                    <td>650 mg</td>
+                    <td>3 Times Daily</td>
+                    <td>7 Days</td>
+                    <td>0</td>
+
+                    <td>
+
+                        <span class="status expired-status">
+
+                            Expired
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                        <button class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button class="print-btn">
+
+                            <i class="fa-solid fa-print"></i>
+
+                        </button>
+
+                        <button class="share-btn">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>RX-1024</td>
+                    <td>01 Apr 2026</td>
+                    <td>Dr. David Miller</td>
+                    <td>Metformin</td>
+                    <td>500 mg</td>
+                    <td>Morning & Night</td>
+                    <td>90 Days</td>
+                    <td>3</td>
+
+                    <td>
+
+                        <span class="status active-status">
+
+                            Active
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                        <button class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button class="print-btn">
+
+                            <i class="fa-solid fa-print"></i>
+
+                        </button>
+
+                        <button class="share-btn">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        CURRENT MEDICATIONS
+========================================== -->
+
+<section class="current-medicines">
+
+    <div class="section-title">
+
+        <h2>Current Medications</h2>
+
+        <p>Your active medicines and refill status.</p>
+
+    </div>
+
+    <div class="medicine-grid">
+
+        <div class="medicine-card">
+
+            <div class="medicine-icon">
+
+                <i class="fa-solid fa-capsules"></i>
+
+            </div>
+
+            <h3>Amlodipine</h3>
+
+            <p>5 mg • Once Daily</p>
+
+            <span>18 Days Remaining</span>
+
+            <button class="refill-btn">
+
+                Request Refill
+
+            </button>
+
+        </div>
+
+        <div class="medicine-card">
+
+            <div class="medicine-icon">
+
+                <i class="fa-solid fa-tablets"></i>
+
+            </div>
+
+            <h3>Vitamin D3</h3>
+
+            <p>1000 IU • Morning</p>
+
+            <span>42 Days Remaining</span>
+
+            <button class="refill-btn">
+
+                Request Refill
+
+            </button>
+
+        </div>
+
+        <div class="medicine-card">
+
+            <div class="medicine-icon">
+
+                <i class="fa-solid fa-syringe"></i>
+
+            </div>
+
+            <h3>Insulin</h3>
+
+            <p>10 Units • Night</p>
+
+            <span>9 Days Remaining</span>
+
+            <button class="refill-btn">
+
+                Request Refill
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        PRESCRIPTION DETAILS MODAL
+========================================== -->
+
+<div class="record-modal" id="prescriptionModal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>Prescription Details</h2>
+
+            <button class="close-modal">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+        <div class="detail-grid">
+
+            <div>
+
+                <h4>Prescription ID</h4>
+
+                <p>RX-1021</p>
+
+            </div>
+
+            <div>
+
+                <h4>Doctor</h4>
+
+                <p>Dr. Sarah Wilson</p>
+
+            </div>
+
+            <div>
+
+                <h4>Hospital</h4>
+
+                <p>Apollo Hospital</p>
+
+            </div>
+
+            <div>
+
+                <h4>Medicine</h4>
+
+                <p>Amlodipine 5 mg</p>
+
+            </div>
+
+            <div>
+
+                <h4>Dosage</h4>
+
+                <p>One Tablet Daily</p>
+
+            </div>
+
+            <div>
+
+                <h4>Duration</h4>
+
+                <p>30 Days</p>
+
+            </div>
+
+            <div>
+
+                <h4>Instructions</h4>
+
+                <p>Take after breakfast.</p>
+
+            </div>
+
+            <div>
+
+                <h4>Refills</h4>
+
+                <p>2 Remaining</p>
+
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+
+            <button class="download-record">
+
+                <i class="fa-solid fa-download"></i>
+
+                Download Prescription
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ==========================================
+        MEDICATION SCHEDULE
+========================================== -->
+
+<section class="medication-schedule">
+
+    <div class="section-title">
+
+        <h2>Today's Medication Schedule</h2>
+
+        <p>Track your medicines throughout the day.</p>
+
+    </div>
+
+    <div class="schedule-grid">
+
+        <div class="schedule-card morning">
+
+            <div class="schedule-icon">
+                <i class="fa-solid fa-sun"></i>
+            </div>
+
+            <h3>Morning</h3>
+
+            <ul>
+                <li>Amlodipine 5mg</li>
+                <li>Vitamin D3</li>
+                <li>Omega 3 Capsule</li>
+            </ul>
+
+            <button>Mark as Taken</button>
+
+        </div>
+
+        <div class="schedule-card afternoon">
+
+            <div class="schedule-icon">
+                <i class="fa-solid fa-sun-plant-wilt"></i>
+            </div>
+
+            <h3>Afternoon</h3>
+
+            <ul>
+                <li>Paracetamol 650mg</li>
+                <li>Calcium Tablet</li>
+            </ul>
+
+            <button>Mark as Taken</button>
+
+        </div>
+
+        <div class="schedule-card evening">
+
+            <div class="schedule-icon">
+                <i class="fa-solid fa-cloud-sun"></i>
+            </div>
+
+            <h3>Evening</h3>
+
+            <ul>
+                <li>Vitamin C</li>
+                <li>Protein Supplement</li>
+            </ul>
+
+            <button>Mark as Taken</button>
+
+        </div>
+
+        <div class="schedule-card night">
+
+            <div class="schedule-icon">
+                <i class="fa-solid fa-moon"></i>
+            </div>
+
+            <h3>Night</h3>
+
+            <ul>
+                <li>Metformin 500mg</li>
+                <li>Insulin Injection</li>
+            </ul>
+
+            <button>Mark as Taken</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        AI PRESCRIPTION INSIGHTS
+========================================== -->
+
+<section class="ai-insights">
+
+    <div class="section-title">
+
+        <h2>AI Prescription Insights</h2>
+
+        <p>Personalized medication guidance based on your prescriptions.</p>
+
+    </div>
+
+    <div class="insight-grid">
+
+        <div class="insight-card">
+
+            <i class="fa-solid fa-heart-circle-check"></i>
+
+            <h3>Medication Adherence</h3>
+
+            <h1>96%</h1>
+
+            <p>You are taking medicines on time. Keep it up!</p>
+
+        </div>
+
+        <div class="insight-card">
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+            <h3>Drug Interaction</h3>
+
+            <p>No harmful interactions detected.</p>
+
+        </div>
+
+        <div class="insight-card">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>Next Refill</h3>
+
+            <p>Amlodipine refill due in <strong>9 days</strong>.</p>
+
+            <button>Order Refill</button>
+
+        </div>
+
+        <div class="insight-card">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            <h3>Health Tip</h3>
+
+            <p>Take medicines with adequate water and maintain a balanced diet.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        CONNECTED PHARMACY
+========================================== -->
+
+<section class="pharmacy-section">
+
+    <div class="section-title">
+
+        <h2>Connected Pharmacy</h2>
+
+        <p>Order medicines directly from partnered pharmacies.</p>
+
+    </div>
+
+    <div class="pharmacy-grid">
+
+        <div class="pharmacy-card">
+
+            <i class="fa-solid fa-store"></i>
+
+            <h3>Apollo Pharmacy</h3>
+
+            <p>Home Delivery Available</p>
+
+            <button>Order Medicines</button>
+
+        </div>
+
+        <div class="pharmacy-card">
+
+            <i class="fa-solid fa-prescription-bottle-medical"></i>
+
+            <h3>MedPlus Pharmacy</h3>
+
+            <p>Pickup in 20 Minutes</p>
+
+            <button>Order Medicines</button>
+
+        </div>
+
+        <div class="pharmacy-card">
+
+            <i class="fa-solid fa-truck-medical"></i>
+
+            <h3>NetMeds</h3>
+
+            <p>Express Delivery</p>
+
+            <button>Track Orders</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        PRESCRIPTION ANALYTICS
+========================================== -->
+
+<section class="analytics">
+
+    <div class="section-title">
+
+        <h2>Prescription Analytics</h2>
+
+        <p>Your medication statistics.</p>
+
+    </div>
+
+    <div class="analytics-grid">
+
+        <div class="analytics-card">
+
+            <h3>Active Medicines</h3>
+
+            <h1>05</h1>
+
+            <span>Currently Taking</span>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <h3>Completed Courses</h3>
+
+            <h1>24</h1>
+
+            <span>Successfully Finished</span>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <h3>Adherence</h3>
+
+            <h1>96%</h1>
+
+            <span>Excellent</span>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <h3>Missed Doses</h3>
+
+            <h1>02</h1>
+
+            <span>Last 30 Days</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        UPLOAD PRESCRIPTION
+========================================== -->
+
+<section class="upload-prescription">
+
+    <div class="section-title">
+
+        <h2>Upload Prescription</h2>
+
+        <p>Add prescriptions securely for future reference.</p>
+
+    </div>
+
+    <div class="upload-box">
+
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+
+        <h3>Drag & Drop Prescription Here</h3>
+
+        <p>Supported Formats: PDF, JPG, PNG, DOCX</p>
+
+        <button>
+
+            Choose File
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        FOOTER
+========================================== -->
+
+<footer class="footer">
+
+    <p>
+
+        © 2026 Medicare+ | Prescription Management System
+
+    </p>
+
+</footer>
+
+<!-- END OF HTML -->
+
+</main>
+
+</div>
+
+<script src="../js/Prescription.js"></script>
+
+</body>
+</html>

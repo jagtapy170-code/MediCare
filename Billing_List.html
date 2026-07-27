@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare+ | Billing & Invoicing</title>
+    <link rel="stylesheet" href="../css/Receptionist_Dashbaord.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ==========================
+            SIDEBAR
+    ========================== -->
+        <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-hospital-user"></i>
+
+            <h2>Medicare+</h2>
+
+        </div>
+
+        <ul class="menu">
+<li>
+                <a href="Receptionist_Dashboard.html">
+                  
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+                </a>
+
+            </li>
+
+              <li>
+                <a href="Register_Patient.html">
+
+                <i class="fa-solid fa-user-plus"></i>
+                
+
+                <span>Register Patient</span>
+                   </a>
+            </li>
+
+            <li>
+                <a href="Patients_List.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>Patients</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Appointments_List.html">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>Appointments</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Doctors_List.html">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <span>Doctors</span>
+                </a>
+
+            </li>
+
+            <li class="active">
+                <a href="Billing_List.html">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>Billing</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Beds_List.html">
+
+                <i class="fa-solid fa-bed"></i>
+
+                <span>Hospital Beds</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Notification.html">
+                       <i class="fa-solid fa-bell"></i>
+
+                <span>Notifications</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Setting.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+                </a>
+
+            </li>
+
+        </ul>
+
+        <div class="logout">
+            <a href="Reciptionist_login.html">
+            <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+                </button>
+                </a>
+
+        </div>
+
+    </aside>
+    <!-- ==========================
+            MAIN CONTENT
+    ========================== -->
+    <main class="main-content">
+
+        <!-- ==========================
+                TOPBAR
+        ========================== -->
+        <header class="topbar">
+            <div class="welcome">
+                <h1>Billing & Financial Management</h1>
+                <p>Process patient payments, issue invoices, track pending dues, and verify insurance approvals.</p>
+            </div>
+
+            <div class="top-actions">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="billingSearch" placeholder="Search Invoice #, UHID, Patient Name...">
+                </div>
+
+                <button class="icon-btn" aria-label="Notifications">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+
+                <button class="icon-btn" aria-label="Messages">
+                    <i class="fa-solid fa-envelope"></i>
+                </button>
+
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <div class="profile">
+                    <img src="https://ui-avatars.com/api/?name=Receptionist&background=7c3aed&color=ffffff" alt="Receptionist Avatar">
+                    <div>
+                        <h4>Reception Desk</h4>
+                        <small>ID : REC-101</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ==========================
+                BILLING CONTENT
+        ========================== -->
+        <section class="content">
+
+            <!-- Revenue Overview -->
+            <div class="cards">
+                <div class="card payment-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Today's Collection</h3>
+                        <h2>₹ 1,48,500</h2>
+                        <p>Cash & Digital Transactions</p>
+                    </div>
+                </div>
+
+                <div class="card appointment-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Pending Invoices</h3>
+                        <h2>₹ 32,100</h2>
+                        <p>12 Unpaid Statements</p>
+                    </div>
+                </div>
+
+                <div class="card bed-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Insurance Claims</h3>
+                        <h2>₹ 2,15,000</h2>
+                        <p>5 Claims Pending Verification</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Panel -->
+            <div class="panel" style="margin-top: 25px;">
+                <div class="section-title">
+                    <h2>Invoice Filters & Create Bill</h2>
+                    <button class="btn-primary-gradient" style="padding: 10px 18px; font-size: 13px;" id="btnCreateInvoice">
+                        <i class="fa-solid fa-receipt"></i> Create New Invoice
+                    </button>
+                </div>
+
+                <div class="status-grid" style="grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; color: var(--text-light); display: block; margin-bottom: 5px;">Payment Status</label>
+                        <select id="filterPaymentStatus" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 10px;">
+                            <option value="all">All Statuses</option>
+                            <option value="paid">Paid</option>
+                            <option value="pending">Pending</option>
+                            <option value="claimed">Insurance Claimed</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; color: var(--text-light); display: block; margin-bottom: 5px;">Billing Category</label>
+                        <select id="filterCategory" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 10px;">
+                            <option value="all">All Categories</option>
+                            <option value="opd">OPD Consultation</option>
+                            <option value="ipd">IPD Room & Care</option>
+                            <option value="lab">Lab & Diagnostics</option>
+                            <option value="pharmacy">Pharmacy</option>
+                        </select>
+                    </div>
+
+                    <div style="display: flex; align-items: flex-end;">
+                        <button class="view-btn" style="width: 100%; padding: 11px; text-align: center;" id="btnApplyBillingFilter">
+                            <i class="fa-solid fa-filter"></i> Apply Filter
+                        </button>
+                    </div>
+                </div>
+            </div>
+<!-- Billing & Invoices Table Panel -->
+            <div class="panel" style="margin-top: 25px;">
+                <div class="section-title">
+                    <h2>Invoice History & Transactions</h2>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="view-btn" style="background: #e2e8f0; color: #1e293b;" aria-label="Export Financial Report">
+                            <i class="fa-solid fa-file-excel"></i> Export Ledger
+                        </button>
+                        <button class="view-btn" aria-label="Print Report">
+                            <i class="fa-solid fa-print"></i> Daily Summary
+                        </button>
+                    </div>
+                </div>
+
+                <table class="management-table">
+                    <thead>
+                        <tr>
+                            <th>Invoice ID</th>
+                            <th>Date & Time</th>
+                            <th>Patient Details</th>
+                            <th>Category</th>
+                            <th>Total Amount</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>#INV-2026-0891</strong>
+                                <div style="font-size: 11px; color: var(--text-light);">Mode: UPI / QR</div>
+                            </td>
+                            <td>
+                                <div>24 Jul 2026</div>
+                                <small style="color: var(--text-light);">10:15 AM</small>
+                            </td>
+                            <td>
+                                <div>
+                                    <strong style="font-size: 15px;">Rahul Sharma</strong>
+                                    <div style="font-size: 12px; color: var(--text-light);">UHID: MED-2026-8941</div>
+                                </div>
+                            </td>
+                            <td>OPD Consultation</td>
+                            <td><strong>₹ 800.00</strong></td>
+                            <td><span class="paid-status">Paid</span></td>
+                            <td>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px;" title="Print Receipt">
+                                    <i class="fa-solid fa-print"></i>
+                                </button>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px; background: var(--secondary);" title="Email Receipt">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>#INV-2026-0890</strong>
+                                <div style="font-size: 11px; color: var(--text-light);">Mode: Cash Counter</div>
+                            </td>
+                            <td>
+                                <div>24 Jul 2026</div>
+                                <small style="color: var(--text-light);">09:45 AM</small>
+                            </td>
+                            <td>
+                                <div>
+                                    <strong style="font-size: 15px;">Anjali Mehta</strong>
+                                    <div style="font-size: 12px; color: var(--text-light);">UHID: MED-2026-8940</div>
+                                </div>
+                            </td>
+                            <td>Lab & Diagnostics</td>
+                            <td><strong>₹ 2,450.00</strong></td>
+                            <td><span class="paid-status">Paid</span></td>
+                            <td>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px;" title="Print Receipt">
+                                    <i class="fa-solid fa-print"></i>
+                                </button>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px; background: var(--secondary);" title="Email Receipt">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>#INV-2026-0885</strong>
+                                <div style="font-size: 11px; color: var(--text-light);">Claim ID: STAR-9081</div>
+                            </td>
+                            <td>
+                                <div>23 Jul 2026</div>
+                                <small style="color: var(--text-light);">04:30 PM</small>
+                            </td>
+                            <td>
+                                <div>
+                                    <strong style="font-size: 15px;">Rohan Gupta</strong>
+                                    <div style="font-size: 12px; color: var(--text-light);">UHID: MED-2026-8935</div>
+                                </div>
+                            </td>
+                            <td>IPD Room & Care</td>
+                            <td><strong>₹ 45,000.00</strong></td>
+                            <td><span class="pending-status">Insurance Claimed</span></td>
+                            <td>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px; background: var(--warning);" title="Process Payment">
+                                    <i class="fa-solid fa-credit-card"></i>
+                                </button>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px;" title="Print Invoice">
+                                    <i class="fa-solid fa-print"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>#INV-2026-0880</strong>
+                                <div style="font-size: 11px; color: var(--text-light);">Due Payment</div>
+                            </td>
+                            <td>
+                                <div>22 Jul 2026</div>
+                                <small style="color: var(--text-light);">02:10 PM</small>
+                            </td>
+                            <td>
+                                <div>
+                                    <strong style="font-size: 15px;">Vikas Kumar</strong>
+                                    <div style="font-size: 12px; color: var(--text-light);">UHID: MED-2026-8939</div>
+                                </div>
+                            </td>
+                            <td>Pharmacy</td>
+                            <td><strong>₹ 1,200.00</strong></td>
+                            <td><span class="pending-status">Pending</span></td>
+                            <td>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px; background: var(--primary);" title="Collect Cash">
+                                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Dashboard Footer -->
+            <footer class="dashboard-footer">
+                <p>© 2026 Medicare+ Hospital Management System</p>
+                <p>Billing & Financial Management | Version 1.0</p>
+            </footer>
+
+        </section>
+    </main>
+</div>
+
+<!-- Connect Engine JS -->
+<script src="../js/Billing_List.js"></script>
+</body>
+</html>

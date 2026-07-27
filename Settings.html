@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Settings | Medicare+</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="../css/Settings.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-heart-pulse"></i>
+
+<h2>Medicare<span>+</span></h2>
+
+</div>
+
+<ul class="menu">
+
+<li>
+<a href="Patient_dashboard.html">
+<i class="fa-solid fa-house"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li>
+<a href="Appointment.html">
+<i class="fa-solid fa-calendar-check"></i><span>Appointments</span>
+</a>
+</li>
+
+<li>
+<a href="Medical_Records.html">
+ <i class="fa-solid fa-user-doctor"></i>
+<span>Medical Records</span>
+</a>
+</li>
+
+<li>
+<a href="Health_Tracker.html">
+<i class="fa-solid fa-file-medical"></i>
+<span>Health Tracker</span>
+</a>
+</li>
+
+<li>
+<a href="Prescription.html">
+<i class="fa-solid fa-pills"></i>
+<span>Prescriptions</span>
+</a>
+</li>
+
+<li>
+<a href="Patient_Lab_Report.html">
+<i class="fa-solid fa-flask"></i>
+<span>Lab Reports</span>
+</a>
+</li>
+
+<li>
+<a href="Billing.html">
+<i class="fa-solid fa-chart-line"></i>
+<span>Billing</span>
+</a>
+</li>
+
+<li>
+<a href="Notifications.html">
+ <i class="fa-solid fa-heart-circle-check"></i>
+<span>Notifications</span>
+</a>
+</li>
+
+<li>
+<a href="AI Assistant.html">
+<i class="fa-solid fa-robot"></i>
+<span>AI Assistant</span>
+</a>
+</li>
+
+<li class="active">
+<a href="Settings.html">
+<i class="fa-solid fa-gear"></i>
+<span>Settings</span>
+</a>
+</li>
+
+</ul>
+
+<div class="logout">
+
+<a href="patient-login.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+</div>
+
+</aside>
+
+<!-- Main -->
+
+<main class="main-content">
+
+<header class="topbar">
+
+<div class="page-title">
+
+<h1>Settings</h1>
+
+<p>
+
+Manage your Medicare+ account preferences.
+
+</p>
+
+</div>
+
+<div class="top-actions">
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input type="text"
+placeholder="Search settings...">
+
+</div>
+
+<div class="profile">
+
+<img src="https://i.pravatar.cc/150?img=12">
+
+<div>
+
+<h4>John Doe</h4>
+
+<p>Premium Member</p>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- Hero -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>
+
+Account
+
+<span>Settings</span>
+
+</h1>
+
+<p>
+
+Manage your profile, security, preferences and healthcare account.
+
+</p>
+
+<button class="save-btn">
+
+<i class="fa-solid fa-floppy-disk"></i>
+
+Save Changes
+
+</button>
+
+</div>
+
+<div class="hero-right">
+
+<div class="profile-card">
+
+<img src="https://i.pravatar.cc/180?img=12">
+
+<h2>John Doe</h2>
+
+<p>Premium Patient</p>
+
+<button>
+
+<i class="fa-solid fa-camera"></i>
+
+Upload Photo
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROFILE SECTION START -->
+
+<!-- ==========================================
+        PERSONAL INFORMATION
+========================================== -->
+
+<section class="profile-settings">
+
+<div class="section-header">
+
+<h2>Personal Information</h2>
+
+<p>Update your personal details.</p>
+
+</div>
+
+<div class="settings-card">
+
+<div class="form-grid">
+
+<div class="input-group">
+
+<label>Full Name</label>
+
+<input
+type="text"
+value="John Doe">
+
+</div>
+
+<div class="input-group">
+
+<label>Email Address</label>
+
+<input
+type="email"
+value="john@example.com">
+
+</div>
+
+<div class="input-group">
+
+<label>Phone Number</label>
+
+<input
+type="text"
+value="+91 9876543210">
+
+</div>
+
+<div class="input-group">
+
+<label>Date of Birth</label>
+
+<input
+type="date"
+value="1998-05-14">
+
+</div>
+
+<div class="input-group">
+
+<label>Gender</label>
+
+<select>
+
+<option>Male</option>
+
+<option>Female</option>
+
+<option>Other</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Blood Group</label>
+
+<select>
+
+<option>O+</option>
+
+<option>A+</option>
+
+<option>B+</option>
+
+<option>AB+</option>
+
+<option>O-</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Emergency Contact</label>
+
+<input
+type="text"
+placeholder="+91 98XXXXXXXX">
+
+</div>
+
+<div class="input-group">
+
+<label>Address</label>
+
+<input
+type="text"
+placeholder="Enter your address">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        SECURITY
+========================================== -->
+
+<section class="security-section">
+
+<div class="section-header">
+
+<h2>Security</h2>
+
+<p>Protect your Medicare+ account.</p>
+
+</div>
+
+<div class="settings-card">
+
+<div class="form-grid">
+
+<div class="input-group">
+
+<label>Current Password</label>
+
+<input
+type="password">
+
+</div>
+
+<div class="input-group">
+
+<label>New Password</label>
+
+<input
+type="password">
+
+</div>
+
+<div class="input-group">
+
+<label>Confirm Password</label>
+
+<input
+type="password">
+
+</div>
+
+<div class="toggle-box">
+
+<label>
+
+Enable Two-Factor Authentication
+
+</label>
+
+<label class="switch">
+
+<input type="checkbox">
+
+<span class="slider"></span>
+
+</label>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        NOTIFICATIONS
+========================================== -->
+
+<section class="notification-settings">
+
+<div class="section-header">
+
+<h2>Notification Preferences</h2>
+
+</div>
+
+<div class="settings-card">
+
+<div class="toggle-box">
+
+<label>Email Notifications</label>
+
+<label class="switch">
+
+<input type="checkbox" checked>
+
+<span class="slider"></span>
+
+</label>
+
+</div>
+
+<div class="toggle-box">
+
+<label>SMS Notifications</label>
+
+<label class="switch">
+
+<input type="checkbox" checked>
+
+<span class="slider"></span>
+
+</label>
+
+</div>
+
+<div class="toggle-box">
+
+<label>Medicine Reminders</label>
+
+<label class="switch">
+
+<input type="checkbox" checked>
+
+<span class="slider"></span>
+
+</label>
+
+</div>
+
+<div class="toggle-box">
+
+<label>Appointment Alerts</label>
+
+<label class="switch">
+
+<input type="checkbox" checked>
+
+<span class="slider"></span>
+
+</label>
+
+</div>
+
+<div class="toggle-box">
+
+<label>Lab Report Alerts</label>
+
+<label class="switch">
+
+<input type="checkbox">
+
+<span class="slider"></span>
+
+</label>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        APPEARANCE
+========================================== -->
+
+<section class="appearance-section">
+
+<div class="section-header">
+
+<h2>Appearance</h2>
+
+</div>
+
+<div class="settings-card">
+
+<div class="theme-grid">
+
+<button class="theme-btn active-theme">
+
+🌞 Light Mode
+
+</button>
+
+<button class="theme-btn">
+
+🌙 Dark Mode
+
+</button>
+
+<button class="theme-btn">
+
+💙 Blue Theme
+
+</button>
+
+<button class="theme-btn">
+
+🟢 Green Theme
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        HEALTH PREFERENCES
+========================================== -->
+
+<section class="health-section">
+
+<div class="section-header">
+
+<h2>Health Preferences</h2>
+
+</div>
+
+<div class="settings-card">
+
+<div class="form-grid">
+
+<div class="input-group">
+
+<label>Preferred Doctor</label>
+
+<input
+type="text"
+placeholder="Dr. Sarah Wilson">
+
+</div>
+
+<div class="input-group">
+
+<label>Preferred Hospital</label>
+
+<input
+type="text"
+placeholder="Medicare+ Hospital">
+
+</div>
+
+<div class="input-group">
+
+<label>Allergies</label>
+
+<input
+type="text"
+placeholder="Penicillin">
+
+</div>
+
+<div class="input-group">
+
+<label>Chronic Diseases</label>
+
+<input
+type="text"
+placeholder="None">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        PREMIUM MEMBERSHIP
+========================================== -->
+
+<section class="premium-section">
+
+<div class="premium-card">
+
+<i class="fa-solid fa-crown"></i>
+
+<h2>Premium Membership</h2>
+
+<p>
+
+Your current plan:
+
+<strong>Gold Premium</strong>
+
+</p>
+
+<ul>
+
+<li>✔ Unlimited Doctor Consultations</li>
+
+<li>✔ Priority Appointments</li>
+
+<li>✔ AI Health Monitoring</li>
+
+<li>✔ Free Annual Health Checkup</li>
+
+</ul>
+
+<button class="upgrade-btn">
+
+Upgrade Membership
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        ACCOUNT ACTIONS
+========================================== -->
+
+<section class="danger-zone">
+
+<div class="section-header">
+
+<h2>Account Actions</h2>
+
+</div>
+
+<div class="danger-buttons">
+
+<button class="download-btn">
+
+<i class="fa-solid fa-download"></i>
+
+Download Medical Data
+
+</button>
+
+<button class="logout-btn">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</button>
+
+<button class="delete-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+Delete Account
+
+</button>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<p>
+
+© 2026 Medicare+ | Smart Healthcare Platform
+
+</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="../js/Settings.js"></script>
+
+</body>
+
+</html>

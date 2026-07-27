@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Medicare+ Patient Dashboard</title>
+
+<link rel="stylesheet" href="../css/Patient_dashboard.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<div class="logo-icon">
+<i class="fa-solid fa-heart-pulse"></i>
+</div>
+
+<div>
+<h2>Medicare+</h2>
+<p>Patient Portal</p>
+</div>
+
+</div>
+
+<!-- Profile -->
+
+<div class="profile-card">
+
+<img src="https://i.pravatar.cc/150?img=32" alt="patient">
+
+<h3>Steve Smith</h3>
+
+<span>Patient ID : MED20341</span>
+
+<div class="health-score">
+
+<h1>94%</h1>
+
+<p>Health Score</p>
+
+</div>
+
+</div>
+
+<!-- Navigation -->
+
+<ul class="menu">
+
+<li class="active">
+<a href="#">
+<i class="fa-solid fa-house"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li>
+<a href="Appointment.html">
+<i class="fa-solid fa-calendar-check"></i><span>Appointments</span>
+</a>
+</li>
+
+<li>
+<a href="Medical_Records.html">
+ <i class="fa-solid fa-user-doctor"></i>
+<span>Medical Records</span>
+</a>
+</li>
+
+<li>
+<a href="Health_Tracker.html">
+<i class="fa-solid fa-file-medical"></i>
+<span>Health Tracker</span>
+</a>
+</li>
+
+<li>
+<a href="Prescription.html">
+<i class="fa-solid fa-pills"></i>
+<span>Prescriptions</span>
+</a>
+</li>
+
+<li>
+<a href="Patient_Lab_Report.html">
+<i class="fa-solid fa-flask"></i>
+<span>Lab Reports</span>
+</a>
+</li>
+
+<li>
+<a href="Billing.html">
+<i class="fa-solid fa-chart-line"></i>
+<span>Billing</span>
+</a>
+</li>
+
+<li>
+<a href="Notifications.html">
+ <i class="fa-solid fa-heart-circle-check"></i>
+<span>Notifications</span>
+</a>
+</li>
+
+<li>
+<a href="AI Assistant.html">
+<i class="fa-solid fa-robot"></i>
+<span>AI Assistant</span>
+</a>
+</li>
+
+<li>
+<a href="Settings.html">
+<i class="fa-solid fa-gear"></i>
+<span>Settings</span>
+</a>
+</li>
+
+</ul>
+
+<div class="logout">
+
+<a href="patient-login.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+</div>
+
+</aside>
+
+<!-- ================= MAIN ================= -->
+
+<main class="main">
+
+<!-- Topbar -->
+
+<header class="topbar">
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search doctors, medicines, reports...">
+
+</div>
+
+<div class="top-actions">
+
+<button>
+<i class="fa-solid fa-bell"></i>
+</button>
+
+<button>
+<i class="fa-solid fa-envelope"></i>
+</button>
+
+<button>
+<i class="fa-solid fa-moon"></i>
+</button>
+
+<img
+src="https://i.pravatar.cc/100?img=32">
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="tag">
+
+<i class="fa-solid fa-shield-heart"></i>
+
+Welcome Back
+
+</span>
+
+<h1>
+
+Good Morning,
+
+<span>Krishna 👋</span>
+
+</h1>
+
+<p>
+
+Your health journey is progressing well.
+You have completed 94% of today's health goals.
+
+Keep following your medication schedule,
+drink enough water,
+and complete today's walk.
+
+</p>
+
+<div class="hero-buttons">
+
+<button class="primary-btn">
+
+Book Appointment
+
+</button>
+
+<button class="secondary-btn">
+
+View Reports
+
+</button>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg" alt="doctor">
+
+</div>
+
+</section>
+
+<!-- ===== NEXT PART STARTS HERE ===== -->
+ <!-- ===============================
+        HEALTH OVERVIEW
+================================ -->
+
+<section class="overview">
+
+<div class="section-header">
+
+<h2>
+<i class="fa-solid fa-heart-pulse"></i>
+Health Overview
+</h2>
+
+<a href="#">
+View Details
+</a>
+
+</div>
+
+<div class="overview-grid">
+
+<!-- Heart Rate -->
+
+<div class="overview-card">
+
+<div class="card-icon red">
+
+<i class="fa-solid fa-heart"></i>
+
+</div>
+
+<div class="card-content">
+
+<h3>Heart Rate</h3>
+
+<h1>76 BPM</h1>
+
+<p class="positive">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+Normal
+
+</p>
+
+</div>
+
+</div>
+
+<!-- Blood Pressure -->
+
+<div class="overview-card">
+
+<div class="card-icon blue">
+
+<i class="fa-solid fa-droplet"></i>
+
+</div>
+
+<div class="card-content">
+
+<h3>Blood Pressure</h3>
+
+<h1>120/80</h1>
+
+<p class="positive">
+
+Optimal
+
+</p>
+
+</div>
+
+</div>
+
+<!-- Oxygen -->
+
+<div class="overview-card">
+
+<div class="card-icon green">
+
+<i class="fa-solid fa-lungs"></i>
+
+</div>
+
+<div class="card-content">
+
+<h3>Oxygen</h3>
+
+<h1>98%</h1>
+
+<p class="positive">
+
+Healthy
+
+</p>
+
+</div>
+
+</div>
+
+<!-- BMI -->
+
+<div class="overview-card">
+
+<div class="card-icon purple">
+
+<i class="fa-solid fa-weight-scale"></i>
+
+</div>
+
+<div class="card-content">
+
+<h3>BMI</h3>
+
+<h1>22.4</h1>
+
+<p>
+
+Normal Weight
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ============================
+        VITAL SIGNS
+============================== -->
+
+<section class="vitals">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fa-solid fa-chart-simple"></i>
+
+Today's Progress
+
+</h2>
+
+</div>
+
+<div class="vital-grid">
+
+<div class="progress-card">
+
+<h3>Water Intake</h3>
+
+<div class="circle">
+
+75%
+
+</div>
+
+<p>
+
+2.2L of 3L completed
+
+</p>
+
+</div>
+
+<div class="progress-card">
+
+<h3>Sleep</h3>
+
+<div class="circle blue">
+
+86%
+
+</div>
+
+<p>
+
+6.9 Hours
+
+</p>
+
+</div>
+
+<div class="progress-card">
+
+<h3>Steps</h3>
+
+<div class="circle green">
+
+81%
+
+</div>
+
+<p>
+
+8100 / 10000
+
+</p>
+
+</div>
+
+<div class="progress-card">
+
+<h3>Calories</h3>
+
+<div class="circle orange">
+
+67%
+
+</div>
+
+<p>
+
+1670 kcal
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ============================
+      AI PREDICTION
+============================== -->
+
+<section class="prediction">
+
+<div class="prediction-card">
+
+<div class="prediction-left">
+
+<h2>
+
+<i class="fa-solid fa-robot"></i>
+
+AI Health Assistant
+
+</h2>
+
+<p>
+
+Your vitals are stable.
+
+Blood pressure and oxygen level
+are within healthy range.
+
+Continue medication regularly.
+
+</p>
+
+<ul>
+
+<li>
+
+<i class="fa-solid fa-check"></i>
+
+Sleep quality improved
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-check"></i>
+
+Heart rate stable
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-check"></i>
+
+Hydration needs attention
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-check"></i>
+
+Schedule next blood test
+
+</li>
+
+</ul>
+
+<button class="primary-btn">
+
+View AI Report
+
+</button>
+
+</div>
+
+<div class="prediction-right">
+
+<i class="fa-solid fa-brain"></i>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ============================
+      TODAY APPOINTMENT
+============================== -->
+
+<section class="appointment">
+
+<div class="section-header">
+
+<h2>
+
+Today's Appointment
+
+</h2>
+
+</div>
+
+<div class="appointment-card">
+
+<div class="doctor">
+
+<img src="https://i.pravatar.cc/150?img=12">
+
+<div>
+
+<h3>
+
+Dr. Sarah Wilson
+
+</h3>
+
+<p>
+
+Cardiologist
+
+</p>
+
+</div>
+
+</div>
+
+<div class="appointment-info">
+
+<div>
+
+<h4>
+
+Time
+
+</h4>
+
+<p>
+
+10:30 AM
+
+</p>
+
+</div>
+
+<div>
+
+<h4>
+
+Hospital
+
+</h4>
+
+<p>
+
+Apollo Hospital
+
+</p>
+
+</div>
+
+<div>
+
+<h4>
+
+Status
+
+</h4>
+
+<span class="badge">
+
+Confirmed
+
+</span>
+
+</div>
+
+</div>
+
+<button class="primary-btn">
+
+Join Consultation
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ============================
+        ANALYTICS
+============================== -->
+
+<section class="analytics">
+
+<div class="section-header">
+
+<h2>
+
+Health Analytics
+
+</h2>
+
+</div>
+
+<div class="analytics-grid">
+
+<div class="chart-card">
+
+<h3>
+
+Weekly Health Trend
+
+</h3>
+
+<canvas id="healthChart"></canvas>
+
+</div>
+
+<div class="chart-card">
+
+<h3>
+
+Health Score
+
+</h3>
+
+<div class="score-box">
+
+<h1>
+
+94%
+
+</h1>
+
+<p>
+
+Excellent
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== HTML PART 3 STARTS HERE ===== -->
+ <!-- =====================================
+        MEDICINE REMINDERS
+====================================== -->
+
+<section class="medicine-section">
+
+<div class="section-header">
+
+<h2>
+<i class="fa-solid fa-pills"></i>
+Medicine Reminders
+</h2>
+
+<a href="#">View All</a>
+
+</div>
+
+<div class="medicine-grid">
+
+<div class="medicine-card">
+
+<div class="medicine-icon blue">
+<i class="fa-solid fa-capsules"></i>
+</div>
+
+<h3>Paracetamol 500mg</h3>
+
+<p>After Breakfast</p>
+
+<div class="medicine-time">
+8:00 AM
+</div>
+
+<span class="status completed">
+Taken
+</span>
+
+</div>
+
+<div class="medicine-card">
+
+<div class="medicine-icon green">
+<i class="fa-solid fa-tablets"></i>
+</div>
+
+<h3>Vitamin D3</h3>
+
+<p>After Lunch</p>
+
+<div class="medicine-time">
+1:30 PM
+</div>
+
+<span class="status pending">
+Upcoming
+</span>
+
+</div>
+
+<div class="medicine-card">
+
+<div class="medicine-icon red">
+<i class="fa-solid fa-prescription-bottle-medical"></i>
+</div>
+
+<h3>Amoxicillin</h3>
+
+<p>After Dinner</p>
+
+<div class="medicine-time">
+8:30 PM
+</div>
+
+<span class="status pending">
+Pending
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================
+            LAB REPORTS
+====================================== -->
+
+<section class="reports-section">
+
+<div class="section-header">
+
+<h2>
+<i class="fa-solid fa-file-waveform"></i>
+Recent Lab Reports
+</h2>
+
+<a href="#">View All</a>
+
+</div>
+
+<div class="report-card">
+
+<table class="report-table">
+
+<thead>
+
+<tr>
+
+<th>Report</th>
+
+<th>Date</th>
+
+<th>Doctor</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Complete Blood Count</td>
+
+<td>15 Jul 2026</td>
+
+<td>Dr. Sarah Wilson</td>
+
+<td>
+<span class="badge success">
+Normal
+</span>
+</td>
+
+<td>
+
+<button class="table-btn">
+
+Download
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Liver Function Test</td>
+
+<td>08 Jul 2026</td>
+
+<td>Dr. Michael</td>
+
+<td>
+
+<span class="badge warning">
+
+Review
+
+</span>
+
+</td>
+
+<td>
+
+<button class="table-btn">
+
+View
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Vitamin Profile</td>
+
+<td>02 Jul 2026</td>
+
+<td>Dr. Emma</td>
+
+<td>
+
+<span class="badge success">
+
+Completed
+
+</span>
+
+</td>
+
+<td>
+
+<button class="table-btn">
+
+Download
+
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- =====================================
+          PRESCRIPTIONS
+====================================== -->
+
+<section class="prescription-section">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fa-solid fa-prescription"></i>
+
+Active Prescriptions
+
+</h2>
+
+<a href="#">
+
+Manage
+
+</a>
+
+</div>
+
+<div class="prescription-grid">
+
+<div class="prescription-card">
+
+<div class="prescription-top">
+
+<i class="fa-solid fa-user-doctor"></i>
+
+<div>
+
+<h3>
+
+Dr. Sarah Wilson
+
+</h3>
+
+<p>
+
+Cardiologist
+
+</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<p>
+
+Prescription valid until
+
+<strong>
+
+30 August 2026
+
+</strong>
+
+</p>
+
+<button class="primary-btn">
+
+View Prescription
+
+</button>
+
+</div>
+
+<div class="prescription-card">
+
+<div class="prescription-top">
+
+<i class="fa-solid fa-user-doctor"></i>
+
+<div>
+
+<h3>
+
+Dr. Michael Brown
+
+</h3>
+
+<p>
+
+General Physician
+
+</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<p>
+
+Prescription valid until
+
+<strong>
+
+18 September 2026
+
+</strong>
+
+</p>
+
+<button class="primary-btn">
+
+View Prescription
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================
+       HEALTH SUMMARY
+====================================== -->
+
+<section class="summary-section">
+
+<div class="summary-card">
+
+<h2>
+
+Today's Health Summary
+
+</h2>
+
+<div class="summary-list">
+
+<div class="summary-item">
+
+<span>Heart Rate</span>
+
+<strong>76 BPM</strong>
+
+</div>
+
+<div class="summary-item">
+
+<span>Blood Pressure</span>
+
+<strong>120 / 80</strong>
+
+</div>
+
+<div class="summary-item">
+
+<span>Sleep</span>
+
+<strong>6h 54m</strong>
+
+</div>
+
+<div class="summary-item">
+
+<span>Water Intake</span>
+
+<strong>2.2 Litres</strong>
+
+</div>
+
+<div class="summary-item">
+
+<span>Calories Burned</span>
+
+<strong>1648 kcal</strong>
+
+</div>
+
+<div class="summary-item">
+
+<span>Overall Health</span>
+
+<strong style="color:#22c55e">
+
+Excellent
+
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========= HTML PART 3B STARTS HERE ========= -->
+ <!-- ============================================
+                DOCTORS DIRECTORY
+============================================= -->
+
+<section class="doctor-section">
+
+<div class="section-header">
+
+<h2>
+<i class="fa-solid fa-user-doctor"></i>
+Top Doctors
+</h2>
+
+<a href="#">View All</a>
+
+</div>
+
+<div class="doctor-grid">
+
+<div class="doctor-card">
+
+<img src="https://i.pravatar.cc/200?img=15">
+
+<h3>Dr. Sarah Wilson</h3>
+
+<span>Cardiologist</span>
+
+<p>
+15 Years Experience
+</p>
+
+<div class="doctor-rating">
+
+<i class="fas fa-star"></i>
+4.9
+
+</div>
+
+<button class="primary-btn">
+
+Book Appointment
+
+</button>
+
+</div>
+
+<div class="doctor-card">
+
+<img src="https://i.pravatar.cc/200?img=48">
+
+<h3>Dr. Michael Brown</h3>
+
+<span>General Physician</span>
+
+<p>
+12 Years Experience
+</p>
+
+<div class="doctor-rating">
+
+<i class="fas fa-star"></i>
+4.8
+
+</div>
+
+<button class="primary-btn">
+
+Book Appointment
+
+</button>
+
+</div>
+
+<div class="doctor-card">
+
+<img src="https://i.pravatar.cc/200?img=31">
+
+<h3>Dr. Emma Watson</h3>
+
+<span>Neurologist</span>
+
+<p>
+18 Years Experience
+</p>
+
+<div class="doctor-rating">
+
+<i class="fas fa-star"></i>
+5.0
+
+</div>
+
+<button class="primary-btn">
+
+Book Appointment
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ============================================
+              NEARBY HOSPITALS
+============================================= -->
+
+<section class="hospital-section">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fa-solid fa-hospital"></i>
+
+Nearby Hospitals
+
+</h2>
+
+</div>
+
+<div class="hospital-grid">
+
+<div class="hospital-card">
+
+<img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800">
+
+<div class="hospital-content">
+
+<h3>
+
+Apollo Hospital
+
+</h3>
+
+<p>
+
+📍 2.4 km Away
+
+</p>
+
+<p>
+
+⭐ 4.9 Rating
+
+</p>
+
+<button class="primary-btn">
+
+Navigate
+
+</button>
+
+</div>
+
+</div>
+
+<div class="hospital-card">
+
+<img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800">
+
+<div class="hospital-content">
+
+<h3>
+
+Fortis Hospital
+
+</h3>
+
+<p>
+
+📍 4.1 km Away
+
+</p>
+
+<p>
+
+⭐ 4.8 Rating
+
+</p>
+
+<button class="primary-btn">
+
+Navigate
+
+</button>
+
+</div>
+
+</div>
+
+<div class="hospital-card">
+
+<img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800">
+
+<div class="hospital-content">
+
+<h3>
+
+AIIMS Medical Center
+
+</h3>
+
+<p>
+
+📍 5.7 km Away
+
+</p>
+
+<p>
+
+⭐ 5.0 Rating
+
+</p>
+
+<button class="primary-btn">
+
+Navigate
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ============================================
+              MEDICAL TIMELINE
+============================================= -->
+
+<section class="timeline-section">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fa-solid fa-clock-rotate-left"></i>
+
+Medical Timeline
+
+</h2>
+
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+
+<h3>
+
+Blood Test Completed
+
+</h3>
+
+<p>
+
+15 July 2026
+
+</p>
+
+<span>
+
+Results are completely normal.
+
+</span>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+
+<h3>
+
+Cardiology Consultation
+
+</h3>
+
+<p>
+
+08 July 2026
+
+</p>
+
+<span>
+
+Medication Updated.
+
+</span>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+
+<h3>
+
+Health Checkup
+
+</h3>
+
+<p>
+
+30 June 2026
+
+</p>
+
+<span>
+
+Overall Health Excellent.
+
+</span>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+
+<h3>
+
+Vaccination
+
+</h3>
+
+<p>
+
+10 June 2026
+
+</p>
+
+<span>
+
+Influenza Vaccine Completed.
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ============================================
+          UPCOMING APPOINTMENTS
+============================================= -->
+
+<section class="upcoming-section">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fa-solid fa-calendar-days"></i>
+
+Upcoming Appointments
+
+</h2>
+
+</div>
+
+<div class="appointment-list">
+
+<div class="appointment-item">
+
+<i class="fas fa-user-doctor"></i>
+
+<div>
+
+<h3>
+
+Dental Checkup
+
+</h3>
+
+<p>
+
+21 July • 10:00 AM
+
+</p>
+
+</div>
+
+<button class="primary-btn">
+
+Details
+
+</button>
+
+</div>
+
+<div class="appointment-item">
+
+<i class="fas fa-heart-pulse"></i>
+
+<div>
+
+<h3>
+
+Heart Specialist
+
+</h3>
+
+<p>
+
+24 July • 03:30 PM
+
+</p>
+
+</div>
+
+<button class="primary-btn">
+
+Details
+
+</button>
+
+</div>
+
+<div class="appointment-item">
+
+<i class="fas fa-eye"></i>
+
+<div>
+
+<h3>
+
+Eye Examination
+
+</h3>
+
+<p>
+
+30 July • 11:00 AM
+
+</p>
+
+</div>
+
+<button class="primary-btn">
+
+Details
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========= HTML PART 3C STARTS HERE ========= -->
+ <!-- ============================================
+            HEALTH ACHIEVEMENTS
+============================================= -->
+
+<section class="achievement-section">
+
+<div class="section-header">
+<h2>
+<i class="fas fa-trophy"></i>
+Health Achievements
+</h2>
+</div>
+
+<div class="achievement-grid">
+
+<div class="achievement-card">
+<i class="fas fa-fire"></i>
+<h3>30 Day Streak</h3>
+<p>Medication taken on time for 30 consecutive days.</p>
+</div>
+
+<div class="achievement-card">
+<i class="fas fa-person-walking"></i>
+<h3>100K Steps</h3>
+<p>Completed more than 100,000 steps this month.</p>
+</div>
+
+<div class="achievement-card">
+<i class="fas fa-glass-water"></i>
+<h3>Hydration Hero</h3>
+<p>Maintained daily water intake for 2 weeks.</p>
+</div>
+
+<div class="achievement-card">
+<i class="fas fa-heart-circle-check"></i>
+<h3>Healthy Heart</h3>
+<p>Excellent cardiovascular health maintained.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ============================================
+                DAILY GOALS
+============================================= -->
+
+<section class="goal-section">
+
+<div class="section-header">
+<h2>
+<i class="fas fa-bullseye"></i>
+Today's Goals
+</h2>
+</div>
+
+<div class="goal-grid">
+
+<div class="goal-card">
+<h3>💊 Medicines</h3>
+<progress value="100" max="100"></progress>
+<p>Completed</p>
+</div>
+
+<div class="goal-card">
+<h3>🚶 Walk</h3>
+<progress value="82" max="100"></progress>
+<p>8200 / 10000 Steps</p>
+</div>
+
+<div class="goal-card">
+<h3>💧 Water Intake</h3>
+<progress value="72" max="100"></progress>
+<p>2.2L / 3L</p>
+</div>
+
+<div class="goal-card">
+<h3>😴 Sleep</h3>
+<progress value="88" max="100"></progress>
+<p>7h 15m</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ============================================
+            CONNECTED DEVICES
+============================================= -->
+
+<section class="device-section">
+
+<div class="section-header">
+<h2>
+<i class="fas fa-mobile-screen-button"></i>
+Connected Devices
+</h2>
+</div>
+
+<div class="device-grid">
+
+<div class="device-card">
+<i class="fas fa-watch-smart"></i>
+<h3>Apple Watch</h3>
+<p>Connected Successfully</p>
+<span class="device-status">Online</span>
+</div>
+
+<div class="device-card">
+<i class="fas fa-heart-pulse"></i>
+<h3>BP Monitor</h3>
+<p>Last Sync: 10 min ago</p>
+<span class="device-status">Connected</span>
+</div>
+
+<div class="device-card">
+<i class="fas fa-weight-scale"></i>
+<h3>Smart Scale</h3>
+<p>Last Sync: Today</p>
+<span class="device-status">Connected</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- ============================================
+            INSURANCE
+============================================= -->
+
+<section class="insurance-section">
+
+<div class="insurance-card">
+
+<h2>
+<i class="fas fa-shield-heart"></i>
+Health Insurance
+</h2>
+
+<p>
+Provider : Star Health Insurance
+</p>
+
+<p>
+Policy No : SHI-45896321
+</p>
+
+<p>
+Coverage : ₹10,00,000
+</p>
+
+<p>
+Expiry : 18 March 2027
+</p>
+
+<button class="primary-btn">
+
+View Policy
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ============================================
+            EMERGENCY
+============================================= -->
+
+<section class="emergency-section">
+
+<div class="sos-card">
+
+<h2>
+
+🚑 Emergency Assistance
+
+</h2>
+
+<p>
+
+Need urgent medical help?
+
+</p>
+
+<button class="sos-btn">
+
+Call Emergency
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ============================================
+            HEALTH COMMUNITY
+============================================= -->
+
+<section class="community-section">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fas fa-users"></i>
+
+Health Community
+
+</h2>
+
+</div>
+
+<div class="community-grid">
+
+<div class="community-card">
+
+<h3>Heart Care Group ❤️</h3>
+
+<p>
+
+2,145 Members
+
+</p>
+
+<button class="primary-btn">
+
+Join
+
+</button>
+
+</div>
+
+<div class="community-card">
+
+<h3>Diabetes Support</h3>
+
+<p>
+
+3,011 Members
+
+</p>
+
+<button class="primary-btn">
+
+Join
+
+</button>
+
+</div>
+
+<div class="community-card">
+
+<h3>Fitness Community</h3>
+
+<p>
+
+5,890 Members
+
+</p>
+
+<button class="primary-btn">
+
+Join
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ============================================
+            FOOTER
+============================================= -->
+
+<footer class="footer">
+
+<h3>
+
+Medicare+
+
+</h3>
+
+<p>
+
+Empowering Patients Through Smart Healthcare
+
+</p>
+
+<p>
+
+© 2026 Medicare+. All Rights Reserved.
+
+</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<!-- Floating AI Assistant -->
+
+<div class="ai-float">
+
+<i class="fas fa-robot"></i>
+
+</div>
+
+<!-- Scroll Top -->
+
+<div id="scrollTop">
+
+<i class="fas fa-arrow-up"></i>
+
+</div>
+
+<script src="../js/Patient_dashboard.js"></script>
+
+</body>
+
+</html>

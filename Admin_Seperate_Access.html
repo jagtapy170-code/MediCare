@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare+ Admin Dashboard</title>
+
+    <link rel="stylesheet" href="../css/Admin_Seperate_Access.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <i class="fa-solid fa-heart-pulse"></i>
+        <h2>Medicare+</h2>
+    </div>
+
+    <ul>
+
+        <li class="active" data-page="dashboard">
+            <i class="fa-solid fa-chart-line"></i>
+            Dashboard
+        </li>
+
+        <li data-page="doctor">
+            <i class="fa-solid fa-user-doctor"></i>
+            Doctors
+        </li>
+
+        <li data-page="patient">
+            <i class="fa-solid fa-hospital-user"></i>
+            Patients
+        </li>
+
+        <li data-page="receptionist">
+            <i class="fa-solid fa-user-nurse"></i>
+            Receptionists
+        </li>
+
+        <li data-page="hospital">
+            <i class="fa-solid fa-hospital"></i>
+            Hospital
+        </li>
+
+        <li data-page="messages">
+            <i class="fa-solid fa-bullhorn"></i>
+            Admin Messages
+        </li>
+
+       <li data-page="reports">
+    <i class="fa-solid fa-chart-column"></i>
+    Reports
+</li>
+
+<li data-page="settings">
+    <i class="fa-solid fa-gear"></i>
+    Settings
+</li>
+        <li>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </li>
+
+    </ul>
+
+</aside>
+
+<!-- ================= MAIN ================= -->
+
+<div class="main">
+
+    <!-- TOP NAVBAR -->
+
+    <header>
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-search"></i>
+
+            <input
+            type="text"
+            placeholder="Search doctors, patients...">
+
+        </div>
+
+        <div class="top-right">
+
+            <button class="notification">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span>5</span>
+
+            </button>
+
+            <img
+            src="https://i.pravatar.cc/100?img=12"
+            class="profile">
+
+            <div>
+
+                <h4>Administrator</h4>
+                <small>Hospital Admin</small>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- DASHBOARD -->
+
+    <section id="dashboard" class="page active-page">
+
+        <h1>Dashboard Overview</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                <i class="fa-solid fa-user-doctor"></i>
+                <h2 id="doctorCount">120</h2>
+                <p>Doctors</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-hospital-user"></i>
+                <h2 id="patientCount">2548</h2>
+                <p>Patients</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-user-nurse"></i>
+                <h2 id="receptionCount">35</h2>
+                <p>Receptionists</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-calendar-check"></i>
+                <h2>421</h2>
+                <p>Appointments</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-bed"></i>
+                <h2>95</h2>
+                <p>Available Beds</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <h2>8</h2>
+                <p>Emergency Cases</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- DOCTOR -->
+
+    <section id="doctor" class="page">
+
+        <h1>Doctor Management</h1>
+
+      <div class="button-group">
+
+    <button class="primary-btn" id="addDoctorBtn">
+        <i class="fa-solid fa-user-plus"></i>
+        Add Doctor
+    </button>
+
+    <button class="secondary-btn" onclick="openDoctorDashboard()">
+        <i class="fa-solid fa-user-doctor"></i>
+        Doctor Dashboard
+    </button>
+
+</div>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Status</th>
+                <th>Patients</th>
+                <th>Action</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="doctorTable">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- PATIENT -->
+
+    <section id="patient" class="page">
+
+        <h1>Patient Management</h1>
+
+        <div class="button-group">
+
+    <button class="primary-btn" id="addPatientBtn">
+        <i class="fa-solid fa-user-plus"></i>
+        Add Patient
+    </button>
+
+    <button class="secondary-btn" onclick="openPatientDashboard()">
+        <i class="fa-solid fa-hospital-user"></i>
+        Patient Dashboard
+    </button>
+
+</div>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Name</th>
+                <th>Doctor</th>
+                <th>Disease</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="patientTable">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- RECEPTIONIST -->
+
+    <section id="receptionist" class="page">
+
+        <h1>Receptionist Management</h1>
+
+        <div class="button-group">
+
+    <button class="primary-btn" id="addReceptionistBtn">
+        <i class="fa-solid fa-user-plus"></i>
+        Add Receptionist
+    </button>
+
+    <button class="secondary-btn" onclick="openReceptionistDashboard()">
+        <i class="fa-solid fa-user-nurse"></i>
+        Receptionist Dashboard
+    </button>
+
+</div>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Name</th>
+                <th>Shift</th>
+                <th>Contact</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="receptionTable">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- HOSPITAL -->
+
+    <section id="hospital" class="page">
+
+        <h1>Hospital Information</h1>
+
+        <div class="hospital-grid">
+
+            <div class="info-box">
+
+                <h3>General Information</h3>
+
+                <p><b>Name:</b> Medicare+ Hospital</p>
+                <p><b>Address:</b> Pune, Maharashtra</p>
+                <p><b>Email:</b> admin@medicare.com</p>
+                <p><b>Emergency:</b> +91-9999999999</p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h3>Departments</h3>
+
+                <ul>
+
+                    <li>Cardiology</li>
+                    <li>Neurology</li>
+                    <li>Orthopedics</li>
+                    <li>Pediatrics</li>
+                    <li>Dermatology</li>
+                    <li>Radiology</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ADMIN MESSAGE -->
+
+    <section id="messages" class="page">
+
+        <h1>Admin Notice Board</h1>
+
+        <textarea
+        rows="6"
+        placeholder="Write a notice for staff..."></textarea>
+
+        <button class="primary-btn">
+
+            Publish Notice
+
+        </button>
+
+        <div class="notice-list">
+
+            <div class="notice">
+
+                Annual Staff Meeting tomorrow at 10:00 AM.
+
+            </div>
+
+            <div class="notice">
+
+                Emergency Ward renovation starts Monday.
+
+            </div>
+
+            <div class="notice">
+
+                New COVID safety guidelines uploaded.
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="../js/Admin_Seperate_Access.js"></script>
+
+</body>
+</html>

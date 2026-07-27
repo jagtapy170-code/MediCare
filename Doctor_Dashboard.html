@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Medicare+ | Doctor Dashboard</title>
+
+    <link rel="stylesheet" href="../css/Doctor_Dashboard.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ==========================
+            SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-user-doctor"></i>
+
+            <h2>Medicare+</h2>
+
+        </div>
+
+        <ul class="menu">
+
+            <li class="active">
+           
+               <a href="Doctor_Dashboard.html"> 
+                 <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span></a>
+            </li>
+            <li>
+               
+                <a href="appointments.html">
+                <i class="fa-solid fa-calendar-check"></i>
+                 <span>Appointments</span></a>
+            </li>
+            <li>
+                
+                <a href="patients.html">
+               <i class="fa-solid fa-users"></i>
+               <span>My Patients</span></a>
+            </li>
+            <li>
+                
+                <a href="records.html">
+                <i class="fa-solid fa-file-medical"></i>
+                <span>Medical Records</span></a>
+            </li>
+            <li>
+               
+                <a href="prescriptions.html">
+                     <i class="fa-solid fa-prescription-bottle-medical"></i>
+                   <span>Prescriptions</span></a>
+            </li>
+            <li>
+              
+                <a href="lab-reports.html">
+               <i class="fa-solid fa-flask-vial"></i>
+                 <span>Lab Reports</span><a>
+            </li>
+            <li>
+               
+                <a href="emergency.html">
+                    <i class="fa-solid fa-heart-pulse"></i>
+               <span>Emergency</span></a>
+            </li>
+            <li>
+              
+                <a href="analytics.html">
+              <i class="fa-solid fa-chart-line"></i>
+             <span>Analytics</span></a>
+            </li>
+            <li>
+               
+                <a href="Doctor_Settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span></a>
+            </li>
+        </ul>
+<div class="logout">
+
+<a href="Doctor_Login.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+</nav>
+</div>
+    </aside>
+
+
+    <!-- ==========================
+            MAIN CONTENT
+    ========================== -->
+
+    <main class="main-content">
+
+        <!-- ==========================
+                TOPBAR
+        ========================== -->
+
+        <header class="topbar">
+
+            <div class="welcome">
+
+                <h1>
+
+                    Welcome,
+
+                    <span id="doctorName">
+
+                        Dr. John Smith
+
+                    </span>
+
+                </h1>
+
+                <p>
+
+                    Manage appointments, patients, prescriptions and reports efficiently.
+
+                </p>
+
+            </div>
+
+            <div class="top-actions">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Search patient, report, prescription...">
+
+                </div>
+
+                <button class="icon-btn">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </button>
+
+                <button class="icon-btn">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </button>
+
+                <button class="icon-btn" id="themeToggle">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <div class="profile">
+
+                    <img src="https://ui-avatars.com/api/?name=Doctor&background=059669&color=ffffff"
+                        alt="Doctor">
+
+                    <div>
+
+                        <h4>Cardiologist</h4>
+
+                        <small>ID : DOC-101</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ==========================
+                DASHBOARD CONTENT
+        ========================== -->
+
+        <section class="content">
+            <!-- ==================================
+        DASHBOARD OVERVIEW CARDS
+=================================== -->
+
+<div class="cards">
+
+    <!-- Patients Today -->
+
+    <div class="card patient-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-users"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Patients Today</h3>
+
+            <h2>48</h2>
+
+            <p>+8 from yesterday</p>
+
+        </div>
+
+    </div>
+
+    <!-- Today's Appointments -->
+
+    <div class="card appointment-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Appointments</h3>
+
+            <h2>18</h2>
+
+            <p>5 Remaining</p>
+
+        </div>
+
+    </div>
+
+    <!-- Prescriptions -->
+
+    <div class="card prescription-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-prescription-bottle-medical"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Prescriptions</h3>
+
+            <h2>31</h2>
+
+            <p>Issued Today</p>
+
+        </div>
+
+    </div>
+
+    <!-- Lab Reports -->
+
+    <div class="card report-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-flask-vial"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Lab Reports</h3>
+
+            <h2>14</h2>
+
+            <p>Pending Review</p>
+
+        </div>
+
+    </div>
+
+    <!-- Emergency -->
+
+    <div class="card emergency-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-heart-pulse"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Emergency Cases</h3>
+
+            <h2>3</h2>
+
+            <p>High Priority</p>
+
+        </div>
+
+    </div>
+
+    <!-- Patient Satisfaction -->
+
+    <div class="card rating-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-star"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Patient Rating</h3>
+
+            <h2>4.9</h2>
+
+            <p>Excellent</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================
+        QUICK ACTIONS
+=================================== -->
+
+<div class="quick-actions">
+
+    <button>
+
+        <i class="fa-solid fa-user-plus"></i>
+
+        Add Patient Notes
+
+    </button>
+
+    <button>
+
+        <i class="fa-solid fa-file-prescription"></i>
+
+        Write Prescription
+
+    </button>
+
+    <button>
+
+        <i class="fa-solid fa-flask"></i>
+
+        View Lab Reports
+
+    </button>
+
+    <button>
+
+        <i class="fa-solid fa-calendar-plus"></i>
+
+        Manage Schedule
+
+    </button>
+
+    <button>
+
+        <i class="fa-solid fa-video"></i>
+
+        Start Consultation
+
+    </button>
+
+    <button>
+
+        <i class="fa-solid fa-print"></i>
+
+        Print Prescription
+
+    </button>
+
+</div>
+
+
+
+<!-- ==================================
+        TODAY'S MEDICAL STATUS
+=================================== -->
+
+<div class="hospital-status">
+
+    <div class="section-title">
+
+        <h2>Today's Medical Overview</h2>
+
+        <a href="#">View Report</a>
+
+    </div>
+
+    <div class="status-grid">
+
+        <div class="status-box">
+
+            <i class="fa-solid fa-user-clock"></i>
+
+            <h3>Waiting Patients</h3>
+
+            <h2>12</h2>
+
+        </div>
+
+        <div class="status-box">
+
+            <i class="fa-solid fa-stethoscope"></i>
+
+            <h3>Consultations</h3>
+
+            <h2>29</h2>
+
+        </div>
+
+        <div class="status-box">
+
+            <i class="fa-solid fa-file-medical"></i>
+
+            <h3>Reports Reviewed</h3>
+
+            <h2>17</h2>
+
+        </div>
+
+        <div class="status-box">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h3>Treatments Completed</h3>
+
+            <h2>24</h2>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ==================================
+        PATIENT LIST & PRESCRIPTIONS
+=================================== -->
+
+<div class="management-grid">
+
+    <!-- Today's Patients -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Today's Patients</h2>
+
+            <button class="view-btn">View All</button>
+
+        </div>
+
+        <table class="management-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Patient</th>
+                    <th>Age</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>PT-101</td>
+                    <td>Rahul Sharma</td>
+                    <td>35</td>
+                    <td><span class="waiting-status">Waiting</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>PT-102</td>
+                    <td>Anjali Mehta</td>
+                    <td>29</td>
+                    <td><span class="consulting-status">Consulting</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>PT-103</td>
+                    <td>Rohan Gupta</td>
+                    <td>41</td>
+                    <td><span class="completed-status">Completed</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>PT-104</td>
+                    <td>Neha Verma</td>
+                    <td>52</td>
+                    <td><span class="waiting-status">Waiting</span></td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <!-- Digital Prescription -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Digital Prescription</h2>
+
+            <button class="view-btn">Save</button>
+
+        </div>
+
+        <form class="prescription-form">
+
+            <input
+                type="text"
+                placeholder="Patient Name">
+
+            <input
+                type="text"
+                placeholder="Diagnosis">
+
+            <input
+                type="text"
+                placeholder="Medicine Name">
+
+            <input
+                type="text"
+                placeholder="Dosage">
+
+            <input
+                type="text"
+                placeholder="Duration">
+
+            <textarea
+                rows="5"
+                placeholder="Additional Instructions"></textarea>
+
+            <button
+                type="submit"
+                class="prescription-btn">
+
+                <i class="fa-solid fa-file-prescription"></i>
+
+                Generate Prescription
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================
+        LAB REPORTS & PATIENT VITALS
+=================================== -->
+
+<div class="management-grid">
+
+    <!-- Lab Reports -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Latest Lab Reports</h2>
+
+            <button class="view-btn">View All</button>
+
+        </div>
+
+        <table class="management-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Patient</th>
+                    <th>Test</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Rahul Sharma</td>
+                    <td>Blood Test</td>
+                    <td><span class="completed-status">Ready</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Anjali Mehta</td>
+                    <td>X-Ray</td>
+                    <td><span class="waiting-status">Pending</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Neha Verma</td>
+                    <td>ECG</td>
+                    <td><span class="consulting-status">Review</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Vikas Kumar</td>
+                    <td>MRI</td>
+                    <td><span class="completed-status">Ready</span></td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <!-- Patient Vitals -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Current Patient Vitals</h2>
+
+            <button class="view-btn">Refresh</button>
+
+        </div>
+
+        <div class="vitals-list">
+
+            <div class="vital-item">
+
+                <span>❤️ Heart Rate</span>
+
+                <strong>76 BPM</strong>
+
+            </div>
+
+            <div class="vital-item">
+
+                <span>🩸 Blood Pressure</span>
+
+                <strong>120 / 80</strong>
+
+            </div>
+
+            <div class="vital-item">
+
+                <span>🌡 Temperature</span>
+
+                <strong>98.4°F</strong>
+
+            </div>
+
+            <div class="vital-item">
+
+                <span>🫁 Oxygen Level</span>
+
+                <strong>98%</strong>
+
+            </div>
+
+            <div class="vital-item">
+
+                <span>⚖ Weight</span>
+
+                <strong>72 kg</strong>
+
+            </div>
+
+            <div class="vital-item">
+
+                <span>📏 Height</span>
+
+                <strong>174 cm</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================
+        WEEKLY PATIENT ANALYTICS
+=================================== -->
+
+<div class="panel">
+
+    <div class="section-title">
+
+        <h2>Weekly Patient Analytics</h2>
+
+        <button class="view-btn">
+
+            This Week
+
+        </button>
+
+    </div>
+
+    <canvas id="doctorChart"></canvas>
+
+</div>
+<!-- ==================================
+        TODAY'S SCHEDULE & NOTIFICATIONS
+=================================== -->
+
+<div class="management-grid">
+
+    <!-- Today's Schedule -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Today's Schedule</h2>
+
+            <button class="view-btn">View Calendar</button>
+
+        </div>
+
+        <div class="schedule-list">
+
+            <div class="schedule-item">
+
+                <div class="schedule-time">
+                    <h3>09:00 AM</h3>
+                </div>
+
+                <div class="schedule-details">
+                    <h4>Morning OPD</h4>
+                    <p>General Check-ups</p>
+                </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+                <div class="schedule-time">
+                    <h3>10:30 AM</h3>
+                </div>
+
+                <div class="schedule-details">
+                    <h4>Heart Surgery Consultation</h4>
+                    <p>Operation Theatre - 2</p>
+                </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+                <div class="schedule-time">
+                    <h3>01:00 PM</h3>
+                </div>
+
+                <div class="schedule-details">
+                    <h4>Lunch Break</h4>
+                    <p>Doctor Lounge</p>
+                </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+                <div class="schedule-time">
+                    <h3>03:30 PM</h3>
+                </div>
+
+                <div class="schedule-details">
+                    <h4>Follow-up Patients</h4>
+                    <p>Room No. 204</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Notifications -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Notifications</h2>
+
+            <button class="view-btn">Clear All</button>
+
+        </div>
+
+        <div class="notification-list">
+
+            <div class="notification-item">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <div>
+
+                    <h4>New Appointment</h4>
+
+                    <p>A patient booked a consultation for today.</p>
+
+                </div>
+
+            </div>
+
+            <div class="notification-item">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+                <div>
+
+                    <h4>Emergency Case</h4>
+
+                    <p>Emergency patient admitted to ICU.</p>
+
+                </div>
+
+            </div>
+
+            <div class="notification-item">
+
+                <i class="fa-solid fa-flask"></i>
+
+                <div>
+
+                    <h4>Lab Report Ready</h4>
+
+                    <p>Blood test results are available.</p>
+
+                </div>
+
+            </div>
+
+            <div class="notification-item">
+
+                <i class="fa-solid fa-pills"></i>
+
+                <div>
+
+                    <h4>Prescription Approved</h4>
+
+                    <p>Pharmacy confirmed medicine availability.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================
+        RECENT ACTIVITIES
+=================================== -->
+
+<div class="panel">
+
+    <div class="section-title">
+
+        <h2>Recent Activities</h2>
+
+        <button class="view-btn">View All</button>
+
+    </div>
+
+    <div class="activity-list">
+
+        <div class="activity-item">
+
+            <i class="fa-solid fa-user-check"></i>
+
+            <div>
+
+                <h4>Patient Consultation Completed</h4>
+
+                <p>Rahul Sharma consultation finished successfully.</p>
+
+            </div>
+
+            <span>10 min ago</span>
+
+        </div>
+
+        <div class="activity-item">
+
+            <i class="fa-solid fa-file-medical"></i>
+
+            <div>
+
+                <h4>Prescription Generated</h4>
+
+                <p>Medicine prescribed for Anjali Mehta.</p>
+
+            </div>
+
+            <span>25 min ago</span>
+
+        </div>
+
+        <div class="activity-item">
+
+            <i class="fa-solid fa-flask-vial"></i>
+
+            <div>
+
+                <h4>Lab Report Reviewed</h4>
+
+                <p>MRI report verified successfully.</p>
+
+            </div>
+
+            <span>45 min ago</span>
+
+        </div>
+
+        <div class="activity-item">
+
+            <i class="fa-solid fa-video"></i>
+
+            <div>
+
+                <h4>Video Consultation</h4>
+
+                <p>Online appointment completed.</p>
+
+            </div>
+
+            <span>1 hour ago</span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================
+        FOOTER
+=================================== -->
+
+<footer class="dashboard-footer">
+
+    <p>
+
+        © 2026 Medicare+ Hospital Management System
+
+    </p>
+
+    <p>
+
+        Doctor Dashboard | Version 1.0
+
+    </p>
+
+</footer>
+
+</section>
+
+</main>
+
+</div>
+
+<!-- Chart.js -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Doctor Dashboard JS -->
+
+<script src="../js/Doctor_Dashboard.js"></script>
+
+</body>
+
+</html>

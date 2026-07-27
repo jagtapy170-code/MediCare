@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Medicare+ | Patient Lab Reports</title>
+
+    <link rel="stylesheet"
+          href="../css/Patient_Lab_Report.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!--=========================================
+                SIDEBAR
+==========================================-->
+
+<aside class="sidebar">
+
+    <div>
+
+        <div class="logo">
+
+            <div class="logo-icon">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+            </div>
+
+            <div>
+
+                <h2>Medicare+</h2>
+
+                <p>Patient Portal</p>
+
+            </div>
+
+        </div>
+
+      
+
+        <ul class="menu">
+
+           <li>
+<a href="Patient_dashboard.html">
+<i class="fa-solid fa-house"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li>
+<a href="Appointment.html">
+<i class="fa-solid fa-calendar-check"></i>
+<span>Appointments</span>
+</a>
+</li>
+
+<li>
+<a href="Medical_Records.html">
+<i class="fa-solid fa-file-medical"></i>
+<span>Medical Records</span>
+</a>
+</li>
+
+<li>
+<a href="Health_Tracker.html">
+<i class="fa-solid fa-file-medical"></i>
+<span>Health Tracker</span>
+</a>
+</li>
+
+<li>
+<a href="Prescription.html">
+<i class="fa-solid fa-prescription-bottle-medical"></i>
+<span>Prescriptions</span>
+</a>
+</li>
+
+<li class="active">
+<a href="Patient_Lab_Report.html">
+<i class="fa-solid fa-flask"></i>
+<span>Lab Reports</span>
+</a>
+</li>
+
+<li>
+<a href="Billing.html">
+<i class="fa-solid fa-wallet"></i>
+<span>Billing</span>
+</a>
+</li>
+
+<li>
+<a href="Notifications.html">
+<i class="fa-solid fa-bell"></i>
+<span>Notifications</span>
+</a>
+</li>
+
+<li>
+<a href="AI Assistant.html">
+<i class="fa-solid fa-robot"></i>
+<span>AI Assistant</span>
+</a>
+</li>
+
+<li>
+<a href="Settings.html">
+<i class="fa-solid fa-gear"></i>
+<span>Settings</span>
+</a>
+</li>
+
+</ul>
+<div class="logout">
+
+<a href="patient-login.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+</div>
+</aside>
+
+<!--=========================================
+                MAIN CONTENT
+==========================================-->
+
+<main class="main-content">
+
+<!--=========================================
+                HEADER
+==========================================-->
+
+<header class="topbar">
+
+    <div class="search">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+        type="text"
+        placeholder="Search reports...">
+
+    </div>
+
+    <div class="top-icons">
+
+        <button>
+
+            <i class="fa-solid fa-bell"></i>
+
+        </button>
+
+        <button>
+
+            <i class="fa-solid fa-envelope"></i>
+
+        </button>
+
+        <button>
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+        <img src="../assets/patient.jpg">
+
+    </div>
+
+</header>
+
+<!--=========================================
+                PAGE TITLE
+==========================================-->
+
+<section class="page-title">
+
+    <h1>
+
+        <i class="fa-solid fa-flask"></i>
+
+        Lab Reports
+
+    </h1>
+
+    <p>
+
+        View, download and manage all your laboratory reports.
+
+    </p>
+
+</section>
+
+<!--=========================================
+                STATISTICS
+==========================================-->
+
+<section class="stats">
+
+<div class="card">
+
+<i class="fa-solid fa-file-medical"></i>
+
+<h2>26</h2>
+
+<p>Total Reports</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<h2>20</h2>
+
+<p>Completed</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-clock"></i>
+
+<h2>4</h2>
+
+<p>Pending</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-calendar"></i>
+
+<h2>2</h2>
+
+<p>Upcoming Tests</p>
+
+</div>
+
+</section>
+
+<!--=========================================
+                REPORT TABLE
+==========================================-->
+
+<section class="table-card">
+
+<div class="table-header">
+
+<h2>Recent Laboratory Reports</h2>
+
+<button>
+
+<i class="fa-solid fa-download"></i>
+
+Download All
+
+</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Report</th>
+
+<th>Doctor</th>
+
+<th>Date</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Complete Blood Count</td>
+
+<td>Dr. John Smith</td>
+
+<td>20 Jul 2026</td>
+
+<td>
+
+<span class="completed">
+
+Completed
+
+</span>
+
+</td>
+
+<td>
+
+<button class="view">
+
+View PDF
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Blood Sugar Test</td>
+
+<td>Dr. Emily</td>
+
+<td>18 Jul 2026</td>
+
+<td>
+
+<span class="completed">
+
+Completed
+
+</span>
+
+</td>
+
+<td>
+
+<button class="view">
+
+Download
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Liver Function Test</td>
+
+<td>Dr. Brown</td>
+
+<td>16 Jul 2026</td>
+
+<td>
+
+<span class="pending">
+
+Pending
+
+</span>
+
+</td>
+
+<td>
+
+<button class="view">
+
+View
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Kidney Profile</td>
+
+<td>Dr. David</td>
+
+<td>10 Jul 2026</td>
+
+<td>
+
+<span class="completed">
+
+Completed
+
+</span>
+
+</td>
+
+<td>
+
+<button class="view">
+
+Download
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>X-Ray Chest</td>
+
+<td>Dr. Wilson</td>
+
+<td>08 Jul 2026</td>
+
+<td>
+
+<span class="completed">
+
+Completed
+
+</span>
+
+</td>
+
+<td>
+
+<button class="view">
+
+View
+
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+</main>
+
+<script src="../js/Patient_Lab_Report.js"></script>
+
+</body>
+</html>

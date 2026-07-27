@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Notifications | Medicare+</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="../css/Notifications.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= Sidebar ================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-heart-pulse"></i>
+
+<h2>Medicare<span>+</span></h2>
+
+</div>
+
+<ul class="menu">
+
+<li>
+<a href="Patient_dashboard.html">
+<i class="fa-solid fa-house"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li>
+<a href="Appointment.html">
+<i class="fa-solid fa-calendar-check"></i>
+<span>Appointments</span>
+</a>
+</li>
+
+<li>
+<a href="Medical_Records.html">
+<i class="fa-solid fa-file-medical"></i>
+<span>Medical Records</span>
+</a>
+</li>
+
+
+<li>
+<a href="Health_Tracker.html">
+<i class="fa-solid fa-file-medical"></i>
+<span>Health Tracker</span>
+</a>
+</li>
+
+<li>
+<a href="Prescription.html">
+<i class="fa-solid fa-pills"></i>
+<span>Prescriptions</span>
+</a>
+</li>
+
+<li>
+<a href="Patient_Lab_Report.html">
+<i class="fa-solid fa-flask"></i>
+<span>Lab Reports</span>
+</a>
+</li>
+
+<li>
+<a href="Billing.html">
+<i class="fa-solid fa-credit-card"></i>
+<span>Billing</span>
+</a>
+</li>
+
+<li class="active">
+<a href="Notifications.html">
+<i class="fa-solid fa-bell"></i>
+<span>Notifications</span>
+</a>
+</li>
+
+<li>
+<a href="AI Assistant.html">
+<i class="fa-solid fa-robot"></i>
+<span>AI Assistant</span>
+</a>
+</li>
+
+<li>
+<a href="Settings.html">
+<i class="fa-solid fa-gear"></i>
+<span>Settings</span>
+</a>
+</li>
+
+</ul>
+
+
+<div class="logout">
+
+<a href="patient-login.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+</div>
+
+</aside>
+
+<!-- ================= MAIN ================= -->
+
+<main class="main-content">
+
+<header class="topbar">
+
+<div class="page-title">
+
+<h1>Notification Center</h1>
+
+<p>Stay updated with your healthcare activities.</p>
+
+</div>
+
+<div class="top-actions">
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search notifications...">
+
+</div>
+
+<button class="icon-btn">
+
+<i class="fa-solid fa-bell"></i>
+
+</button>
+
+<div class="profile">
+
+<img src="https://i.pravatar.cc/60?img=12">
+
+<div>
+
+<h4>John Doe</h4>
+
+<p>Patient</p>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>
+
+Healthcare
+
+<span>Notifications</span>
+
+</h1>
+
+<p>
+
+Receive instant updates about appointments, reports, medicines and billing.
+
+</p>
+
+<button class="clear-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+Clear All Notifications
+
+</button>
+
+</div>
+
+<div class="hero-right">
+
+<div class="notify-card">
+
+<i class="fa-solid fa-bell"></i>
+
+<h2>18</h2>
+
+<p>Unread Notifications</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Notification List Starts -->
+
+<!-- ==========================================
+        TODAY'S NOTIFICATIONS
+========================================== -->
+
+<section class="notification-list">
+
+<div class="section-header">
+
+<h2>Today's Notifications</h2>
+
+<p>Your latest healthcare updates.</p>
+
+</div>
+
+<div class="notification-grid">
+
+<!-- Medicine Reminder -->
+
+<div class="notification-card medicine">
+
+<div class="icon">
+
+<i class="fa-solid fa-pills"></i>
+
+</div>
+
+<div class="content">
+
+<h3>Medicine Reminder</h3>
+
+<p>Take <strong>Paracetamol 500mg</strong> at 8:00 PM.</p>
+
+<span>10 Minutes Ago</span>
+
+</div>
+
+<div class="actions">
+
+<button class="read-btn">
+
+<i class="fa-solid fa-check"></i>
+
+</button>
+
+<button class="delete-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Appointment -->
+
+<div class="notification-card appointment">
+
+<div class="icon">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+</div>
+
+<div class="content">
+
+<h3>Appointment Reminder</h3>
+
+<p>You have an appointment with <strong>Dr. Sarah Wilson</strong> tomorrow at 10:30 AM.</p>
+
+<span>30 Minutes Ago</span>
+
+</div>
+
+<div class="actions">
+
+<button class="read-btn">
+
+<i class="fa-solid fa-check"></i>
+
+</button>
+
+<button class="delete-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Lab Report -->
+
+<div class="notification-card report">
+
+<div class="icon">
+
+<i class="fa-solid fa-flask"></i>
+
+</div>
+
+<div class="content">
+
+<h3>Lab Report Ready</h3>
+
+<p>Your Blood Test Report has been uploaded successfully.</p>
+
+<span>1 Hour Ago</span>
+
+</div>
+
+<div class="actions">
+
+<button class="read-btn">
+
+<i class="fa-solid fa-check"></i>
+
+</button>
+
+<button class="delete-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Billing -->
+
+<div class="notification-card billing">
+
+<div class="icon">
+
+<i class="fa-solid fa-credit-card"></i>
+
+</div>
+
+<div class="content">
+
+<h3>Payment Due</h3>
+
+<p>Your hospital bill of <strong>₹2,350</strong> is due tomorrow.</p>
+
+<span>2 Hours Ago</span>
+
+</div>
+
+<div class="actions">
+
+<button class="read-btn">
+
+<i class="fa-solid fa-check"></i>
+
+</button>
+
+<button class="delete-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Health Alert -->
+
+<div class="notification-card health">
+
+<div class="icon">
+
+<i class="fa-solid fa-heart-pulse"></i>
+
+</div>
+
+<div class="content">
+
+<h3>Health Alert</h3>
+
+<p>Your average heart rate today is <strong>74 BPM</strong>.</p>
+
+<span>Today</span>
+
+</div>
+
+<div class="actions">
+
+<button class="read-btn">
+
+<i class="fa-solid fa-check"></i>
+
+</button>
+
+<button class="delete-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Doctor Message -->
+
+<div class="notification-card doctor">
+
+<div class="icon">
+
+<i class="fa-solid fa-user-doctor"></i>
+
+</div>
+
+<div class="content">
+
+<h3>Doctor Message</h3>
+
+<p>Dr. Sarah shared new advice regarding your treatment plan.</p>
+
+<span>Today</span>
+
+</div>
+
+<div class="actions">
+
+<button class="read-btn">
+
+<i class="fa-solid fa-check"></i>
+
+</button>
+
+<button class="delete-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        HOSPITAL ANNOUNCEMENTS
+========================================== -->
+
+<section class="announcement-section">
+
+<div class="section-header">
+
+<h2>Hospital Announcements</h2>
+
+<p>Latest updates from Medicare+ Hospital.</p>
+
+</div>
+
+<div class="announcement-grid">
+
+<div class="announcement-card">
+
+<i class="fa-solid fa-hospital"></i>
+
+<h3>Free Health Camp</h3>
+
+<p>Join our free heart health checkup camp this Sunday.</p>
+
+</div>
+
+<div class="announcement-card">
+
+<i class="fa-solid fa-user-doctor"></i>
+
+<h3>New Specialist</h3>
+
+<p>Dr. Michael Johnson has joined our Cardiology Department.</p>
+
+</div>
+
+<div class="announcement-card">
+
+<i class="fa-solid fa-syringe"></i>
+
+<h3>Vaccination Drive</h3>
+
+<p>Book your vaccination slot online with Medicare+.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        QUICK ACTIONS
+========================================== -->
+
+<section class="quick-actions">
+
+<div class="section-header">
+
+<h2>Quick Actions</h2>
+
+</div>
+
+<div class="quick-grid">
+
+<button class="action-btn">
+
+<i class="fa-solid fa-check-double"></i>
+
+Mark All Read
+
+</button>
+
+<button class="action-btn">
+
+<i class="fa-solid fa-trash-can"></i>
+
+Delete Read
+
+</button>
+
+<button class="action-btn">
+
+<i class="fa-solid fa-download"></i>
+
+Export Notifications
+
+</button>
+
+<button class="action-btn">
+
+<i class="fa-solid fa-gear"></i>
+
+Notification Settings
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        FOOTER
+========================================== -->
+
+<footer class="footer">
+
+<p>
+
+© 2026 Medicare+ | Smart Notification Center
+
+</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="../js/Notifications.js"></script>
+
+</body>
+
+</html>

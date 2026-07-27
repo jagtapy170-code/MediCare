@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare+ | System Settings</title>
+    <link rel="stylesheet" href="../css/Receptionist_Dashbaord.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ==========================
+            SIDEBAR
+    ========================== -->
+       <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-hospital-user"></i>
+
+            <h2>Medicare+</h2>
+
+        </div>
+
+        <ul class="menu">
+<li>
+                <a href="Receptionist_Dashboard.html">
+                  
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+                </a>
+
+            </li>
+
+              <li>
+                <a href="Register_Patient.html">
+
+                <i class="fa-solid fa-user-plus"></i>
+                
+
+                <span>Register Patient</span>
+                   </a>
+            </li>
+
+            <li>
+                <a href="Patients_List.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>Patients</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Appointments_List.html">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>Appointments</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Doctors_List.html">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <span>Doctors</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Billing_List.html">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>Billing</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Beds_List.html">
+
+                <i class="fa-solid fa-bed"></i>
+
+                <span>Hospital Beds</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Notification.html">
+                       <i class="fa-solid fa-bell"></i>
+
+                <span>Notifications</span>
+                </a>
+
+            </li>
+
+            <li class="active">
+                <a href="Setting.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+                </a>
+
+            </li>
+
+        </ul>
+
+        <div class="logout">
+            <a href="Reciptionist_login.html">
+            <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+                </button>
+                </a>
+
+        </div>
+
+    </aside>
+
+    <!-- ==========================
+            MAIN CONTENT
+    ========================== -->
+    <main class="main-content">
+
+        <!-- ==========================
+                TOPBAR
+        ========================== -->
+        <header class="topbar">
+            <div class="welcome">
+                <h1>System Settings & Configuration</h1>
+                <p>Manage hospital terminal settings, desk profiles, security preferences, and system backups.</p>
+            </div>
+
+            <div class="top-actions">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="settingsSearch" placeholder="Search settings, profiles, security...">
+                </div>
+
+                <button class="icon-btn" aria-label="Notifications">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+
+                <button class="icon-btn" aria-label="Messages">
+                    <i class="fa-solid fa-envelope"></i>
+                </button>
+
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <div class="profile">
+                    <img src="https://ui-avatars.com/api/?name=Receptionist&background=7c3aed&color=ffffff" alt="Receptionist Avatar">
+                    <div>
+                        <h4>Reception Desk</h4>
+                        <small>ID : REC-101</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ==========================
+                SETTINGS CONTENT
+        ========================== -->
+        <section class="content">
+
+            <!-- Hospital Profile Settings -->
+            <div class="panel">
+                <div class="section-title">
+                    <h2><i class="fa-solid fa-hospital" style="color: var(--primary); margin-right: 8px;"></i> Hospital & Counter Profile</h2>
+                    <button class="btn-primary-gradient" style="padding: 8px 16px; font-size: 13px;" id="btnSaveProfile">
+                        <i class="fa-solid fa-floppy-disk"></i> Save Profile
+                    </button>
+                </div>
+
+                <div class="status-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; color: var(--text-light); display: block; margin-bottom: 5px;">Hospital Name</label>
+                        <input type="text" value="Medicare+ Multispecialty Hospital" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 10px;">
+                    </div>
+
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; color: var(--text-light); display: block; margin-bottom: 5px;">Terminal / Desk ID</label>
+                        <input type="text" value="Desk-01 (Main Reception)" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 10px;">
+                    </div>
+
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; color: var(--text-light); display: block; margin-bottom: 5px;">Contact Email</label>
+                        <input type="email" value="reception@medicareplus.com" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 10px;">
+                    </div>
+
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; color: var(--text-light); display: block; margin-bottom: 5px;">Emergency Hotline</label>
+                        <input type="text" value="+91 1800 123 4567" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 10px;">
+                    </div>
+                </div>
+            </div>
+<!-- System & Display Preferences Panel -->
+            <div class="panel" style="margin-top: 25px;">
+                <div class="section-title">
+                    <h2><i class="fa-solid fa-sliders" style="color: var(--primary); margin-right: 8px;"></i> Display & Notification Preferences</h2>
+                    <button class="btn-primary-gradient" style="padding: 8px 16px; font-size: 13px;" id="btnSavePreferences">
+                        <i class="fa-solid fa-floppy-disk"></i> Update Preferences
+                    </button>
+                </div>
+
+                <div class="status-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; color: var(--text-light); display: block; margin-bottom: 5px;">Default Theme Appearance</label>
+                        <select id="prefThemeSelect" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 10px;">
+                            <option value="light">Light Mode</option>
+                            <option value="dark">Dark Mode</option>
+                            <option value="system">Sync with System Settings</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; color: var(--text-light); display: block; margin-bottom: 5px;">Automatic Refresh Interval</label>
+                        <select style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 10px;">
+                            <option value="30">Every 30 Seconds</option>
+                            <option value="60">Every 1 Minute</option>
+                            <option value="300">Every 5 Minutes</option>
+                            <option value="manual">Manual Refresh Only</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; color: var(--text-light); display: block; margin-bottom: 5px;">Emergency OPD Alerts</label>
+                        <select style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 10px;">
+                            <option value="enabled">Enabled (Sound & Popup)</option>
+                            <option value="popup">Popup Only</option>
+                            <option value="disabled">Mute Alerts</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; color: var(--text-light); display: block; margin-bottom: 5px;">Receipt Auto-Print</label>
+                        <select style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 10px;">
+                            <option value="prompt">Ask Before Printing</option>
+                            <option value="auto">Auto Print on Payment</option>
+                            <option value="off">Disabled</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security & Backup Panel -->
+            <div class="panel" style="margin-top: 25px;">
+                <div class="section-title">
+                    <h2><i class="fa-solid fa-shield-halved" style="color: var(--primary); margin-right: 8px;"></i> Security & Data Management</h2>
+                </div>
+
+                <div class="status-grid" style="grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                    <div style="background: var(--bg-body); padding: 15px; border-radius: 12px; border: 1px solid var(--border);">
+                        <h4 style="margin-bottom: 5px;"><i class="fa-solid fa-key" style="color: var(--warning);"></i> Password Security</h4>
+                        <p style="font-size: 12px; color: var(--text-light); margin-bottom: 12px;">Last changed 14 days ago. Regular updates maintain compliance.</p>
+                        <button class="view-btn" style="width: 100%; padding: 8px;" id="btnChangePassword">Change Password</button>
+                    </div>
+
+                    <div style="background: var(--bg-body); padding: 15px; border-radius: 12px; border: 1px solid var(--border);">
+                        <h4 style="margin-bottom: 5px;"><i class="fa-solid fa-database" style="color: var(--primary);"></i> Local Data Backup</h4>
+                        <p style="font-size: 12px; color: var(--text-light); margin-bottom: 12px;">Export daily patient queue and offline session logs.</p>
+                        <button class="view-btn" style="width: 100%; padding: 8px; background: var(--secondary);" id="btnExportBackup">Export Backup</button>
+                    </div>
+
+                    <div style="background: var(--bg-body); padding: 15px; border-radius: 12px; border: 1px solid var(--border);">
+                        <h4 style="margin-bottom: 5px;"><i class="fa-solid fa-clock-rotate-left" style="color: var(--success);"></i> Activity Logs</h4>
+                        <p style="font-size: 12px; color: var(--text-light); margin-bottom: 12px;">View desk authentication logs and audit trails.</p>
+                        <button class="view-btn" style="width: 100%; padding: 8px; background: #e2e8f0; color: #1e293b;" id="btnViewLogs">View Session Logs</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Footer -->
+            <footer class="dashboard-footer">
+                <p>© 2026 Medicare+ Hospital Management System</p>
+                <p>System Settings & Configuration | Version 1.0</p>
+            </footer>
+
+        </section>
+    </main>
+</div>
+
+<!-- Connect Engine JS -->
+<script src="../js/Setting.js"></script>
+</body>
+</html>

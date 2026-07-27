@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Medicare+ | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="../css/Admin_Dashboard.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ==========================
+            SIDEBAR
+    =========================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-hospital"></i>
+
+            <h2>Medicare+</h2>
+
+        </div>
+
+        <ul class="menu">
+
+            <li class="active">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Dashboard</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <span>Doctors</span>
+                    
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-user-injured"></i>
+
+                <span>Patients</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-user-nurse"></i>
+
+                <span>Receptionists</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>Appointments</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-bed"></i>
+
+                <span>Hospital Beds</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                <span>Billing</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                <span>Analytics</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span>Notifications</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </li>
+
+        </ul>
+
+        <div class="logout">
+
+            <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ==========================
+            MAIN CONTENT
+    =========================== -->
+
+    <main class="main-content">
+
+        <!-- ==========================
+                TOP NAVBAR
+        =========================== -->
+
+        <header class="topbar">
+
+            <div class="welcome">
+
+                <h1>
+
+                    Welcome,
+
+                    <span id="adminName">
+
+                        Administrator
+
+                    </span>
+
+                </h1>
+
+                <p>
+
+                    Manage your hospital, staff, patients and appointments from one dashboard.
+
+                </p>
+
+            </div>
+
+            <div class="top-actions">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Search doctors, patients, receptionists...">
+
+                </div>
+
+                <button class="icon-btn">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </button>
+
+                <button class="icon-btn">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </button>
+
+                <button class="icon-btn" id="themeToggle">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <div class="profile">
+
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=2563eb&color=ffffff"
+                        alt="Admin">
+
+                    <div>
+
+                        <h4>Hospital Admin</h4>
+
+                        <small>ID : ADM-001</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ==========================
+                DASHBOARD CONTENT
+        =========================== -->
+
+        <section class="content">
+            <!-- ==================================
+        DASHBOARD OVERVIEW CARDS
+=================================== -->
+
+<div class="cards">
+
+    <!-- Total Doctors -->
+
+    <div class="card doctor-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-user-doctor"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Total Doctors</h3>
+
+            <h2>125</h2>
+
+            <p>+8 This Month</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Total Patients -->
+
+    <div class="card patient-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-user-injured"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Total Patients</h3>
+
+            <h2>2,845</h2>
+
+            <p>42 New Today</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Receptionists -->
+
+    <div class="card receptionist-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-user-nurse"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Receptionists</h3>
+
+            <h2>18</h2>
+
+            <p>All On Duty</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Today's Appointments -->
+
+    <div class="card appointment-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Appointments</h3>
+
+            <h2>156</h2>
+
+            <p>18 Pending</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Beds -->
+
+    <div class="card bed-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-bed"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Available Beds</h3>
+
+            <h2>64</h2>
+
+            <p>Out of 120</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Revenue -->
+
+    <div class="card revenue-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Today's Revenue</h3>
+
+            <h2>₹2.48L</h2>
+
+            <p>+12% Growth</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================
+        QUICK ACTIONS
+=================================== -->
+
+<div class="quick-actions">
+
+    <button>
+
+        <i class="fa-solid fa-user-plus"></i>
+
+        Add Doctor
+
+    </button>
+
+    <button>
+
+        <i class="fa-solid fa-user-group"></i>
+
+        Add Patient
+
+    </button>
+
+    <button>
+
+        <i class="fa-solid fa-user-nurse"></i>
+
+        Add Receptionist
+
+    </button>
+
+    <button>
+
+        <i class="fa-solid fa-calendar-plus"></i>
+
+        New Appointment
+
+    </button>
+
+    <button>
+
+        <i class="fa-solid fa-file-medical"></i>
+
+        Medical Reports
+
+    </button>
+
+    <button>
+
+        <i class="fa-solid fa-credit-card"></i>
+
+        Billing
+
+    </button>
+
+</div>
+
+
+
+<!-- ==================================
+        HOSPITAL STATUS
+=================================== -->
+
+<div class="hospital-status">
+
+    <div class="section-title">
+
+        <h2>Hospital Status Overview</h2>
+
+        <a href="#">View Details</a>
+
+    </div>
+
+    <div class="status-grid">
+
+        <div class="status-box">
+
+            <i class="fa-solid fa-hospital"></i>
+
+            <h3>ICU Occupancy</h3>
+
+            <h2>82%</h2>
+
+        </div>
+
+        <div class="status-box">
+
+            <i class="fa-solid fa-kit-medical"></i>
+
+            <h3>Emergency Cases</h3>
+
+            <h2>14</h2>
+
+        </div>
+
+        <div class="status-box">
+
+            <i class="fa-solid fa-user-clock"></i>
+
+            <h3>Waiting Patients</h3>
+
+            <h2>37</h2>
+
+        </div>
+
+        <div class="status-box">
+
+            <i class="fa-solid fa-user-check"></i>
+
+            <h3>Discharged Today</h3>
+
+            <h2>23</h2>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ==================================
+        MAIN MANAGEMENT SECTION
+=================================== -->
+
+<div class="management-grid">
+
+    <!-- ==========================
+            DOCTOR MANAGEMENT
+    =========================== -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Doctor Management</h2>
+
+            <button class="view-btn">View All</button>
+
+        </div>
+
+        <table class="management-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Doctor</th>
+                    <th>Department</th>
+                    <th>Status</th>
+                    <th>Patients</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Dr. Sarah Wilson</td>
+                    <td>Cardiology</td>
+                    <td><span class="active-status">Available</span></td>
+                    <td>18</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Dr. Amit Sharma</td>
+                    <td>Neurology</td>
+                    <td><span class="busy-status">In Surgery</span></td>
+                    <td>12</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Dr. Priya Patel</td>
+                    <td>Pediatrics</td>
+                    <td><span class="active-status">Available</span></td>
+                    <td>22</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Dr. James Anderson</td>
+                    <td>Orthopedics</td>
+                    <td><span class="leave-status">On Leave</span></td>
+                    <td>0</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <!-- ==========================
+            PATIENT MANAGEMENT
+    =========================== -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Recent Patients</h2>
+
+            <button class="view-btn">View All</button>
+
+        </div>
+
+        <table class="management-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Patient</th>
+                    <th>Age</th>
+                    <th>Doctor</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Rahul Sharma</td>
+                    <td>28</td>
+                    <td>Dr. Sarah</td>
+                    <td><span class="active-status">Admitted</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Anjali Mehta</td>
+                    <td>42</td>
+                    <td>Dr. Amit</td>
+                    <td><span class="pending-status">Observation</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Rohan Gupta</td>
+                    <td>35</td>
+                    <td>Dr. Priya</td>
+                    <td><span class="discharge-status">Discharged</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Neha Verma</td>
+                    <td>31</td>
+                    <td>Dr. James</td>
+                    <td><span class="active-status">Admitted</span></td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================
+        RECEPTIONIST & ANALYTICS
+=================================== -->
+
+<div class="management-grid">
+
+    <!-- Receptionists -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Receptionists</h2>
+
+            <button class="view-btn">Manage</button>
+
+        </div>
+
+        <table class="management-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Name</th>
+                    <th>Shift</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Neha Kapoor</td>
+                    <td>Morning</td>
+                    <td><span class="active-status">Present</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Mohit Singh</td>
+                    <td>Evening</td>
+                    <td><span class="active-status">Present</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Riya Sharma</td>
+                    <td>Night</td>
+                    <td><span class="leave-status">Leave</span></td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <!-- Analytics -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Hospital Analytics</h2>
+
+            <button class="view-btn">Monthly</button>
+
+        </div>
+
+        <canvas id="adminChart"></canvas>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================
+        RECENT ACTIVITIES
+=================================== -->
+
+<div class="panel">
+
+    <div class="section-title">
+
+        <h2>Recent Activities</h2>
+
+        <button class="view-btn">View All</button>
+
+    </div>
+
+    <div class="activity-list">
+
+        <div class="activity-item">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            <div>
+
+                <h4>New Patient Registered</h4>
+
+                <p>Rahul Sharma successfully registered.</p>
+
+            </div>
+
+            <span>5 min ago</span>
+
+        </div>
+
+        <div class="activity-item">
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+            <div>
+
+                <h4>Appointment Confirmed</h4>
+
+                <p>Dr. Sarah confirmed an appointment.</p>
+
+            </div>
+
+            <span>12 min ago</span>
+
+        </div>
+
+        <div class="activity-item">
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            <div>
+
+                <h4>Bill Payment Received</h4>
+
+                <p>₹15,600 received from Patient ID PT-105.</p>
+
+            </div>
+
+            <span>20 min ago</span>
+
+        </div>
+
+        <div class="activity-item">
+
+            <i class="fa-solid fa-user-doctor"></i>
+
+            <div>
+
+                <h4>New Doctor Joined</h4>
+
+                <p>Dr. Arjun Mehra joined the Cardiology Department.</p>
+
+            </div>
+
+            <span>1 hour ago</span>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ==================================
+        LOWER DASHBOARD SECTION
+=================================== -->
+
+<div class="bottom-grid">
+
+    <!-- Revenue Analytics -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Revenue Analytics</h2>
+
+            <button class="view-btn">This Year</button>
+
+        </div>
+
+        <canvas id="revenueChart"></canvas>
+
+    </div>
+
+
+
+    <!-- Department Performance -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Department Performance</h2>
+
+        </div>
+
+        <div class="department-list">
+
+            <div class="department-item">
+
+                <span>Cardiology</span>
+
+                <div class="progress">
+
+                    <div class="progress-bar cardio"></div>
+
+                </div>
+
+                <strong>95%</strong>
+
+            </div>
+
+            <div class="department-item">
+
+                <span>Neurology</span>
+
+                <div class="progress">
+
+                    <div class="progress-bar neuro"></div>
+
+                </div>
+
+                <strong>88%</strong>
+
+            </div>
+
+            <div class="department-item">
+
+                <span>Pediatrics</span>
+
+                <div class="progress">
+
+                    <div class="progress-bar ped"></div>
+
+                </div>
+
+                <strong>91%</strong>
+
+            </div>
+
+            <div class="department-item">
+
+                <span>Orthopedics</span>
+
+                <div class="progress">
+
+                    <div class="progress-bar ortho"></div>
+
+                </div>
+
+                <strong>86%</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================
+        CALENDAR & NOTIFICATIONS
+=================================== -->
+
+<div class="management-grid">
+
+    <!-- Calendar -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Hospital Calendar</h2>
+
+        </div>
+
+        <div class="calendar-widget">
+
+            <h3>July 2026</h3>
+
+            <div class="calendar-grid">
+
+                <span>Su</span>
+                <span>Mo</span>
+                <span>Tu</span>
+                <span>We</span>
+                <span>Th</span>
+                <span>Fr</span>
+                <span>Sa</span>
+
+                <span></span>
+                <span></span>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+
+                <span>6</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>10</span>
+                <span>11</span>
+                <span>12</span>
+
+                <span>13</span>
+                <span>14</span>
+                <span>15</span>
+                <span class="today">16</span>
+                <span>17</span>
+                <span>18</span>
+                <span>19</span>
+
+                <span>20</span>
+                <span>21</span>
+                <span>22</span>
+                <span>23</span>
+                <span>24</span>
+                <span>25</span>
+                <span>26</span>
+
+                <span>27</span>
+                <span>28</span>
+                <span>29</span>
+                <span>30</span>
+                <span>31</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Notifications -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>System Notifications</h2>
+
+        </div>
+
+        <div class="notification-list">
+
+            <div class="notification-item">
+
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+                <div>
+
+                    <h4>Emergency Alert</h4>
+
+                    <p>ICU Bed No. 07 requires immediate attention.</p>
+
+                </div>
+
+            </div>
+
+            <div class="notification-item">
+
+                <i class="fa-solid fa-user-plus"></i>
+
+                <div>
+
+                    <h4>New Registration</h4>
+
+                    <p>8 new patients registered today.</p>
+
+                </div>
+
+            </div>
+
+            <div class="notification-item">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <div>
+
+                    <h4>Appointments</h4>
+
+                    <p>18 appointments are waiting for confirmation.</p>
+
+                </div>
+
+            </div>
+
+            <div class="notification-item">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <div>
+
+                    <h4>Billing</h4>
+
+                    <p>₹1,25,000 payments received today.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================
+        FOOTER
+=================================== -->
+
+<footer class="dashboard-footer">
+
+    <p>
+
+        © 2026 Medicare+ Hospital Management System
+
+    </p>
+
+    <p>
+
+        Admin Dashboard | Version 1.0
+
+    </p>
+
+</footer>
+
+</section>
+
+</main>
+
+</div>
+
+<!-- Chart.js -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- JavaScript -->
+
+<script src="../js/Admin_Dashboard.js"></script>
+
+</body>
+
+</html>

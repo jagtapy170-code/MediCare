@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Health Tracker | Medicare+</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="../css/Health_Tracker.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= Sidebar ================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-heart-pulse"></i>
+
+<h2>Medicare<span>+</span></h2>
+
+</div>
+
+<ul class="menu">
+
+<li>
+<a href="Patient_dashboard.html">
+<i class="fa-solid fa-house"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li>
+<a href="Appointment.html">
+<i class="fa-solid fa-calendar-check"></i>
+<span>Appointments</span>
+</a>
+</li>
+
+<li>
+<a href="Medical_Records.html">
+<i class="fa-solid fa-file-medical"></i>
+<span>Medical Records</span>
+</a>
+</li>
+
+<li class="active">
+
+<a href="Health_Tracker.html">
+<i class="fa-solid fa-file-medical"></i>
+<span>Health Tracker</span>
+</a>
+</li>
+
+
+<a href="Prescription.html">
+<i class="fa-solid fa-pills"></i>
+<span>Prescriptions</span>
+</a>
+</li>
+
+<li>
+<a href="Patient_Lab_Report.html">
+<i class="fa-solid fa-flask"></i>
+<span>Lab Reports</span>
+</a>
+</li>
+
+<li>
+<a href="Billing.html">
+<i class="fa-solid fa-credit-card"></i>
+<span>Billing</span>
+</a>
+</li>
+
+
+<li>
+<a href="Notifications.html">
+<i class="fa-solid fa-bell"></i>
+<span>Notifications</span>
+</a>
+</li>
+
+<li>
+<a href="AI Assistant.html">
+<i class="fa-solid fa-robot"></i>
+<span>AI Assistant</span>
+</a>
+</li>
+
+<li>
+<a href="Settings.html">
+<i class="fa-solid fa-gear"></i>
+<span>Settings</span>
+</a>
+</li>
+
+</ul>
+
+<div class="logout">
+
+<a href="patient-login.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+</div>
+
+</aside>
+
+<!-- ================= Main Content ================= -->
+
+<main class="main-content">
+
+<header class="topbar">
+
+<div class="page-title">
+
+<h1>Health Tracker</h1>
+
+<p>Monitor your health, fitness, and daily wellness.</p>
+
+</div>
+
+<div class="top-actions">
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search health records...">
+
+</div>
+
+<button class="icon-btn">
+
+<i class="fa-solid fa-bell"></i>
+
+</button>
+
+<div class="profile">
+
+<img src="https://i.pravatar.cc/60?img=12">
+
+<div>
+
+<h4>John Doe</h4>
+
+<p>Patient</p>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="tracker-hero">
+
+<div class="hero-left">
+
+<h1>
+
+Your Daily
+
+<span>Health Tracker</span>
+
+</h1>
+
+<p>
+
+Track your heart rate, BMI, sleep, calories, water intake and daily fitness progress in one place.
+
+</p>
+
+<button class="track-btn">
+
+<i class="fa-solid fa-heart"></i>
+
+Track Today
+
+</button>
+
+</div>
+
+<div class="hero-right">
+
+<div class="health-score-card">
+
+<i class="fa-solid fa-heart-circle-check"></i>
+
+<h2>96%</h2>
+
+<p>Overall Health Score</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= HEALTH STATS ================= -->
+
+<section class="stats">
+
+<div class="stat-card">
+
+<i class="fa-solid fa-heart-pulse"></i>
+
+<h2>74 BPM</h2>
+
+<p>Heart Rate</p>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa-solid fa-shoe-prints"></i>
+
+<h2>8,245</h2>
+
+<p>Steps Today</p>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa-solid fa-fire"></i>
+
+<h2>520</h2>
+
+<p>Calories Burned</p>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa-solid fa-droplet"></i>
+
+<h2>2.4 L</h2>
+
+<p>Water Intake</p>
+
+</div>
+
+</section>
+
+<!-- ================= BMI ================= -->
+
+<section class="bmi-section">
+
+<div class="section-header">
+
+<h2>BMI Calculator</h2>
+
+<p>Calculate your Body Mass Index.</p>
+
+</div>
+
+<div class="bmi-card">
+
+<div class="input-group">
+
+<label>Height (cm)</label>
+
+<input
+type="number"
+id="height"
+placeholder="170">
+
+</div>
+
+<div class="input-group">
+
+<label>Weight (kg)</label>
+
+<input
+type="number"
+id="weight"
+placeholder="65">
+
+</div>
+
+<button id="calculateBMI">
+
+Calculate BMI
+
+</button>
+
+<h3 id="bmiResult">
+
+Your BMI: --
+
+</h3>
+
+</div>
+
+</section>
+
+<!-- NEXT PART STARTS HERE -->
+
+<!-- ==========================================
+        SLEEP TRACKER
+========================================== -->
+
+<section class="activity-section">
+
+<div class="section-header">
+
+<h2>Sleep Tracker</h2>
+
+<p>Your sleep quality over the last week.</p>
+
+</div>
+
+<div class="activity-grid">
+
+<div class="activity-card">
+
+<i class="fa-solid fa-bed"></i>
+
+<h3>Sleep Duration</h3>
+
+<h2>7h 45m</h2>
+
+<p>Last Night</p>
+
+</div>
+
+<div class="activity-card">
+
+<i class="fa-solid fa-heart-circle-bolt"></i>
+
+<h3>Blood Pressure</h3>
+
+<h2>120 / 80</h2>
+
+<p>Normal</p>
+
+</div>
+
+<div class="activity-card">
+
+<i class="fa-solid fa-droplet"></i>
+
+<h3>Blood Sugar</h3>
+
+<h2>96 mg/dL</h2>
+
+<p>Healthy</p>
+
+</div>
+
+<div class="activity-card">
+
+<i class="fa-solid fa-lungs"></i>
+
+<h3>Oxygen Level</h3>
+
+<h2>98%</h2>
+
+<p>Excellent</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        HEALTH GRAPH
+========================================== -->
+
+<section class="graph-section">
+
+<div class="section-header">
+
+<h2>Weekly Health Progress</h2>
+
+<p>Your overall health statistics for the last 7 days.</p>
+
+</div>
+
+<div class="graph-card">
+
+<canvas id="healthTrackerChart"></canvas>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        DAILY GOALS
+========================================== -->
+
+<section class="goals-section">
+
+<div class="section-header">
+
+<h2>Today's Goals</h2>
+
+<p>Track your daily wellness goals.</p>
+
+</div>
+
+<div class="goal-grid">
+
+<div class="goal-card">
+
+<i class="fa-solid fa-shoe-prints"></i>
+
+<h3>10,000 Steps</h3>
+
+<progress value="8245" max="10000"></progress>
+
+<span>82%</span>
+
+</div>
+
+<div class="goal-card">
+
+<i class="fa-solid fa-droplet"></i>
+
+<h3>3 Litres Water</h3>
+
+<progress value="2.4" max="3"></progress>
+
+<span>80%</span>
+
+</div>
+
+<div class="goal-card">
+
+<i class="fa-solid fa-fire"></i>
+
+<h3>700 Calories</h3>
+
+<progress value="520" max="700"></progress>
+
+<span>74%</span>
+
+</div>
+
+<div class="goal-card">
+
+<i class="fa-solid fa-bed"></i>
+
+<h3>8 Hours Sleep</h3>
+
+<progress value="7.75" max="8"></progress>
+
+<span>97%</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        ACHIEVEMENTS
+========================================== -->
+
+<section class="achievement-section">
+
+<div class="section-header">
+
+<h2>Achievements</h2>
+
+<p>Your latest health milestones.</p>
+
+</div>
+
+<div class="achievement-grid">
+
+<div class="achievement-card">
+
+<i class="fa-solid fa-medal"></i>
+
+<h3>10K Steps</h3>
+
+<p>Completed for 5 consecutive days.</p>
+
+</div>
+
+<div class="achievement-card">
+
+<i class="fa-solid fa-trophy"></i>
+
+<h3>Healthy Heart</h3>
+
+<p>Excellent heart rate this month.</p>
+
+</div>
+
+<div class="achievement-card">
+
+<i class="fa-solid fa-star"></i>
+
+<h3>Hydration Hero</h3>
+
+<p>Water intake goal achieved.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        AI HEALTH RECOMMENDATION
+========================================== -->
+
+<section class="ai-section">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fa-solid fa-robot"></i>
+
+AI Health Recommendation
+
+</h2>
+
+</div>
+
+<div class="analysis-box">
+
+<p>✅ Your heart rate is healthy.</p>
+
+<p>✅ Blood pressure is within the normal range.</p>
+
+<p>⚠ Increase water intake by 600 ml today.</p>
+
+<p>💡 Walk another 1,755 steps to achieve today's goal.</p>
+
+<p>🌞 Sleep 15 minutes earlier tonight to complete your sleep target.</p>
+
+</div>
+
+<button class="track-btn">
+
+Generate New Analysis
+
+</button>
+
+</section>
+
+<!-- ==========================================
+        SMART DEVICE
+========================================== -->
+
+<section class="device-section">
+
+<div class="section-header">
+
+<h2>Connected Devices</h2>
+
+<p>Sync your smart health devices.</p>
+
+</div>
+
+<div class="device-grid">
+
+<div class="device-card">
+
+<i class="fa-brands fa-apple"></i>
+
+<h3>Apple Watch</h3>
+
+<p>Connected</p>
+
+</div>
+
+<div class="device-card">
+
+<i class="fa-solid fa-watch-smart"></i>
+
+<h3>Samsung Watch</h3>
+
+<p>Not Connected</p>
+
+</div>
+
+<div class="device-card">
+
+<i class="fa-solid fa-mobile-screen"></i>
+
+<h3>Google Fit</h3>
+
+<p>Connected</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        FOOTER
+========================================== -->
+
+<footer class="footer">
+
+<p>
+
+© 2026 Medicare+ | Smart Health Monitoring Platform
+
+</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../js/Health_Tracker.js"></script>
+
+</body>
+
+</html>

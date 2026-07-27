@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Billing | Medicare+</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="../css/Billing.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= Sidebar ================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-heart-pulse"></i>
+
+<h2>Medicare<span>+</span></h2>
+
+</div>
+
+<ul class="menu">
+
+<li>
+<a href="Patient_dashboard.html">
+<i class="fa-solid fa-house"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li>
+<a href="Appointment.html">
+<i class="fa-solid fa-calendar-check"></i>
+<span>Appointments</span>
+</a>
+</li>
+
+<li>
+<a href="Medical_Records.html">
+<i class="fa-solid fa-file-medical"></i>
+<span>Medical Records</span>
+</a>
+</li>
+
+<li>
+<a href="Health_Tracker.html">
+<i class="fa-solid fa-file-medical"></i>
+<span>Health Tracker</span>
+</a>
+</li>
+
+<li>
+<a href="Prescription.html">
+<i class="fa-solid fa-pills"></i>
+<span>Prescriptions</span>
+</a>
+</li>
+
+<li>
+<a href="Patient_Lab_Report.html">
+<i class="fa-solid fa-flask"></i>
+<span>Lab Reports</span>
+</a>
+</li>
+
+<li class="active">
+<a href="Billing.html">
+<i class="fa-solid fa-credit-card"></i>
+<span>Billing</span>
+</a>
+</li>
+
+<li>
+<a href="Notifications.html">
+<i class="fa-solid fa-bell"></i>
+<span>Notifications</span>
+</a>
+</li>
+
+<li>
+<a href="AI Assistant.html">
+<i class="fa-solid fa-robot"></i>
+<span>AI Assistant</span>
+</a>
+</li>
+
+<li>
+<a href="Settings.html">
+<i class="fa-solid fa-gear"></i>
+<span>Settings</span>
+</a>
+</li>
+
+</ul>
+
+<div class="logout">
+
+<a href="patient-login.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+</div>
+</aside>
+
+<!-- ================= Main ================= -->
+
+<main class="main-content">
+
+<header class="topbar">
+
+<div class="page-title">
+
+<h1>Billing & Payments</h1>
+
+<p>Manage invoices, payments and insurance claims.</p>
+
+</div>
+
+<div class="top-actions">
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search invoices...">
+
+</div>
+
+<button class="icon-btn">
+
+<i class="fa-solid fa-bell"></i>
+
+</button>
+
+<div class="profile">
+
+<img src="https://i.pravatar.cc/60?img=12">
+
+<div>
+
+<h4>John Doe</h4>
+
+<p>Patient</p>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="billing-hero">
+
+<div class="hero-left">
+
+<h1>
+
+Billing
+
+<span>Overview</span>
+
+</h1>
+
+<p>
+
+Track all payments, medical bills, insurance claims and invoices securely.
+
+</p>
+
+<button class="pay-btn">
+
+<i class="fa-solid fa-wallet"></i>
+
+Pay Outstanding Bill
+
+</button>
+
+</div>
+
+<div class="hero-right">
+
+<div class="balance-card">
+
+<i class="fa-solid fa-wallet"></i>
+
+<h2>₹18,450</h2>
+
+<p>Outstanding Balance</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= Statistics ================= -->
+
+<section class="stats">
+
+<div class="stat-card">
+
+<i class="fa-solid fa-file-invoice-dollar"></i>
+
+<h2>26</h2>
+
+<p>Total Bills</p>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<h2>22</h2>
+
+<p>Paid Bills</p>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa-solid fa-clock"></i>
+
+<h2>4</h2>
+
+<p>Pending Bills</p>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa-solid fa-shield-heart"></i>
+
+<h2>92%</h2>
+
+<p>Insurance Coverage</p>
+
+</div>
+
+</section>
+
+<!-- ================= Invoice Section ================= -->
+
+<section class="invoice-section">
+
+<div class="section-header">
+
+<h2>Recent Invoices</h2>
+
+<p>Your latest medical bills.</p>
+
+</div>
+
+<div class="invoice-grid">
+
+<div class="invoice-card">
+
+<i class="fa-solid fa-file-invoice"></i>
+
+<h3>General Checkup</h3>
+
+<p>Dr. Sarah Wilson</p>
+
+<h4>₹1,200</h4>
+
+<span class="paid">
+
+Paid
+
+</span>
+
+<div class="buttons">
+
+<button>View</button>
+
+<button>Download</button>
+
+</div>
+
+</div>
+
+<div class="invoice-card">
+
+<i class="fa-solid fa-file-invoice"></i>
+
+<h3>Blood Test</h3>
+
+<p>Laboratory</p>
+
+<h4>₹850</h4>
+
+<span class="pending">
+
+Pending
+
+</span>
+
+<div class="buttons">
+
+<button>Pay</button>
+
+<button>Invoice</button>
+
+</div>
+
+</div>
+
+<div class="invoice-card">
+
+<i class="fa-solid fa-file-invoice"></i>
+
+<h3>MRI Scan</h3>
+
+<p>Radiology</p>
+
+<h4>₹8,500</h4>
+
+<span class="paid">
+
+Paid
+
+</span>
+
+<div class="buttons">
+
+<button>View</button>
+
+<button>Download</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PART 2 STARTS HERE -->
+
+<!-- ==========================================
+        PAYMENT HISTORY
+========================================== -->
+
+<section class="payment-history">
+
+<div class="section-header">
+
+<h2>Payment History</h2>
+
+<p>Your recent transactions and payment records.</p>
+
+</div>
+
+<div class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Invoice ID</th>
+
+<th>Date</th>
+
+<th>Department</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>#INV-1001</td>
+
+<td>18 July 2026</td>
+
+<td>General Checkup</td>
+
+<td>₹1,200</td>
+
+<td><span class="paid">Paid</span></td>
+
+</tr>
+
+<tr>
+
+<td>#INV-1002</td>
+
+<td>15 July 2026</td>
+
+<td>Blood Test</td>
+
+<td>₹850</td>
+
+<td><span class="pending">Pending</span></td>
+
+</tr>
+
+<tr>
+
+<td>#INV-1003</td>
+
+<td>10 July 2026</td>
+
+<td>MRI Scan</td>
+
+<td>₹8,500</td>
+
+<td><span class="paid">Paid</span></td>
+
+</tr>
+
+<tr>
+
+<td>#INV-1004</td>
+
+<td>02 July 2026</td>
+
+<td>ECG Test</td>
+
+<td>₹650</td>
+
+<td><span class="paid">Paid</span></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        INSURANCE DETAILS
+========================================== -->
+
+<section class="insurance-section">
+
+<div class="section-header">
+
+<h2>Insurance Details</h2>
+
+<p>Your active health insurance information.</p>
+
+</div>
+
+<div class="insurance-card">
+
+<div class="insurance-item">
+
+<i class="fa-solid fa-shield-heart"></i>
+
+<div>
+
+<h3>Health Insurance</h3>
+
+<p>Star Health Insurance</p>
+
+</div>
+
+</div>
+
+<div class="insurance-item">
+
+<i class="fa-solid fa-id-card"></i>
+
+<div>
+
+<h3>Policy Number</h3>
+
+<p>SHI-458769251</p>
+
+</div>
+
+</div>
+
+<div class="insurance-item">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+<div>
+
+<h3>Expiry Date</h3>
+
+<p>31 Dec 2027</p>
+
+</div>
+
+</div>
+
+<div class="insurance-item">
+
+<i class="fa-solid fa-indian-rupee-sign"></i>
+
+<div>
+
+<h3>Coverage</h3>
+
+<p>₹5,00,000</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        EXPENSE ANALYTICS
+========================================== -->
+
+<section class="expense-section">
+
+<div class="section-header">
+
+<h2>Expense Analytics</h2>
+
+<p>Track your healthcare spending.</p>
+
+</div>
+
+<div class="expense-grid">
+
+<div class="expense-card">
+
+<i class="fa-solid fa-user-doctor"></i>
+
+<h3>Consultation</h3>
+
+<h2>₹9,500</h2>
+
+</div>
+
+<div class="expense-card">
+
+<i class="fa-solid fa-capsules"></i>
+
+<h3>Medicines</h3>
+
+<h2>₹4,200</h2>
+
+</div>
+
+<div class="expense-card">
+
+<i class="fa-solid fa-flask"></i>
+
+<h3>Laboratory</h3>
+
+<h2>₹6,800</h2>
+
+</div>
+
+<div class="expense-card">
+
+<i class="fa-solid fa-hospital"></i>
+
+<h3>Hospital</h3>
+
+<h2>₹14,300</h2>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        MONTHLY EXPENSE GRAPH
+========================================== -->
+
+<section class="graph-section">
+
+<div class="section-header">
+
+<h2>Monthly Expenses</h2>
+
+<p>Your healthcare spending trend.</p>
+
+</div>
+
+<div class="graph-card">
+
+<canvas id="expenseChart"></canvas>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        PAYMENT METHODS
+========================================== -->
+
+<section class="payment-methods">
+
+<div class="section-header">
+
+<h2>Saved Payment Methods</h2>
+
+</div>
+
+<div class="method-grid">
+
+<div class="method-card">
+
+<i class="fa-brands fa-cc-visa"></i>
+
+<h3>Visa Card</h3>
+
+<p>**** **** **** 4589</p>
+
+</div>
+
+<div class="method-card">
+
+<i class="fa-brands fa-google-pay"></i>
+
+<h3>Google Pay</h3>
+
+<p>Connected</p>
+
+</div>
+
+<div class="method-card">
+
+<i class="fa-brands fa-paypal"></i>
+
+<h3>PayPal</h3>
+
+<p>Connected</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+        AI BILLING INSIGHTS
+========================================== -->
+
+<section class="ai-billing">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fa-solid fa-robot"></i>
+
+AI Billing Insights
+
+</h2>
+
+</div>
+
+<div class="analysis-box">
+
+<p>✅ You spent <strong>18%</strong> less this month compared to last month.</p>
+
+<p>💊 Medicine expenses account for <strong>22%</strong> of your total healthcare spending.</p>
+
+<p>🏥 Your insurance covered <strong>92%</strong> of eligible hospital expenses.</p>
+
+<p>💡 Renew your insurance before expiry to maintain uninterrupted coverage.</p>
+
+</div>
+
+<button class="download-analysis">
+
+Download Billing Report
+
+</button>
+
+</section>
+
+<!-- ==========================================
+        FOOTER
+========================================== -->
+
+<footer class="footer">
+
+<p>
+
+© 2026 Medicare+ | Secure Healthcare Billing System
+
+</p>
+
+</footer>
+</main>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../js/Billing.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare+ | Appointments Management</title>
+    <link rel="stylesheet" href="../css/Receptionist_Dashbaord.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ==========================
+            SIDEBAR
+    ========================== -->
+        <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-hospital-user"></i>
+
+            <h2>Medicare+</h2>
+
+        </div>
+
+        <ul class="menu">
+<li>
+                <a href="Receptionist_Dashboard.html">
+                  
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+                </a>
+
+            </li>
+
+              <li>
+                <a href="Register_Patient.html">
+
+                <i class="fa-solid fa-user-plus"></i>
+                
+
+                <span>Register Patient</span>
+                   </a>
+            </li>
+
+            <li>
+                <a href="Patients_List.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>Patients</span>
+                </a>
+
+            </li>
+
+            <li class="active">
+                <a href="Appointments_List.html">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>Appointments</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Doctors_List.html">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <span>Doctors</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Billing_List.html">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>Billing</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Beds_List.html">
+
+                <i class="fa-solid fa-bed"></i>
+
+                <span>Hospital Beds</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Notification.html">
+                       <i class="fa-solid fa-bell"></i>
+
+                <span>Notifications</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Setting.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+                </a>
+
+            </li>
+
+        </ul>
+
+        <div class="logout">
+            <a href="Reciptionist_login.html">
+            <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+                </button>
+                </a>
+
+        </div>
+
+    </aside>
+    <!-- ==========================
+            MAIN CONTENT
+    ========================== -->
+    <main class="main-content">
+
+        <!-- ==========================
+                TOPBAR
+        ========================== -->
+        <header class="topbar">
+            <div class="welcome">
+                <h1>Appointments Management</h1>
+                <p>Schedule, reschedule, and track outpatient clinic appointments and token queues.</p>
+            </div>
+
+            <div class="top-actions">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="appointmentSearch" placeholder="Search Patient, Doctor, Appt ID...">
+                </div>
+
+                <button class="icon-btn" aria-label="Notifications">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+
+                <button class="icon-btn" aria-label="Messages">
+                    <i class="fa-solid fa-envelope"></i>
+                </button>
+
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <div class="profile">
+                    <img src="https://ui-avatars.com/api/?name=Receptionist&background=7c3aed&color=ffffff" alt="Receptionist Avatar">
+                    <div>
+                        <h4>Reception Desk</h4>
+                        <small>ID : REC-101</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ==========================
+                APPOINTMENTS CONTENT
+        ========================== -->
+        <section class="content">
+
+            <!-- Overview Metrics -->
+            <div class="cards">
+                <div class="card appointment-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-calendar-day"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Today's Total Appointments</h3>
+                        <h2>42</h2>
+                        <p>18 Completed</p>
+                    </div>
+                </div>
+
+                <div class="card patient-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Waiting in OPD Queue</h3>
+                        <h2>12</h2>
+                        <p>Average wait time: 14 mins</p>
+                    </div>
+                </div>
+
+                <div class="card doctor-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Active Clinics</h3>
+                        <h2>8 OPDs</h2>
+                        <p>All doctors on schedule</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking & Filter Bar -->
+            <div class="panel" style="margin-top: 25px;">
+                <div class="section-title">
+                    <h2>Filter & Schedule Appointments</h2>
+                    <button class="btn-primary-gradient" style="padding: 10px 18px; font-size: 13px;" id="btnBookAppointment">
+                        <i class="fa-solid fa-calendar-plus"></i> Book New Appointment
+                    </button>
+                </div>
+
+                <div class="status-grid" style="grid-template-columns: repeat(4, 1fr); gap: 15px;">
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; color: var(--text-light); display: block; margin-bottom: 5px;">Date</label>
+                        <input type="date" id="filterDate" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 10px;">
+                    </div>
+
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; color: var(--text-light); display: block; margin-bottom: 5px;">Specialty / Department</label>
+                        <select id="filterSpecialty" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 10px;">
+                            <option value="all">All Specialties</option>
+                            <option value="cardiology">Cardiology</option>
+                            <option value="neurology">Neurology</option>
+                            <option value="orthopedics">Orthopedics</option>
+                            <option value="pediatrics">Pediatrics</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; color: var(--text-light); display: block; margin-bottom: 5px;">Appointment Status</label>
+                        <select id="filterApptStatus" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 10px;">
+                            <option value="all">All Statuses</option>
+                            <option value="waiting">Waiting</option>
+                            <option value="consulting">In Consultation</option>
+                            <option value="completed">Completed</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </div>
+
+                    <div style="display: flex; align-items: flex-end;">
+                        <button class="view-btn" style="width: 100%; padding: 11px; text-align: center;" id="btnApplyApptFilter">
+                            <i class="fa-solid fa-filter"></i> Apply Filter
+                        </button>
+                    </div>
+                </div>
+            </div>
+<!-- Appointments Table Panel -->
+            <div class="panel" style="margin-top: 25px;">
+                <div class="section-title">
+                    <h2>Appointments Schedule</h2>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="view-btn" style="background: #e2e8f0; color: #1e293b;" aria-label="Export Appointments">
+                            <i class="fa-solid fa-file-csv"></i> Export List
+                        </button>
+                        <button class="view-btn" aria-label="Print Daily Schedule">
+                            <i class="fa-solid fa-print"></i> Print Schedule
+                        </button>
+                    </div>
+                </div>
+
+                <table class="management-table">
+                    <thead>
+                        <tr>
+                            <th>Appt ID / Token</th>
+                            <th>Time Slot</th>
+                            <th>Patient Name</th>
+                            <th>Assigned Doctor</th>
+                            <th>Department</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>#APT-1001</strong>
+                                <div style="font-size: 11px; color: var(--text-light);">Token: T-01</div>
+                            </td>
+                            <td>
+                                <strong>09:30 AM</strong>
+                                <div style="font-size: 12px; color: var(--text-light);">24 Jul 2026</div>
+                            </td>
+                            <td>
+                                <div>
+                                    <strong style="font-size: 15px;">Rahul Sharma</strong>
+                                    <div style="font-size: 12px; color: var(--text-light);">UHID: MED-2026-8941</div>
+                                </div>
+                            </td>
+                            <td>Dr. Sarah Wilson</td>
+                            <td>Cardiology</td>
+                            <td><span class="waiting-status">Waiting</span></td>
+                            <td>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px;" title="Check-In Patient">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </button>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px; background: var(--warning);" title="Reschedule">
+                                    <i class="fa-solid fa-clock"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>#APT-1002</strong>
+                                <div style="font-size: 11px; color: var(--text-light);">Token: T-02</div>
+                            </td>
+                            <td>
+                                <strong>10:15 AM</strong>
+                                <div style="font-size: 12px; color: var(--text-light);">24 Jul 2026</div>
+                            </td>
+                            <td>
+                                <div>
+                                    <strong style="font-size: 15px;">Anjali Mehta</strong>
+                                    <div style="font-size: 12px; color: var(--text-light);">UHID: MED-2026-8940</div>
+                                </div>
+                            </td>
+                            <td>Dr. Amit Sharma</td>
+                            <td>Neurology</td>
+                            <td><span class="consulting-status">Consulting</span></td>
+                            <td>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px;" title="View Details">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>#APT-1003</strong>
+                                <div style="font-size: 11px; color: var(--text-light);">Token: T-03</div>
+                            </td>
+                            <td>
+                                <strong>11:00 AM</strong>
+                                <div style="font-size: 12px; color: var(--text-light);">24 Jul 2026</div>
+                            </td>
+                            <td>
+                                <div>
+                                    <strong style="font-size: 15px;">Priya Singh</strong>
+                                    <div style="font-size: 12px; color: var(--text-light);">UHID: MED-2026-8922</div>
+                                </div>
+                            </td>
+                            <td>Dr. James Anderson</td>
+                            <td>Orthopedics</td>
+                            <td><span class="completed-status">Completed</span></td>
+                            <td>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px;" title="Print Slip">
+                                    <i class="fa-solid fa-print"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>#APT-1004</strong>
+                                <div style="font-size: 11px; color: var(--text-light);">Token: T-04</div>
+                            </td>
+                            <td>
+                                <strong>11:45 AM</strong>
+                                <div style="font-size: 12px; color: var(--text-light);">24 Jul 2026</div>
+                            </td>
+                            <td>
+                                <div>
+                                    <strong style="font-size: 15px;">Vikas Kumar</strong>
+                                    <div style="font-size: 12px; color: var(--text-light);">UHID: MED-2026-8939</div>
+                                </div>
+                            </td>
+                            <td>Dr. Priya Patel</td>
+                            <td>Pediatrics</td>
+                            <td><span class="busy-status">Cancelled</span></td>
+                            <td>
+                                <button class="view-btn" style="padding: 6px 12px; font-size: 13px; background: var(--secondary);" title="Rebook">
+                                    <i class="fa-solid fa-rotate-right"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Footer -->
+            <footer class="dashboard-footer">
+                <p>© 2026 Medicare+ Hospital Management System</p>
+                <p>Appointments Module | Version 1.0</p>
+            </footer>
+
+        </section>
+    </main>
+</div>
+
+<!-- Connect Interactive JS Engine -->
+<script src="../js/Appointments_List.js"></script>
+</body>
+</html>

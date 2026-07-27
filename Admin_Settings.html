@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Admin Settings | Medicare+</title>
+
+<link rel="stylesheet"
+href="../css/Admin_Settings.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<!--====================================
+            SIDEBAR
+=====================================-->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<div class="logo-icon">
+
+<i class="fa-solid fa-hospital"></i>
+
+</div>
+
+<div class="logo-text">
+
+<h2>Medicare<span>+</span></h2>
+
+<p>Admin Panel</p>
+
+</div>
+
+</div>
+
+<nav>
+
+<p class="menu-title">
+
+MAIN MENU
+
+</p>
+
+<ul class="menu">
+
+<li>
+
+<a href="Admin_Dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Dashboard</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="Admin_Doctors.html">
+
+<i class="fa-solid fa-user-doctor"></i>
+
+<span>Doctors</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="Admin_Patients.html">
+
+<i class="fa-solid fa-users"></i>
+
+<span>Patients</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="Admin_Appointments.html">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<span>Appointments</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="Admin_Billing.html">
+
+<i class="fa-solid fa-credit-card"></i>
+
+<span>Billing</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="Admin_reports.html">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<span>Reports</span>
+
+</a>
+
+</li>
+
+<li class="active">
+
+<a href="Admin_Settings.html">
+
+<i class="fa-solid fa-gear"></i>
+
+<span>Settings</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</nav>
+
+<div class="logout-section">
+
+<button class="logout-btn">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</button>
+
+</div>
+
+</aside>
+
+<!--====================================
+            MAIN CONTENT
+=====================================-->
+
+<main class="main-content">
+
+<header class="topbar">
+
+<div class="welcome">
+
+<h1>
+
+System Settings
+
+</h1>
+
+<p>
+
+Manage hospital configuration and administrator preferences.
+
+</p>
+
+</div>
+
+<div class="top-actions">
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search settings...">
+
+</div>
+
+<button class="icon-btn">
+
+<i class="fa-solid fa-bell"></i>
+
+<span class="badge">
+
+3
+
+</span>
+
+</button>
+
+<button class="icon-btn"
+id="themeToggle">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+<div class="profile">
+
+<img
+src="https://ui-avatars.com/api/?name=Admin&background=2563eb&color=fff"
+alt="Admin">
+
+<div>
+
+<h4>
+
+System Admin
+
+</h4>
+
+<small>
+
+Administrator
+
+</small>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!--====================================
+            ADMIN PROFILE
+=====================================-->
+
+<section class="profile-card">
+
+<div class="profile-left">
+
+<img
+src="https://ui-avatars.com/api/?name=Admin&background=2563eb&color=fff"
+id="profileImage">
+
+<button class="upload-btn">
+
+<i class="fa-solid fa-camera"></i>
+
+Change Photo
+
+</button>
+
+</div>
+
+<div class="profile-right">
+
+<h2>
+
+System Administrator
+
+</h2>
+
+<p>
+
+Hospital Management Administrator
+
+</p>
+
+<div class="profile-info">
+
+<div>
+
+<h4>Email</h4>
+
+<p>
+
+admin@medicareplus.com
+
+</p>
+
+</div>
+
+<div>
+
+<h4>Phone</h4>
+
+<p>
+
++91 9876543210
+
+</p>
+
+</div>
+
+<div>
+
+<h4>Department</h4>
+
+<p>
+
+Administration
+
+</p>
+
+</div>
+
+<div>
+
+<h4>Location</h4>
+
+<p>
+
+Pune, Maharashtra
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!--====================================
+        SETTINGS GRID
+=====================================-->
+
+<div class="settings-grid">
+
+    <!-- Hospital Information -->
+
+    <div class="settings-card">
+
+        <div class="card-header">
+
+            <h2>
+
+                <i class="fa-solid fa-hospital"></i>
+
+                Hospital Information
+
+            </h2>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Hospital Name</label>
+
+            <input type="text" value="Medicare+ Multi Speciality Hospital">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Hospital Email</label>
+
+            <input type="email" value="info@medicareplus.com">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Hospital Phone</label>
+
+            <input type="text" value="+91 9876543210">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Hospital Address</label>
+
+            <textarea rows="4">Pune, Maharashtra, India</textarea>
+
+        </div>
+
+    </div>
+
+    <!-- Administrator Information -->
+
+    <div class="settings-card">
+
+        <div class="card-header">
+
+            <h2>
+
+                <i class="fa-solid fa-user-shield"></i>
+
+                Administrator Information
+
+            </h2>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Administrator Name</label>
+
+            <input type="text" value="System Administrator">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Email Address</label>
+
+            <input type="email" value="admin@medicareplus.com">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Mobile Number</label>
+
+            <input type="text" value="+91 9876543210">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Designation</label>
+
+            <input type="text" value="Hospital Administrator">
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--====================================
+        SECURITY SETTINGS
+=====================================-->
+
+<div class="settings-card">
+
+    <div class="card-header">
+
+        <h2>
+
+            <i class="fa-solid fa-lock"></i>
+
+            Security Settings
+
+        </h2>
+
+    </div>
+
+    <div class="form-group">
+
+        <label>Current Password</label>
+
+        <input type="password" placeholder="********">
+
+    </div>
+
+    <div class="form-group">
+
+        <label>New Password</label>
+
+        <input type="password" placeholder="Enter New Password">
+
+    </div>
+
+    <div class="form-group">
+
+        <label>Confirm Password</label>
+
+        <input type="password" placeholder="Confirm Password">
+
+    </div>
+
+    <div class="toggle-row">
+
+        <span>Enable Two-Factor Authentication</span>
+
+        <label class="switch">
+
+            <input type="checkbox" checked>
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+</div>
+
+<!--====================================
+        APPEARANCE SETTINGS
+=====================================-->
+
+<div class="settings-card">
+
+    <div class="card-header">
+
+        <h2>
+
+            <i class="fa-solid fa-palette"></i>
+
+            Appearance
+
+        </h2>
+
+    </div>
+
+    <div class="toggle-row">
+
+        <span>Dark Mode</span>
+
+        <label class="switch">
+
+            <input type="checkbox" id="darkModeSwitch">
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+    <div class="toggle-row">
+
+        <span>Enable Animations</span>
+
+        <label class="switch">
+
+            <input type="checkbox" checked>
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+    <div class="toggle-row">
+
+        <span>Compact Layout</span>
+
+        <label class="switch">
+
+            <input type="checkbox">
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+</div>
+<!--====================================
+        EMAIL SETTINGS
+=====================================-->
+
+<div class="settings-card">
+
+    <div class="card-header">
+
+        <h2>
+
+            <i class="fa-solid fa-envelope"></i>
+
+            Email (SMTP) Settings
+
+        </h2>
+
+    </div>
+
+    <div class="form-group">
+
+        <label>SMTP Host</label>
+
+        <input type="text" value="smtp.gmail.com">
+
+    </div>
+
+    <div class="form-group">
+
+        <label>SMTP Port</label>
+
+        <input type="number" value="587">
+
+    </div>
+
+    <div class="form-group">
+
+        <label>SMTP Email</label>
+
+        <input type="email" value="admin@medicareplus.com">
+
+    </div>
+
+    <div class="form-group">
+
+        <label>SMTP Password</label>
+
+        <input type="password" value="password123">
+
+    </div>
+
+</div>
+
+<!--====================================
+        NOTIFICATION SETTINGS
+=====================================-->
+
+<div class="settings-card">
+
+    <div class="card-header">
+
+        <h2>
+
+            <i class="fa-solid fa-bell"></i>
+
+            Notification Preferences
+
+        </h2>
+
+    </div>
+
+    <div class="toggle-row">
+
+        <span>Email Notifications</span>
+
+        <label class="switch">
+
+            <input type="checkbox" checked>
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+    <div class="toggle-row">
+
+        <span>SMS Notifications</span>
+
+        <label class="switch">
+
+            <input type="checkbox" checked>
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+    <div class="toggle-row">
+
+        <span>Appointment Alerts</span>
+
+        <label class="switch">
+
+            <input type="checkbox" checked>
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+    <div class="toggle-row">
+
+        <span>Emergency Alerts</span>
+
+        <label class="switch">
+
+            <input type="checkbox" checked>
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+</div>
+
+<!--====================================
+        USER ROLES & PERMISSIONS
+=====================================-->
+
+<div class="settings-card">
+
+    <div class="card-header">
+
+        <h2>
+
+            <i class="fa-solid fa-user-lock"></i>
+
+            User Roles & Permissions
+
+        </h2>
+
+    </div>
+
+    <div class="form-group">
+
+        <label>Default User Role</label>
+
+        <select>
+
+            <option selected>Administrator</option>
+            <option>Doctor</option>
+            <option>Receptionist</option>
+            <option>Nurse</option>
+            <option>Pharmacist</option>
+
+        </select>
+
+    </div>
+
+    <div class="toggle-row">
+
+        <span>Allow User Registration</span>
+
+        <label class="switch">
+
+            <input type="checkbox">
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+    <div class="toggle-row">
+
+        <span>Role Based Access Control</span>
+
+        <label class="switch">
+
+            <input type="checkbox" checked>
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+</div>
+
+<!--====================================
+        BACKUP & RESTORE
+=====================================-->
+
+<div class="settings-card">
+
+    <div class="card-header">
+
+        <h2>
+
+            <i class="fa-solid fa-database"></i>
+
+            Backup & Restore
+
+        </h2>
+
+    </div>
+
+    <div class="backup-actions">
+
+        <button class="backup-btn">
+
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+            Backup Database
+
+        </button>
+
+        <button class="restore-btn">
+
+            <i class="fa-solid fa-clock-rotate-left"></i>
+
+            Restore Database
+
+        </button>
+
+    </div>
+
+</div>
+
+<!--====================================
+        ACTION BUTTONS
+=====================================-->
+
+<div class="settings-actions">
+
+    <button class="save-btn">
+
+        <i class="fa-solid fa-floppy-disk"></i>
+
+        Save Changes
+
+    </button>
+
+    <button class="reset-btn">
+
+        <i class="fa-solid fa-rotate-left"></i>
+
+        Reset Settings
+
+    </button>
+
+    <button class="logout-btn2">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        Logout
+
+    </button>
+
+</div>
+<!--====================================
+        SYSTEM STATUS
+=====================================-->
+
+<section class="system-grid">
+
+    <!-- Database Status -->
+
+    <div class="system-card">
+
+        <div class="card-header">
+
+            <h2>
+
+                <i class="fa-solid fa-database"></i>
+
+                Database Status
+
+            </h2>
+
+        </div>
+
+        <div class="status-list">
+
+            <div class="status-item">
+
+                <span>Database</span>
+
+                <span class="online">● Online</span>
+
+            </div>
+
+            <div class="status-item">
+
+                <span>Storage Used</span>
+
+                <span>78%</span>
+
+            </div>
+
+            <div class="status-item">
+
+                <span>Last Backup</span>
+
+                <span>Today - 02:00 AM</span>
+
+            </div>
+
+            <div class="status-item">
+
+                <span>Database Size</span>
+
+                <span>8.4 GB</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Server Information -->
+
+    <div class="system-card">
+
+        <div class="card-header">
+
+            <h2>
+
+                <i class="fa-solid fa-server"></i>
+
+                Server Information
+
+            </h2>
+
+        </div>
+
+        <div class="status-list">
+
+            <div class="status-item">
+
+                <span>Server Status</span>
+
+                <span class="online">● Running</span>
+
+            </div>
+
+            <div class="status-item">
+
+                <span>CPU Usage</span>
+
+                <span>42%</span>
+
+            </div>
+
+            <div class="status-item">
+
+                <span>Memory Usage</span>
+
+                <span>65%</span>
+
+            </div>
+
+            <div class="status-item">
+
+                <span>Uptime</span>
+
+                <span>128 Days</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--====================================
+        RECENT ACTIVITY
+=====================================-->
+
+<section class="activity-card">
+
+    <div class="card-header">
+
+        <h2>
+
+            <i class="fa-solid fa-clock-rotate-left"></i>
+
+            Recent Activity
+
+        </h2>
+
+    </div>
+
+    <div class="activity-list">
+
+        <div class="activity-item">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            <div>
+
+                <h4>New Doctor Registered</h4>
+
+                <p>2 minutes ago</p>
+
+            </div>
+
+        </div>
+
+        <div class="activity-item">
+
+            <i class="fa-solid fa-file-medical"></i>
+
+            <div>
+
+                <h4>Medical Report Generated</h4>
+
+                <p>15 minutes ago</p>
+
+            </div>
+
+        </div>
+
+        <div class="activity-item">
+
+            <i class="fa-solid fa-database"></i>
+
+            <div>
+
+                <h4>Database Backup Completed</h4>
+
+                <p>Today - 02:00 AM</p>
+
+            </div>
+
+        </div>
+
+        <div class="activity-item">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <div>
+
+                <h4>Security Settings Updated</h4>
+
+                <p>Yesterday</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--====================================
+        SYSTEM STATISTICS
+=====================================-->
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-users"></i>
+
+        <h2>12,486</h2>
+
+        <p>Total Patients</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-user-doctor"></i>
+
+        <h2>248</h2>
+
+        <p>Doctors</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-calendar-check"></i>
+
+        <h2>3,842</h2>
+
+        <p>Appointments</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-indian-rupee-sign"></i>
+
+        <h2>₹18.6L</h2>
+
+        <p>Monthly Revenue</p>
+
+    </div>
+
+</section>
+
+<!--====================================
+        FOOTER
+=====================================-->
+
+<footer class="dashboard-footer">
+
+    <div>
+
+        <h3>Medicare+ Admin Settings</h3>
+
+        <p>
+
+            Hospital Management System © 2026
+
+        </p>
+
+    </div>
+
+    <div class="footer-links">
+
+        <a href="#">Privacy Policy</a>
+
+        <a href="#">Terms</a>
+
+        <a href="#">Support</a>
+
+        <a href="#">Contact</a>
+
+    </div>
+
+</footer>
+
+</main>
+
+<script src="../js/Admin_Settings.js"></script>
+
+</body>
+
+</html>

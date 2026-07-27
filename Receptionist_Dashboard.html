@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Medicare+ | Receptionist Dashboard</title>
+
+    <link rel="stylesheet" href="../css/Receptionist_Dashbaord.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ==========================
+            SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-hospital-user"></i>
+
+            <h2>Medicare+</h2>
+
+        </div>
+
+        <ul class="menu">
+
+            <li class="active">
+                  
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+
+            </li>
+
+            <li>
+                <a href="Register_Patient.html">
+
+                <i class="fa-solid fa-user-plus"></i>
+                
+
+                <span>Register Patient</span>
+                   </a>
+            </li>
+
+            <li>
+                <a href="Patients_List.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>Patients</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Appointments_List.html">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>Appointments</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Doctors_List.html">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <span>Doctors</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Billing_List.html">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>Billing</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Beds_List.html">
+
+                <i class="fa-solid fa-bed"></i>
+
+                <span>Hospital Beds</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Notification.html">
+                       <i class="fa-solid fa-bell"></i>
+
+                <span>Notifications</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Setting.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+                </a>
+
+            </li>
+
+        </ul>
+
+        <div class="logout">
+            <a href="Reciptionist_login.html">
+                 <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+                </button>
+                </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ==========================
+            MAIN CONTENT
+    ========================== -->
+
+    <main class="main-content">
+
+        <!-- ==========================
+                TOPBAR
+        ========================== -->
+
+        <header class="topbar">
+
+            <div class="welcome">
+
+                <h1>
+
+                    Welcome,
+
+                    <span id="receptionistName">
+
+                        Receptionist
+
+                    </span>
+
+                </h1>
+
+                <p>
+
+                    Manage patient registrations, appointments, billing and hospital operations efficiently.
+
+                </p>
+
+            </div>
+
+            <div class="top-actions">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Search patient, doctor, appointment...">
+
+                </div>
+
+                <button class="icon-btn">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </button>
+
+                <button class="icon-btn">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </button>
+
+                <button class="icon-btn" id="themeToggle">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <div class="profile">
+
+                    <img src="https://ui-avatars.com/api/?name=Receptionist&background=7c3aed&color=ffffff"
+                        alt="Receptionist">
+
+                    <div>
+
+                        <h4>Reception Desk</h4>
+
+                        <small>ID : REC-101</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ==========================
+                DASHBOARD CONTENT
+        ========================== -->
+
+        <section class="content">
+            <!-- ==================================
+        DASHBOARD OVERVIEW CARDS
+=================================== -->
+
+<div class="cards">
+
+    <!-- Patients Today -->
+
+    <div class="card patient-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-users"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Patients Today</h3>
+
+            <h2>86</h2>
+
+            <p>+12 Since Morning</p>
+
+        </div>
+
+    </div>
+
+    <!-- Appointments -->
+
+    <div class="card appointment-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Appointments</h3>
+
+            <h2>42</h2>
+
+            <p>8 Waiting</p>
+
+        </div>
+
+    </div>
+
+    <!-- Available Doctors -->
+
+    <div class="card doctor-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-user-doctor"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Doctors Available</h3>
+
+            <h2>24</h2>
+
+            <p>3 In Surgery</p>
+
+        </div>
+
+    </div>
+
+    <!-- Bills Generated -->
+
+    <div class="card billing-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Bills Generated</h3>
+
+            <h2>₹78K</h2>
+
+            <p>Today</p>
+
+        </div>
+
+    </div>
+
+    <!-- Available Beds -->
+
+    <div class="card bed-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-bed"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Available Beds</h3>
+
+            <h2>36</h2>
+
+            <p>Out of 120</p>
+
+        </div>
+
+    </div>
+
+    <!-- Emergency Cases -->
+
+    <div class="card emergency-card">
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-truck-medical"></i>
+
+        </div>
+
+        <div class="card-info">
+
+            <h3>Emergency Cases</h3>
+
+            <h2>5</h2>
+
+            <p>Immediate Attention</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================
+        QUICK ACTIONS
+=================================== -->
+
+<div class="quick-actions">
+
+    <button>
+
+        <i class="fa-solid fa-user-plus"></i>
+
+        Register Patient
+
+    </button>
+
+    <button>
+
+        <i class="fa-solid fa-calendar-plus"></i>
+
+        Book Appointment
+
+    </button>
+
+    <button>
+
+        <i class="fa-solid fa-print"></i>
+
+        Print Receipt
+
+    </button>
+
+    <button>
+
+        <i class="fa-solid fa-credit-card"></i>
+
+        Generate Bill
+
+    </button>
+
+    <button>
+
+        <i class="fa-solid fa-user-doctor"></i>
+
+        Assign Doctor
+
+    </button>
+
+    <button>
+
+        <i class="fa-solid fa-bed"></i>
+
+        Bed Allocation
+
+    </button>
+
+</div>
+
+
+
+<!-- ==================================
+        TODAY'S HOSPITAL STATUS
+=================================== -->
+
+<div class="hospital-status">
+
+    <div class="section-title">
+
+        <h2>Today's Hospital Status</h2>
+
+        <a href="#">View Report</a>
+
+    </div>
+
+    <div class="status-grid">
+
+        <div class="status-box">
+
+            <i class="fa-solid fa-user-clock"></i>
+
+            <h3>Waiting Queue</h3>
+
+            <h2>18</h2>
+
+        </div>
+
+        <div class="status-box">
+
+            <i class="fa-solid fa-stethoscope"></i>
+
+            <h3>Consultations</h3>
+
+            <h2>74</h2>
+
+        </div>
+
+        <div class="status-box">
+
+            <i class="fa-solid fa-kit-medical"></i>
+
+            <h3>Emergency Ward</h3>
+
+            <h2>09</h2>
+
+        </div>
+
+        <div class="status-box">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h3>Discharges</h3>
+
+            <h2>11</h2>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ==================================
+        PATIENT QUEUE & APPOINTMENTS
+=================================== -->
+
+<div class="management-grid">
+
+    <!-- Patient Queue -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Patient Queue</h2>
+
+            <button class="view-btn">View All</button>
+
+        </div>
+
+        <table class="management-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Token</th>
+                    <th>Patient</th>
+                    <th>Doctor</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>#101</td>
+                    <td>Rahul Sharma</td>
+                    <td>Dr. Sarah</td>
+                    <td><span class="waiting-status">Waiting</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>#102</td>
+                    <td>Anjali Mehta</td>
+                    <td>Dr. Amit</td>
+                    <td><span class="consulting-status">Consulting</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>#103</td>
+                    <td>Rohan Gupta</td>
+                    <td>Dr. Priya</td>
+                    <td><span class="completed-status">Completed</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>#104</td>
+                    <td>Neha Verma</td>
+                    <td>Dr. James</td>
+                    <td><span class="waiting-status">Waiting</span></td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <!-- Today's Appointments -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Today's Appointments</h2>
+
+            <button class="view-btn">Manage</button>
+
+        </div>
+
+        <table class="management-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Time</th>
+                    <th>Patient</th>
+                    <th>Doctor</th>
+                    <th>Room</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>09:30 AM</td>
+                    <td>Rahul Sharma</td>
+                    <td>Dr. Sarah</td>
+                    <td>201</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>10:15 AM</td>
+                    <td>Anjali Mehta</td>
+                    <td>Dr. Amit</td>
+                    <td>105</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>11:00 AM</td>
+                    <td>Priya Singh</td>
+                    <td>Dr. James</td>
+                    <td>310</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>11:45 AM</td>
+                    <td>Vikas Kumar</td>
+                    <td>Dr. Priya</td>
+                    <td>112</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================
+        DOCTOR AVAILABILITY
+=================================== -->
+
+<div class="management-grid">
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Doctor Availability</h2>
+
+            <button class="view-btn">Refresh</button>
+
+        </div>
+
+        <table class="management-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Doctor</th>
+                    <th>Department</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Dr. Sarah Wilson</td>
+                    <td>Cardiology</td>
+                    <td><span class="available-status">Available</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Dr. Amit Sharma</td>
+                    <td>Neurology</td>
+                    <td><span class="busy-status">Busy</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Dr. Priya Patel</td>
+                    <td>Pediatrics</td>
+                    <td><span class="available-status">Available</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Dr. James Anderson</td>
+                    <td>Orthopedics</td>
+                    <td><span class="leave-status">On Leave</span></td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <!-- Billing Records -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Recent Billing</h2>
+
+            <button class="view-btn">View All</button>
+
+        </div>
+
+        <table class="management-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Bill ID</th>
+                    <th>Patient</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>B1001</td>
+                    <td>Rahul Sharma</td>
+                    <td>₹2,500</td>
+                    <td><span class="paid-status">Paid</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>B1002</td>
+                    <td>Anjali Mehta</td>
+                    <td>₹6,200</td>
+                    <td><span class="pending-status">Pending</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>B1003</td>
+                    <td>Vikas Kumar</td>
+                    <td>₹1,800</td>
+                    <td><span class="paid-status">Paid</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>B1004</td>
+                    <td>Neha Verma</td>
+                    <td>₹3,450</td>
+                    <td><span class="pending-status">Pending</span></td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================
+        RECEPTION STATISTICS
+=================================== -->
+
+<div class="panel">
+
+    <div class="section-title">
+
+        <h2>Reception Statistics</h2>
+
+        <button class="view-btn">Today</button>
+
+    </div>
+
+    <canvas id="receptionChart"></canvas>
+
+</div>
+<!-- ==================================
+        TODAY'S SCHEDULE & NOTIFICATIONS
+=================================== -->
+
+<div class="management-grid">
+
+    <!-- Today's Schedule -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Today's Schedule</h2>
+
+            <button class="view-btn">View Calendar</button>
+
+        </div>
+
+        <div class="schedule-list">
+
+            <div class="schedule-item">
+
+                <div class="schedule-time">
+
+                    <h3>09:00 AM</h3>
+
+                </div>
+
+                <div class="schedule-details">
+
+                    <h4>Morning OPD Opens</h4>
+
+                    <p>Reception Counter 1</p>
+
+                </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+                <div class="schedule-time">
+
+                    <h3>10:30 AM</h3>
+
+                </div>
+
+                <div class="schedule-details">
+
+                    <h4>Dr. Sarah Consultation</h4>
+
+                    <p>Cardiology Department</p>
+
+                </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+                <div class="schedule-time">
+
+                    <h3>12:30 PM</h3>
+
+                </div>
+
+                <div class="schedule-details">
+
+                    <h4>Lunch Break</h4>
+
+                    <p>Reception Staff</p>
+
+                </div>
+
+            </div>
+
+            <div class="schedule-item">
+
+                <div class="schedule-time">
+
+                    <h3>03:00 PM</h3>
+
+                </div>
+
+                <div class="schedule-details">
+
+                    <h4>Insurance Verification</h4>
+
+                    <p>Billing Department</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Notifications -->
+
+    <div class="panel">
+
+        <div class="section-title">
+
+            <h2>Notifications</h2>
+
+            <button class="view-btn">Clear All</button>
+
+        </div>
+
+        <div class="notification-list">
+
+            <div class="notification-item">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <div>
+
+                    <h4>New Patient Registration</h4>
+
+                    <p>5 new patients have registered today.</p>
+
+                </div>
+
+            </div>
+
+            <div class="notification-item">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+                <div>
+
+                    <h4>Emergency Case</h4>
+
+                    <p>An emergency patient has arrived at the Emergency Ward.</p>
+
+                </div>
+
+            </div>
+
+            <div class="notification-item">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <div>
+
+                    <h4>Pending Payments</h4>
+
+                    <p>3 bills are awaiting payment confirmation.</p>
+
+                </div>
+
+            </div>
+
+            <div class="notification-item">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <div>
+
+                    <h4>Doctor Update</h4>
+
+                    <p>Dr. Priya has completed her morning appointments.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================
+        RECENT ACTIVITIES
+=================================== -->
+
+<div class="panel">
+
+    <div class="section-title">
+
+        <h2>Recent Activities</h2>
+
+        <button class="view-btn">View All</button>
+
+    </div>
+
+    <div class="activity-list">
+
+        <div class="activity-item">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            <div>
+
+                <h4>Patient Registered</h4>
+
+                <p>Rahul Sharma successfully registered.</p>
+
+            </div>
+
+            <span>5 min ago</span>
+
+        </div>
+
+        <div class="activity-item">
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+            <div>
+
+                <h4>Appointment Booked</h4>
+
+                <p>Appointment scheduled with Dr. Sarah.</p>
+
+            </div>
+
+            <span>15 min ago</span>
+
+        </div>
+
+        <div class="activity-item">
+
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+
+            <div>
+
+                <h4>Bill Generated</h4>
+
+                <p>Invoice generated for Patient ID PT-109.</p>
+
+            </div>
+
+            <span>22 min ago</span>
+
+        </div>
+
+        <div class="activity-item">
+
+            <i class="fa-solid fa-bed"></i>
+
+            <div>
+
+                <h4>Bed Allocated</h4>
+
+                <p>Bed No. 18 assigned to a new patient.</p>
+
+            </div>
+
+            <span>40 min ago</span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================
+        FOOTER
+=================================== -->
+
+<footer class="dashboard-footer">
+
+    <p>
+
+        © 2026 Medicare+ Hospital Management System
+
+    </p>
+
+    <p>
+
+        Receptionist Dashboard | Version 1.0
+
+    </p>
+
+</footer>
+
+</section>
+
+</main>
+
+</div>
+
+<!-- Chart.js -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Receptionist Dashboard JS -->
+
+<script src="../js/Receptionist_Dashbaord.js"></script>
+
+</body>
+
+</html>
