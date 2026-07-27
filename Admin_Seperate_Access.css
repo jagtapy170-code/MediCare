@@ -1,0 +1,1465 @@
+/* ===========================================
+   MEDICARE+ ADMIN DASHBOARD
+   PART - 1
+=========================================== */
+
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===============================
+   RESET
+================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#eef5ff;
+    color:#222;
+    overflow-x:hidden;
+}
+
+/* ===============================
+   VARIABLES
+================================= */
+
+:root{
+
+    --primary:#2563eb;
+    --secondary:#1e40af;
+    --light:#ffffff;
+    --bg:#eef5ff;
+    --text:#333;
+    --success:#16a34a;
+    --danger:#dc2626;
+    --warning:#f59e0b;
+    --shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+/* ===============================
+   SIDEBAR
+================================= */
+
+.sidebar{
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    width:270px;
+    height:100vh;
+
+    background:linear-gradient(
+        180deg,
+        #2563eb,
+        #1e40af
+    );
+
+    color:white;
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+    overflow-y:auto;
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    margin-bottom:40px;
+
+}
+
+.logo i{
+
+    font-size:38px;
+
+}
+
+.logo h2{
+
+    font-size:28px;
+    font-weight:700;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar ul li{
+
+    padding:16px 18px;
+
+    border-radius:12px;
+
+    margin-bottom:12px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    font-size:16px;
+
+}
+
+.sidebar ul li:hover{
+
+    background:rgba(255,255,255,.18);
+
+    transform:translateX(6px);
+
+}
+
+.sidebar ul li.active{
+
+    background:white;
+
+    color:#2563eb;
+
+    font-weight:600;
+
+}
+
+.sidebar ul li i{
+
+    width:25px;
+
+    text-align:center;
+
+}
+
+/* ===============================
+   MAIN
+================================= */
+
+.main{
+
+    margin-left:270px;
+
+    min-height:100vh;
+
+    padding:30px;
+
+}
+
+/* ===============================
+   NAVBAR
+================================= */
+
+header{
+
+    background:white;
+
+    padding:20px 30px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* Search */
+
+.search-box{
+
+    display:flex;
+
+    align-items:center;
+
+    background:#f3f7ff;
+
+    padding:12px 18px;
+
+    border-radius:40px;
+
+    width:380px;
+
+}
+
+.search-box i{
+
+    color:#2563eb;
+
+    margin-right:10px;
+
+}
+
+.search-box input{
+
+    border:none;
+
+    outline:none;
+
+    width:100%;
+
+    background:transparent;
+
+    font-size:15px;
+
+}
+
+/* Right */
+
+.top-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.notification{
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#eef5ff;
+
+    cursor:pointer;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.notification:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.notification span{
+
+    position:absolute;
+
+    top:-5px;
+
+    right:-3px;
+
+    width:22px;
+
+    height:22px;
+
+    background:red;
+
+    color:white;
+
+    border-radius:50%;
+
+    font-size:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.profile{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid #2563eb;
+
+}
+
+/* ===============================
+   PAGE
+================================= */
+
+.page{
+
+    display:none;
+
+    animation:fade .4s ease;
+
+}
+
+.active-page{
+
+    display:block;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+.page h1{
+
+    margin-bottom:30px;
+
+    font-size:34px;
+
+    color:#1e40af;
+
+}
+
+/* ===============================
+   DASHBOARD CARDS
+================================= */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    right:-45px;
+    top:-45px;
+
+    width:120px;
+    height:120px;
+
+    background:rgba(37,99,235,.08);
+
+    border-radius:50%;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card i{
+
+    font-size:42px;
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+}
+
+.card h2{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.card p{
+
+    color:#666;
+
+    font-size:16px;
+
+}
+
+/* ===============================
+   PRIMARY BUTTON
+================================= */
+
+.primary-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 24px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    margin-bottom:20px;
+
+    transition:.3s;
+
+}
+
+.primary-btn:hover{
+
+    background:#1e40af;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===============================
+   SCROLLBAR
+================================= */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#dbeafe;
+
+}
+/* ===========================================
+   TABLE DESIGN
+=========================================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    margin-top:20px;
+
+}
+
+thead{
+
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #1e40af
+    );
+
+    color:white;
+
+}
+
+thead th{
+
+    padding:18px;
+
+    text-align:left;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+tbody tr{
+
+    transition:.3s;
+
+}
+
+tbody tr:nth-child(even){
+
+    background:#f8fbff;
+
+}
+
+tbody tr:hover{
+
+    background:#edf5ff;
+
+}
+
+tbody td{
+
+    padding:16px 18px;
+
+    border-bottom:1px solid #edf2f7;
+
+    font-size:15px;
+
+}
+
+/* ===========================================
+   STATUS BADGES
+=========================================== */
+
+.status{
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.status.active{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+.status.leave{
+
+    background:#fef3c7;
+
+    color:#b45309;
+
+}
+
+.status.inactive{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+.status.admitted{
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+}
+
+.status.discharged{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+.status.critical{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+/* ===========================================
+   ACTION BUTTONS
+=========================================== */
+
+.action-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.action-buttons button{
+
+    border:none;
+
+    cursor:pointer;
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+    color:white;
+
+}
+
+.view{
+
+    background:#2563eb;
+
+}
+
+.edit{
+
+    background:#f59e0b;
+
+}
+
+.delete{
+
+    background:#dc2626;
+
+}
+
+.action-buttons button:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* ===========================================
+   HOSPITAL INFORMATION
+=========================================== */
+
+.hospital-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+    gap:30px;
+
+}
+
+.info-box{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.info-box h3{
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+}
+
+.info-box p{
+
+    margin-bottom:15px;
+
+    color:#444;
+
+}
+
+.info-box ul{
+
+    margin-left:25px;
+
+    margin-top:15px;
+
+}
+
+.info-box li{
+
+    margin-bottom:10px;
+
+}
+
+/* ===========================================
+   NOTICE BOARD
+=========================================== */
+
+textarea{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    padding:20px;
+
+    border-radius:16px;
+
+    resize:none;
+
+    background:white;
+
+    box-shadow:var(--shadow);
+
+    font-size:15px;
+
+    margin-bottom:20px;
+
+}
+
+.notice-list{
+
+    margin-top:35px;
+
+}
+
+.notice{
+
+    background:white;
+
+    padding:18px 22px;
+
+    border-left:6px solid #2563eb;
+
+    border-radius:14px;
+
+    margin-bottom:18px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.notice:hover{
+
+    transform:translateX(10px);
+
+}
+
+/* ===========================================
+   DASHBOARD SECTION TITLES
+=========================================== */
+
+section h1{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#1e40af;
+
+}
+
+section h1::after{
+
+    content:"";
+
+    flex:1;
+
+    height:3px;
+
+    background:#dbeafe;
+
+    margin-left:15px;
+
+}
+
+/* ===========================================
+   BUTTON HOVER EFFECT
+=========================================== */
+
+.primary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+.primary-btn:hover{
+
+    box-shadow:0 15px 25px rgba(37,99,235,.25);
+
+}
+
+/* ===========================================
+   CARD HOVER EFFECT
+=========================================== */
+
+.card{
+
+    cursor:pointer;
+
+}
+
+.card:hover{
+
+    box-shadow:
+
+    0 20px 45px rgba(37,99,235,.15);
+
+}
+
+/* ===========================================
+   TABLE ANIMATION
+=========================================== */
+
+table{
+
+    animation:tableFade .6s ease;
+
+}
+
+@keyframes tableFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================================
+   SEARCH INPUT EFFECT
+=========================================== */
+
+.search-box{
+
+    transition:.3s;
+
+}
+
+.search-box:focus-within{
+
+    box-shadow:
+
+    0 0 20px rgba(37,99,235,.25);
+
+}
+
+/* ===========================================
+   PROFILE INFO
+=========================================== */
+
+.top-right h4{
+
+    font-size:16px;
+
+    color:#1e40af;
+
+}
+
+.top-right small{
+
+    color:#666;
+
+}
+
+/* ===========================================
+   PAGE SPACING
+=========================================== */
+
+.page{
+
+    padding-bottom:40px;
+
+}
+
+/* ===========================================
+   EMPTY TABLE MESSAGE
+=========================================== */
+
+.empty{
+
+    text-align:center;
+
+    color:#888;
+
+    padding:40px;
+
+    font-size:18px;
+
+}
+/* ===========================================
+   ANALYTICS & STATS
+=========================================== */
+
+.analytics-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+    margin-top:30px;
+
+}
+
+.analytics-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.analytics-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.analytics-card h3{
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+
+}
+
+.chart-placeholder{
+
+    height:220px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border:2px dashed #cbd5e1;
+
+    border-radius:15px;
+
+    color:#94a3b8;
+
+    font-size:18px;
+
+}
+
+/* ===========================================
+   RECENT ACTIVITY
+=========================================== */
+
+.activity-box{
+
+    margin-top:30px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.activity-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 0;
+
+    border-bottom:1px solid #edf2f7;
+
+}
+
+.activity-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.activity-item i{
+
+    width:45px;
+
+    height:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    color:white;
+
+    background:#2563eb;
+
+}
+
+/* ===========================================
+   NOTIFICATION ANIMATION
+=========================================== */
+
+.notification span{
+
+    animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.25);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ===========================================
+   GLASS EFFECT
+=========================================== */
+
+.glass{
+
+    backdrop-filter:blur(15px);
+
+    background:rgba(255,255,255,.7);
+
+    border:1px solid rgba(255,255,255,.3);
+
+}
+
+/* ===========================================
+   LOADING EFFECT
+=========================================== */
+
+.loading{
+
+    animation:loading 1.2s infinite alternate;
+
+}
+
+@keyframes loading{
+
+    from{
+
+        opacity:.5;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ===========================================
+   FADE ANIMATION
+=========================================== */
+
+.fade-in{
+
+    animation:fadeIn .6s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN
+=========================================== */
+
+@media(max-width:1200px){
+
+.main{
+
+    margin-left:220px;
+
+}
+
+.sidebar{
+
+    width:220px;
+
+}
+
+.cards{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ========================= */
+
+@media(max-width:992px){
+
+.sidebar{
+
+    position:fixed;
+
+    left:-270px;
+
+    transition:.4s;
+
+    z-index:1000;
+
+}
+
+.sidebar.active{
+
+    left:0;
+
+}
+
+.main{
+
+    margin-left:0;
+
+}
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+    align-items:flex-start;
+
+}
+
+.search-box{
+
+    width:100%;
+
+}
+
+.cards{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+table{
+
+    display:block;
+
+    overflow-x:auto;
+
+}
+
+}
+
+/* ========================= */
+
+@media(max-width:768px){
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+.analytics-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.hospital-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.profile{
+
+    width:45px;
+
+    height:45px;
+
+}
+
+.top-right{
+
+    gap:12px;
+
+}
+
+.page h1{
+
+    font-size:28px;
+
+}
+
+}
+
+/* ========================= */
+
+@media(max-width:500px){
+
+.main{
+
+    padding:15px;
+
+}
+
+header{
+
+    padding:15px;
+
+}
+
+.search-box{
+
+    padding:10px 15px;
+
+}
+
+.card{
+
+    padding:20px;
+
+}
+
+.card h2{
+
+    font-size:30px;
+
+}
+
+.card i{
+
+    font-size:32px;
+
+}
+
+.primary-btn{
+
+    width:100%;
+
+}
+
+.action-buttons{
+
+    flex-wrap:wrap;
+
+}
+
+.action-buttons button{
+
+    width:36px;
+
+    height:36px;
+
+}
+
+}
+
+/* ===========================================
+   CUSTOM SELECTION
+=========================================== */
+
+::selection{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+/* ===========================================
+   FOOTER
+=========================================== */
+
+.footer{
+
+    margin-top:40px;
+
+    text-align:center;
+
+    color:#64748b;
+
+    font-size:14px;
+
+}
+/*==============================
+BUTTON GROUP
+==============================*/
+
+.button-group{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+    flex-wrap:wrap;
+
+}
+
+/* Secondary Button */
+
+.secondary-btn{
+
+    background:white;
+
+    color:#2563eb;
+
+    border:2px solid #2563eb;
+
+    padding:14px 24px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.secondary-btn:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================================
+   END OF CSS
+=========================================== */

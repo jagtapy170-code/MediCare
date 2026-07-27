@@ -1,0 +1,3265 @@
+/*=====================================================
+        MEDICARE+ PATIENT DASHBOARD
+        CSS PART 1
+======================================================*/
+
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*=========================
+        RESET
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#08111f;
+
+    color:#fff;
+
+    overflow-x:hidden;
+
+}
+
+/*=========================
+        COLORS
+=========================*/
+
+:root{
+
+--primary:#2563eb;
+
+--secondary:#06b6d4;
+
+--success:#22c55e;
+
+--danger:#ef4444;
+
+--warning:#f59e0b;
+
+--purple:#8b5cf6;
+
+--dark:#08111f;
+
+--dark2:#111c2f;
+
+--card:#162033;
+
+--border:rgba(255,255,255,.08);
+
+--text:#ffffff;
+
+--muted:#9fb0c6;
+
+}
+
+/*=========================
+        CONTAINER
+=========================*/
+
+.container{
+
+display:flex;
+
+min-height:100vh;
+
+}
+
+/*=========================
+        SIDEBAR
+=========================*/
+
+.sidebar{
+
+width:270px;
+
+background:#101b2d;
+
+padding:25px;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+bottom:0;
+
+overflow-y:auto;
+
+border-right:1px solid var(--border);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+}
+
+/* Scrollbar */
+
+.sidebar::-webkit-scrollbar{
+
+width:6px;
+
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+
+background:#2b3b58;
+
+border-radius:20px;
+
+}
+
+/*=========================
+        LOGO
+=========================*/
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+margin-bottom:35px;
+
+}
+
+.logo-icon{
+
+width:55px;
+
+height:55px;
+
+border-radius:18px;
+
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:24px;
+
+}
+
+.logo h2{
+
+font-size:24px;
+
+font-weight:700;
+
+}
+
+.logo p{
+
+font-size:13px;
+
+color:var(--muted);
+
+margin-top:4px;
+
+}
+
+/*=========================
+      PROFILE CARD
+=========================*/
+
+.profile-card{
+
+background:var(--card);
+
+border:1px solid var(--border);
+
+border-radius:24px;
+
+padding:25px;
+
+text-align:center;
+
+margin-bottom:30px;
+
+}
+
+.profile-card img{
+
+width:95px;
+
+height:95px;
+
+border-radius:50%;
+
+border:4px solid var(--primary);
+
+object-fit:cover;
+
+margin-bottom:18px;
+
+}
+
+.profile-card h3{
+
+font-size:21px;
+
+margin-bottom:5px;
+
+}
+
+.profile-card span{
+
+color:var(--muted);
+
+font-size:13px;
+
+}
+
+.health-score{
+
+margin-top:22px;
+
+padding:18px;
+
+border-radius:18px;
+
+background:linear-gradient(135deg,#1e40af,#2563eb);
+
+}
+
+.health-score h1{
+
+font-size:36px;
+
+font-weight:700;
+
+}
+
+.health-score p{
+
+font-size:14px;
+
+margin-top:6px;
+
+}
+
+/*=========================
+      SIDEBAR MENU
+=========================*/
+
+.menu{
+
+list-style:none;
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+.menu li{
+
+width:100%;
+
+}
+
+.menu li a{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+text-decoration:none;
+
+padding:15px 18px;
+
+color:#dbeafe;
+
+border-radius:16px;
+
+transition:.35s;
+
+font-size:15px;
+
+font-weight:500;
+
+}
+
+.menu li a i{
+
+width:24px;
+
+font-size:18px;
+
+text-align:center;
+
+}
+
+.menu li:hover a{
+
+background:#1d2b45;
+
+transform:translateX(8px);
+
+}
+
+.menu li.active a{
+
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+color:white;
+
+box-shadow:0 10px 25px rgba(37,99,235,.35);
+
+}
+
+/*=========================
+      LOGOUT BUTTON
+=========================*/
+
+.logout a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    text-decoration:none;
+    color:#fff;
+    padding:15px;
+    border-radius:14px;
+    background:#ef4444;
+    transition:.3s;
+}
+
+.logout a:hover{
+    background:#dc2626;
+}
+
+.logout-btn{
+
+margin-top:30px;
+
+padding:15px;
+
+border:none;
+
+border-radius:16px;
+
+background:#ef4444;
+
+color:white;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.logout-btn:hover{
+
+transform:translateY(-3px);
+
+background:#dc2626;
+
+box-shadow:0 10px 25px rgba(239,68,68,.35);
+
+}
+/*=====================================================
+        MEDICARE+ PATIENT DASHBOARD
+        CSS PART 2
+        MAIN • TOPBAR • HERO
+======================================================*/
+
+/*=========================
+        MAIN CONTENT
+=========================*/
+
+.main{
+
+    margin-left:270px;
+
+    width:calc(100% - 270px);
+
+    padding:35px;
+
+    min-height:100vh;
+
+}
+
+/*=========================
+        TOPBAR
+=========================*/
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+/*=========================
+        SEARCH BOX
+=========================*/
+
+.search-box{
+
+    width:430px;
+
+    height:58px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 20px;
+
+    gap:15px;
+
+}
+
+.search-box i{
+
+    color:var(--muted);
+
+    font-size:18px;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:#fff;
+
+    font-size:15px;
+
+}
+
+.search-box input::placeholder{
+
+    color:var(--muted);
+
+}
+
+/*=========================
+        TOP ACTIONS
+=========================*/
+
+.top-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.top-actions button{
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:var(--card);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.35s;
+
+}
+
+.top-actions button:hover{
+
+    background:var(--primary);
+
+    transform:translateY(-4px);
+
+}
+
+.top-actions img{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid var(--primary);
+
+    cursor:pointer;
+
+}
+
+/*=========================
+        HERO SECTION
+=========================*/
+
+.hero{
+
+    display:grid;
+
+    grid-template-columns:1.3fr .7fr;
+
+    gap:35px;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#162033,#1d2b45);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    border:1px solid var(--border);
+
+    margin-bottom:40px;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    background:rgba(255,255,255,.04);
+
+    border-radius:50%;
+
+    right:-100px;
+
+    top:-100px;
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(37,99,235,.18);
+
+    border-radius:50%;
+
+    bottom:-70px;
+
+    left:-70px;
+
+}
+
+/*=========================
+        HERO CONTENT
+=========================*/
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 18px;
+
+    border-radius:40px;
+
+    background:rgba(37,99,235,.18);
+
+    color:#7dd3fc;
+
+    font-size:14px;
+
+    margin-bottom:20px;
+
+}
+
+.hero-content h1{
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+.hero-content h1 span{
+
+    color:#60a5fa;
+
+}
+
+.hero-content p{
+
+    color:var(--muted);
+
+    line-height:1.9;
+
+    max-width:650px;
+
+    margin-bottom:30px;
+
+    font-size:15px;
+
+}
+
+/*=========================
+        HERO BUTTONS
+=========================*/
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.primary-btn{
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    color:#fff;
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:16px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(37,99,235,.30);
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(37,99,235,.45);
+
+}
+
+.secondary-btn{
+
+    background:transparent;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    padding:15px 30px;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.secondary-btn:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+/*=========================
+        HERO IMAGE
+=========================*/
+
+.hero-image{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    max-width:380px;
+
+    border-radius:24px;
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+/*=========================
+        FLOAT ANIMATION
+=========================*/
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/*=========================
+        SECTION HEADER
+=========================*/
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.section-header h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.section-header a{
+
+    text-decoration:none;
+
+    color:#60a5fa;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.section-header a:hover{
+
+    color:white;
+
+}
+/*=====================================================
+        MEDICARE+ PATIENT DASHBOARD
+        CSS PART 3
+        HEALTH OVERVIEW • VITALS • AI • ANALYTICS
+======================================================*/
+
+/*==============================
+        OVERVIEW GRID
+==============================*/
+
+.overview{
+    margin-bottom:45px;
+}
+
+.overview-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.overview-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    transition:.35s;
+
+}
+
+.overview-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.25);
+
+    border-color:var(--primary);
+
+}
+
+.card-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:28px;
+
+}
+
+.red{
+
+    background:linear-gradient(135deg,#ef4444,#dc2626);
+
+}
+
+.blue{
+
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+
+}
+
+.green{
+
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+
+}
+
+.purple{
+
+    background:linear-gradient(135deg,#8b5cf6,#7c3aed);
+
+}
+
+.card-content h3{
+
+    font-size:15px;
+
+    color:var(--muted);
+
+    margin-bottom:8px;
+
+}
+
+.card-content h1{
+
+    font-size:30px;
+
+    margin-bottom:8px;
+
+}
+
+.card-content p{
+
+    color:#22c55e;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/*==============================
+        VITAL CARDS
+==============================*/
+
+.vitals{
+
+    margin-bottom:45px;
+
+}
+
+.vital-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.progress-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:28px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.progress-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.progress-card h3{
+
+    margin-bottom:22px;
+
+}
+
+.circle{
+
+    width:120px;
+
+    height:120px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:conic-gradient(var(--primary) 75%,#263349 0);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+    color:white;
+
+}
+
+.circle.blue{
+
+    background:conic-gradient(#3b82f6 86%,#263349 0);
+
+}
+
+.circle.green{
+
+    background:conic-gradient(#22c55e 81%,#263349 0);
+
+}
+
+.circle.orange{
+
+    background:conic-gradient(#f59e0b 67%,#263349 0);
+
+}
+
+.progress-card p{
+
+    color:var(--muted);
+
+}
+
+/*==============================
+        AI HEALTH CARD
+==============================*/
+
+.prediction{
+
+    margin-bottom:45px;
+
+}
+
+.prediction-card{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:30px;
+
+    background:linear-gradient(135deg,#162033,#1c2b45);
+
+    border-radius:28px;
+
+    padding:40px;
+
+    border:1px solid var(--border);
+
+    align-items:center;
+
+}
+
+.prediction-left h2{
+
+    margin-bottom:18px;
+
+}
+
+.prediction-left p{
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+.prediction-left ul{
+
+    list-style:none;
+
+    margin-bottom:28px;
+
+}
+
+.prediction-left li{
+
+    margin-bottom:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.prediction-left li i{
+
+    color:#22c55e;
+
+}
+
+.prediction-right{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.prediction-right i{
+
+    font-size:170px;
+
+    color:#60a5fa;
+
+    opacity:.15;
+
+}
+
+/*==============================
+      APPOINTMENT CARD
+==============================*/
+
+.appointment{
+
+    margin-bottom:45px;
+
+}
+
+.appointment-card{
+
+    background:var(--card);
+
+    border-radius:24px;
+
+    border:1px solid var(--border);
+
+    padding:28px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+}
+
+.doctor{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.doctor img{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:50%;
+
+}
+
+.appointment-info{
+
+    display:flex;
+
+    gap:45px;
+
+}
+
+.appointment-info h4{
+
+    margin-bottom:8px;
+
+    color:var(--muted);
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    background:#22c55e;
+
+    color:white;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+}
+
+/*==============================
+        ANALYTICS
+==============================*/
+
+.analytics{
+
+    margin-bottom:45px;
+
+}
+
+.analytics-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:25px;
+
+}
+
+.chart-card{
+
+    background:var(--card);
+
+    border-radius:24px;
+
+    border:1px solid var(--border);
+
+    padding:30px;
+
+}
+
+.chart-card h3{
+
+    margin-bottom:20px;
+
+}
+
+.score-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:320px;
+
+}
+
+.score-box h1{
+
+    font-size:72px;
+
+    color:#22c55e;
+
+}
+
+.score-box p{
+
+    color:var(--muted);
+
+    font-size:18px;
+
+    margin-top:10px;
+
+}
+
+canvas{
+
+    width:100% !important;
+
+    height:320px !important;
+
+}
+
+/*==============================
+        RESPONSIVE
+==============================*/
+
+@media(max-width:1200px){
+
+.overview-grid,
+.vital-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.analytics-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.prediction-card{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.appointment-card{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.appointment-info{
+
+width:100%;
+
+justify-content:space-between;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.overview-grid,
+.vital-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.appointment-info{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.prediction-right{
+
+display:none;
+
+}
+
+}
+/*=====================================================
+        MEDICARE+ PATIENT DASHBOARD
+        CSS PART 4
+ MEDICINES • REPORTS • PRESCRIPTIONS • SUMMARY
+======================================================*/
+
+/*==============================
+        MEDICINE SECTION
+==============================*/
+
+.medicine-section{
+    margin-bottom:45px;
+}
+
+.medicine-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.medicine-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:28px;
+
+    transition:.35s;
+
+    position:relative;
+
+}
+
+.medicine-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+}
+
+.medicine-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+.medicine-card h3{
+
+    font-size:20px;
+
+    margin-bottom:10px;
+
+}
+
+.medicine-card p{
+
+    color:var(--muted);
+
+    margin-bottom:18px;
+
+}
+
+.medicine-time{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#263349;
+
+    margin-bottom:18px;
+
+}
+
+.status{
+
+    display:inline-block;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.status.completed{
+
+    background:#22c55e;
+
+    color:#fff;
+
+}
+
+.status.pending{
+
+    background:#f59e0b;
+
+    color:#fff;
+
+}
+
+/*==============================
+        REPORT TABLE
+==============================*/
+
+.reports-section{
+
+    margin-bottom:45px;
+
+}
+
+.report-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+}
+
+.report-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.report-table thead{
+
+    background:#1d2b45;
+
+}
+
+.report-table th{
+
+    padding:20px;
+
+    text-align:left;
+
+    font-size:15px;
+
+}
+
+.report-table td{
+
+    padding:18px 20px;
+
+}
+
+.report-table tbody tr{
+
+    border-top:1px solid var(--border);
+
+    transition:.3s;
+
+}
+
+.report-table tbody tr:hover{
+
+    background:#1d2b45;
+
+}
+
+.table-btn{
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    border:none;
+
+    color:#fff;
+
+    padding:10px 18px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+}
+
+.badge.success{
+
+    background:#22c55e;
+
+}
+
+.badge.warning{
+
+    background:#f59e0b;
+
+}
+
+/*==============================
+      PRESCRIPTIONS
+==============================*/
+
+.prescription-section{
+
+    margin-bottom:45px;
+
+}
+
+.prescription-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:25px;
+
+}
+
+.prescription-card{
+
+    background:var(--card);
+
+    border-radius:24px;
+
+    border:1px solid var(--border);
+
+    padding:28px;
+
+    transition:.35s;
+
+}
+
+.prescription-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.prescription-top{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:20px;
+
+}
+
+.prescription-top i{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    font-size:26px;
+
+}
+
+.prescription-card hr{
+
+    border:none;
+
+    border-top:1px solid var(--border);
+
+    margin:20px 0;
+
+}
+
+.prescription-card p{
+
+    margin-bottom:25px;
+
+    color:var(--muted);
+
+}
+
+/*==============================
+      SUMMARY
+==============================*/
+
+.summary-section{
+
+    margin-bottom:45px;
+
+}
+
+.summary-card{
+
+    background:linear-gradient(135deg,#162033,#1d2b45);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    border:1px solid var(--border);
+
+}
+
+.summary-card h2{
+
+    margin-bottom:28px;
+
+}
+
+.summary-list{
+
+    display:grid;
+
+    gap:18px;
+
+}
+
+.summary-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+}
+
+.summary-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.summary-item span{
+
+    color:var(--muted);
+
+}
+
+.summary-item strong{
+
+    font-size:17px;
+
+}
+
+/*==============================
+      RESPONSIVE
+==============================*/
+
+@media(max-width:992px){
+
+.report-table{
+
+display:block;
+
+overflow-x:auto;
+
+}
+
+.prescription-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.medicine-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.summary-card{
+
+padding:25px;
+
+}
+
+}
+/*=====================================================
+        MEDICARE+ PATIENT DASHBOARD
+        CSS PART 5
+DOCTORS • HOSPITALS • TIMELINE • APPOINTMENTS
+======================================================*/
+
+/*==============================
+        DOCTORS
+==============================*/
+
+.doctor-section{
+    margin-bottom:50px;
+}
+
+.doctor-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+.doctor-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.doctor-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--primary);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+}
+
+.doctor-card img{
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:4px solid var(--primary);
+
+    margin:auto;
+
+    margin-bottom:18px;
+
+}
+
+.doctor-card h3{
+
+    font-size:22px;
+
+    margin-bottom:8px;
+
+}
+
+.doctor-card span{
+
+    color:var(--secondary);
+
+    font-size:15px;
+
+}
+
+.doctor-card p{
+
+    margin:15px 0;
+
+    color:var(--muted);
+
+}
+
+.doctor-rating{
+
+    margin-bottom:20px;
+
+    color:#facc15;
+
+    font-size:17px;
+
+}
+
+.doctor-rating i{
+
+    margin-right:6px;
+
+}
+
+/*==============================
+        HOSPITALS
+==============================*/
+
+.hospital-section{
+
+    margin-bottom:50px;
+
+}
+
+.hospital-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+    gap:25px;
+
+}
+
+.hospital-card{
+
+    background:var(--card);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    border:1px solid var(--border);
+
+    transition:.35s;
+
+}
+
+.hospital-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+}
+
+.hospital-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.hospital-content{
+
+    padding:25px;
+
+}
+
+.hospital-content h3{
+
+    margin-bottom:10px;
+
+}
+
+.hospital-content p{
+
+    margin-bottom:10px;
+
+    color:var(--muted);
+
+}
+
+.hospital-content .primary-btn{
+
+    margin-top:18px;
+
+    width:100%;
+
+}
+
+/*==============================
+        TIMELINE
+==============================*/
+
+.timeline-section{
+
+    margin-bottom:50px;
+
+}
+
+.timeline{
+
+    position:relative;
+
+    margin-left:20px;
+
+    padding-left:35px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:10px;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:var(--primary);
+
+    border-radius:50px;
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:35px;
+
+}
+
+.timeline-dot{
+
+    position:absolute;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+
+    left:-34px;
+
+    top:8px;
+
+    border:4px solid var(--dark);
+
+}
+
+.timeline-content{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:22px;
+
+    transition:.35s;
+
+}
+
+.timeline-content:hover{
+
+    transform:translateX(8px);
+
+    border-color:var(--primary);
+
+}
+
+.timeline-content h3{
+
+    margin-bottom:10px;
+
+}
+
+.timeline-content p{
+
+    color:var(--secondary);
+
+    margin-bottom:10px;
+
+}
+
+.timeline-content span{
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+}
+
+/*==============================
+      UPCOMING APPOINTMENTS
+==============================*/
+
+.upcoming-section{
+
+    margin-bottom:55px;
+
+}
+
+.appointment-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.appointment-item{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:24px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    transition:.35s;
+
+}
+
+.appointment-item:hover{
+
+    transform:translateY(-5px);
+
+    border-color:var(--primary);
+
+}
+
+.appointment-item i{
+
+    width:60px;
+
+    height:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    font-size:24px;
+
+}
+
+.appointment-item>div{
+
+    flex:1;
+
+    margin-left:20px;
+
+}
+
+.appointment-item h3{
+
+    margin-bottom:6px;
+
+}
+
+.appointment-item p{
+
+    color:var(--muted);
+
+}
+
+/*==============================
+      RESPONSIVE
+==============================*/
+
+@media(max-width:1200px){
+
+.hospital-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:992px){
+
+.doctor-grid,
+.hospital-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.appointment-item{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:20px;
+
+}
+
+.appointment-item>div{
+
+margin-left:0;
+
+}
+
+.appointment-item .primary-btn{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.timeline{
+
+padding-left:25px;
+
+}
+
+.timeline-dot{
+
+left:-26px;
+
+}
+
+.timeline-content{
+
+padding:18px;
+
+}
+
+}
+/*=====================================================
+        MEDICARE+ PATIENT DASHBOARD
+        CSS PART 6
+ACHIEVEMENTS • GOALS • DEVICES • COMMUNITY
+INSURANCE • SOS • FOOTER
+======================================================*/
+
+/*==============================
+        ACHIEVEMENTS
+==============================*/
+
+.achievement-section{
+    margin-bottom:50px;
+}
+
+.achievement-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.achievement-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.achievement-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--warning);
+
+}
+
+.achievement-card i{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+    background:linear-gradient(135deg,#f59e0b,#facc15);
+
+    color:white;
+
+}
+
+.achievement-card h3{
+
+    margin-bottom:12px;
+
+}
+
+.achievement-card p{
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+}
+
+/*==============================
+        DAILY GOALS
+==============================*/
+
+.goal-section{
+
+    margin-bottom:50px;
+
+}
+
+.goal-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+.goal-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:25px;
+
+    transition:.35s;
+
+}
+
+.goal-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.goal-card h3{
+
+    margin-bottom:18px;
+
+}
+
+.goal-card progress{
+
+    width:100%;
+
+    height:12px;
+
+    margin-bottom:15px;
+
+    accent-color:var(--primary);
+
+}
+
+/*==============================
+      DEVICES
+==============================*/
+
+.device-section{
+
+    margin-bottom:50px;
+
+}
+
+.device-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+.device-card{
+
+    background:var(--card);
+
+    border-radius:24px;
+
+    border:1px solid var(--border);
+
+    padding:28px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.device-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.device-card i{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+    font-size:30px;
+
+}
+
+.device-card h3{
+
+    margin-bottom:10px;
+
+}
+
+.device-card p{
+
+    color:var(--muted);
+
+    margin-bottom:18px;
+
+}
+
+.device-status{
+
+    display:inline-block;
+
+    background:var(--success);
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+}
+
+/*==============================
+      INSURANCE
+==============================*/
+
+.insurance-section{
+
+    margin-bottom:50px;
+
+}
+
+.insurance-card{
+
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.insurance-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    top:-80px;
+
+    right:-80px;
+
+}
+
+.insurance-card h2{
+
+    margin-bottom:20px;
+
+}
+
+.insurance-card p{
+
+    margin-bottom:12px;
+
+    color:#dbeafe;
+
+}
+
+/*==============================
+      COMMUNITY
+==============================*/
+
+.community-section{
+
+    margin-bottom:50px;
+
+}
+
+.community-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+.community-card{
+
+    background:var(--card);
+
+    border-radius:24px;
+
+    border:1px solid var(--border);
+
+    padding:30px;
+
+    transition:.35s;
+
+}
+
+.community-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.community-card h3{
+
+    margin-bottom:15px;
+
+}
+
+.community-card p{
+
+    color:var(--muted);
+
+    margin-bottom:20px;
+
+}
+
+/*==============================
+      SOS
+==============================*/
+
+.emergency-section{
+
+    margin-bottom:60px;
+
+}
+
+.sos-card{
+
+    background:linear-gradient(135deg,#ef4444,#dc2626);
+
+    border-radius:28px;
+
+    padding:45px;
+
+    text-align:center;
+
+}
+
+.sos-card h2{
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+}
+
+.sos-card p{
+
+    margin-bottom:25px;
+
+    color:#ffe4e6;
+
+}
+
+.sos-btn{
+
+    padding:16px 35px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:white;
+
+    color:#dc2626;
+
+    font-weight:700;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.sos-btn:hover{
+
+    transform:scale(1.05);
+
+}
+
+/*==============================
+      FLOATING AI
+==============================*/
+
+.ai-float{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    box-shadow:0 15px 35px rgba(37,99,235,.4);
+
+    z-index:999;
+
+    transition:.35s;
+
+}
+
+.ai-float:hover{
+
+    transform:scale(1.1);
+
+}
+
+/*==============================
+      SCROLL TOP
+==============================*/
+
+#scrollTop{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:120px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    color:white;
+
+    z-index:999;
+
+    transition:.35s;
+
+}
+
+#scrollTop:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/*==============================
+      FOOTER
+==============================*/
+
+.footer{
+
+    text-align:center;
+
+    padding:35px;
+
+    border-top:1px solid var(--border);
+
+    color:var(--muted);
+
+}
+
+.footer h3{
+
+    color:white;
+
+    margin-bottom:10px;
+
+}
+
+.footer p{
+
+    margin:6px 0;
+
+}
+
+/*==============================
+      RESPONSIVE
+==============================*/
+
+@media(max-width:992px){
+
+.achievement-grid,
+.goal-grid,
+.device-grid,
+.community-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.achievement-grid,
+.goal-grid,
+.device-grid,
+.community-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.insurance-card,
+.sos-card{
+
+padding:30px;
+
+}
+
+.ai-float{
+
+width:60px;
+height:60px;
+
+font-size:24px;
+
+}
+
+}
+/*=====================================================
+        MEDICARE+ PATIENT DASHBOARD
+        CSS PART 7
+RESPONSIVE • DARK MODE • ANIMATIONS • UTILITIES
+======================================================*/
+
+/*==============================
+      RESPONSIVE
+==============================*/
+
+@media (max-width:1400px){
+
+.main{
+    padding:25px;
+}
+
+.hero{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.hero-content p{
+    max-width:100%;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+.hero-image img{
+    max-width:320px;
+}
+
+}
+
+@media (max-width:1100px){
+
+.sidebar{
+
+    width:90px;
+
+    padding:18px 12px;
+
+}
+
+.logo h2,
+.logo p,
+.profile-card h3,
+.profile-card span,
+.health-score,
+.menu li a span,
+.logout-btn{
+
+    display:none;
+
+}
+
+.logo{
+
+    justify-content:center;
+
+}
+
+.profile-card{
+
+    padding:15px;
+
+}
+
+.profile-card img{
+
+    width:55px;
+
+    height:55px;
+
+}
+
+.menu li a{
+
+    justify-content:center;
+
+    padding:16px;
+
+}
+
+.main{
+
+    margin-left:90px;
+
+    width:calc(100% - 90px);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.sidebar{
+
+    position:fixed;
+
+    left:-270px;
+
+    width:270px;
+
+    z-index:1000;
+
+    transition:.4s;
+
+}
+
+.sidebar.active{
+
+    left:0;
+
+}
+
+.main{
+
+    margin-left:0;
+
+    width:100%;
+
+    padding:20px;
+
+}
+
+.topbar{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.search-box{
+
+    width:100%;
+
+}
+
+.hero{
+
+    padding:30px;
+
+}
+
+.hero-content h1{
+
+    font-size:34px;
+
+}
+
+.hero-content p{
+
+    font-size:14px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+    width:100%;
+
+}
+
+.overview-grid,
+.vital-grid,
+.analytics-grid,
+medicine-grid,
+doctor-grid,
+hospital-grid,
+goal-grid,
+device-grid,
+community-grid,
+achievement-grid,
+prescription-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.report-table{
+
+    display:block;
+
+    overflow-x:auto;
+
+}
+
+.appointment-card{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.appointment-info{
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.footer{
+
+    padding:25px 15px;
+
+}
+
+}
+
+/*==============================
+      DARK MODE
+==============================*/
+
+body.light{
+
+    background:#f3f7fc;
+
+    color:#1f2937;
+
+}
+
+body.light .sidebar{
+
+    background:#ffffff;
+
+    border-right:1px solid #dbeafe;
+
+}
+
+body.light .main{
+
+    background:#f3f7fc;
+
+}
+
+body.light .overview-card,
+body.light .progress-card,
+body.light .chart-card,
+body.light .doctor-card,
+body.light .medicine-card,
+body.light .hospital-card,
+body.light .community-card,
+body.light .device-card,
+body.light .summary-card,
+body.light .prediction-card,
+body.light .appointment-card,
+body.light .prescription-card,
+body.light .timeline-content{
+
+    background:#ffffff;
+
+    color:#1f2937;
+
+    border-color:#dbeafe;
+
+}
+
+body.light input{
+
+    color:#1f2937;
+
+}
+
+/*==============================
+      ANIMATIONS
+==============================*/
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.hero,
+.overview-card,
+.progress-card,
+.chart-card,
+.doctor-card,
+.hospital-card,
+.medicine-card,
+.community-card,
+.device-card,
+.goal-card,
+.achievement-card,
+.summary-card{
+
+animation:fadeUp .8s ease;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+.ai-float{
+
+animation:pulse 3s infinite;
+
+}
+
+/*==============================
+      GLASS EFFECT
+==============================*/
+
+.glass{
+
+background:rgba(255,255,255,.06);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,.12);
+
+}
+
+/*==============================
+      SHADOW UTILITIES
+==============================*/
+
+.shadow{
+
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+}
+
+.round{
+
+border-radius:25px;
+
+}
+
+/*==============================
+      CUSTOM SCROLLBAR
+==============================*/
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#0b1526;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#2563eb;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#3b82f6;
+
+}
+
+/*==============================
+      SELECTION
+==============================*/
+
+::selection{
+
+background:#2563eb;
+
+color:white;
+
+}
+
+/*==============================
+      END
+==============================*/

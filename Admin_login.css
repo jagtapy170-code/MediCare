@@ -1,0 +1,1284 @@
+/*==================================================
+        Medicare+
+        Admin Login Page
+        CSS PART 1
+==================================================*/
+
+
+/*==============================
+        GOOGLE FONT
+==============================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/*==============================
+        ROOT VARIABLES
+==============================*/
+
+:root{
+
+    --primary:#2563eb;
+    --secondary:#0ea5e9;
+    --accent:#06b6d4;
+
+    --dark:#0f172a;
+    --dark2:#111827;
+
+    --white:#ffffff;
+
+    --gray:#94a3b8;
+
+    --light:#f8fafc;
+
+    --glass:rgba(255,255,255,.12);
+
+    --border:rgba(255,255,255,.18);
+
+    --shadow:0 25px 50px rgba(0,0,0,.30);
+
+}
+
+
+
+/*==============================
+        RESET
+==============================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+
+}
+
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow-x:hidden;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #020617,
+    #0f172a,
+    #1d4ed8,
+    #0ea5e9
+    );
+
+    background-size:400% 400%;
+
+    animation:gradientMove 12s ease infinite;
+
+    position:relative;
+
+}
+
+
+
+/*==============================
+    ANIMATED BACKGROUND
+==============================*/
+
+@keyframes gradientMove{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+
+
+/* Floating Blur Circle */
+
+body::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    background:
+
+    rgba(37,99,235,.25);
+
+    border-radius:50%;
+
+    top:-150px;
+
+    left:-150px;
+
+    filter:blur(90px);
+
+}
+
+
+
+body::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    background:
+
+    rgba(14,165,233,.22);
+
+    border-radius:50%;
+
+    bottom:-150px;
+
+    right:-150px;
+
+    filter:blur(100px);
+
+}
+
+
+
+/*==============================
+        MAIN CONTAINER
+==============================*/
+
+.login-container{
+
+    width:1200px;
+
+    max-width:95%;
+
+    min-height:720px;
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+/*==============================
+        LEFT PANEL
+==============================*/
+
+.left-panel{
+
+    padding:60px;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    rgba(255,255,255,.05),
+
+    rgba(255,255,255,.02)
+
+    );
+
+}
+
+
+
+/*==============================
+            LOGO
+==============================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.logo i{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    var(--primary),
+
+    var(--accent)
+
+    );
+
+    box-shadow:
+
+    0 10px 25px rgba(37,99,235,.35);
+
+}
+
+
+
+.logo h1{
+
+    font-size:38px;
+
+    font-weight:700;
+
+}
+
+
+
+/*==============================
+        HEADING
+==============================*/
+
+.left-panel h2{
+
+    font-size:42px;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.left-panel p{
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#dbeafe;
+
+    max-width:520px;
+
+}
+
+
+
+/*==============================
+        FEATURES
+==============================*/
+
+.features{
+
+    margin-top:45px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+
+.features div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 20px;
+
+    border-radius:18px;
+
+    background:
+
+    rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+
+
+.features div:hover{
+
+    transform:translateX(12px);
+
+    background:
+
+    rgba(255,255,255,.15);
+
+}
+
+
+
+.features i{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    var(--primary),
+
+    var(--accent)
+
+    );
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+
+
+.features span{
+
+    font-size:15px;
+
+}
+/*==================================================
+        Medicare+
+        Admin Login
+        CSS PART 2
+==================================================*/
+
+
+
+/*==============================
+        RIGHT PANEL
+==============================*/
+
+.right-panel{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+
+
+/*==============================
+        LOGIN CARD
+==============================*/
+
+.login-card{
+
+    width:100%;
+
+    max-width:450px;
+
+    background:rgba(255,255,255,.95);
+
+    border-radius:28px;
+
+    padding:45px;
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.18);
+
+    animation:cardFade .8s ease;
+
+}
+
+
+
+@keyframes cardFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/*==============================
+        ADMIN ICON
+==============================*/
+
+.admin-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    var(--primary),
+    var(--accent)
+    );
+
+    color:white;
+
+    font-size:36px;
+
+    box-shadow:
+
+    0 12px 30px rgba(37,99,235,.35);
+
+}
+
+
+
+/*==============================
+        LOGIN HEADER
+==============================*/
+
+.login-card h2{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:var(--dark);
+
+    font-size:30px;
+
+}
+
+
+
+.login-card p{
+
+    margin-top:10px;
+
+    text-align:center;
+
+    color:#64748b;
+
+    line-height:1.6;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/*==============================
+        INPUT BOX
+==============================*/
+
+.input-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:#f8fafc;
+
+    border:2px solid transparent;
+
+    border-radius:16px;
+
+    padding:15px 18px;
+
+    margin-bottom:22px;
+
+    transition:.35s;
+
+}
+
+
+
+.input-box:hover{
+
+    border-color:var(--primary);
+
+    background:white;
+
+}
+
+
+
+.input-box:focus-within{
+
+    border-color:var(--accent);
+
+    box-shadow:
+
+    0 0 0 4px rgba(14,165,233,.12);
+
+}
+
+
+
+.input-box i:first-child{
+
+    color:var(--primary);
+
+    font-size:18px;
+
+}
+
+
+
+.input-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    font-size:15px;
+
+    color:var(--dark);
+
+}
+
+
+
+.input-box input::placeholder{
+
+    color:#94a3b8;
+
+}
+
+
+
+/*==============================
+        PASSWORD ICON
+==============================*/
+
+#togglePassword{
+
+    cursor:pointer;
+
+    color:#64748b;
+
+    transition:.3s;
+
+}
+
+
+
+#togglePassword:hover{
+
+    color:var(--primary);
+
+}
+
+
+
+/*==============================
+        OPTIONS
+==============================*/
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+    font-size:14px;
+
+}
+
+
+
+.options label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#475569;
+
+}
+
+
+
+.options input{
+
+    accent-color:var(--primary);
+
+}
+
+
+
+.options a{
+
+    text-decoration:none;
+
+    color:var(--primary);
+
+    font-weight:500;
+
+}
+
+
+
+.options a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+
+/*==============================
+        LOGIN BUTTON
+==============================*/
+
+.login-btn{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    var(--primary),
+    var(--accent)
+    );
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+
+.login-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 15px 35px rgba(37,99,235,.35);
+
+}
+
+
+
+.login-btn:active{
+
+    transform:scale(.98);
+
+}
+
+
+
+/*==============================
+        FOOTER LINKS
+==============================*/
+
+.footer-links{
+
+    margin-top:30px;
+
+    text-align:center;
+
+}
+
+
+
+.footer-links a{
+
+    text-decoration:none;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.footer-links a:hover{
+
+    color:var(--accent);
+
+}
+/*==================================================
+        Medicare+
+        Admin Login
+        CSS PART 3
+==================================================*/
+
+
+/*==============================
+        GLOBAL TRANSITIONS
+==============================*/
+
+*{
+    transition:0.3s ease;
+}
+
+
+/*==============================
+        FLOATING ANIMATION
+==============================*/
+
+.login-card{
+
+    animation:
+    floatCard 5s ease-in-out infinite;
+
+}
+
+@keyframes floatCard{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+
+
+/*==============================
+        BUTTON RIPPLE EFFECT
+==============================*/
+
+.login-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.login-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    background:rgba(255,255,255,.18);
+
+    border-radius:50%;
+
+    left:-320px;
+
+    top:-120px;
+
+    transition:.6s;
+
+}
+
+.login-btn:hover::before{
+
+    left:120%;
+
+}
+
+
+
+/*==============================
+        INPUT ANIMATION
+==============================*/
+
+.input-box{
+
+    position:relative;
+
+}
+
+.input-box:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/*==============================
+        FEATURE CARD EFFECT
+==============================*/
+
+.features div{
+
+    cursor:pointer;
+
+}
+
+.features div:hover{
+
+    transform:translateX(12px) scale(1.02);
+
+}
+
+
+
+/*==============================
+        LOGO ANIMATION
+==============================*/
+
+.logo i{
+
+    animation:pulseLogo 3s infinite;
+
+}
+
+@keyframes pulseLogo{
+
+    0%{
+
+        box-shadow:
+        0 0 0 0 rgba(37,99,235,.45);
+
+    }
+
+    70%{
+
+        box-shadow:
+        0 0 0 18px rgba(37,99,235,0);
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 0 0 0 rgba(37,99,235,0);
+
+    }
+
+}
+
+
+
+/*==============================
+        CUSTOM SCROLLBAR
+==============================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0f172a;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#0ea5e9;
+
+}
+
+
+
+/*==============================
+        TABLET RESPONSIVE
+==============================*/
+
+@media(max-width:1100px){
+
+.login-container{
+
+    width:95%;
+
+    grid-template-columns:1fr;
+
+    min-height:auto;
+
+}
+
+.left-panel{
+
+    padding:45px;
+
+    text-align:center;
+
+}
+
+.logo{
+
+    justify-content:center;
+
+}
+
+.features{
+
+    margin-top:30px;
+
+}
+
+.right-panel{
+
+    padding:40px;
+
+}
+
+}
+
+
+
+/*==============================
+        MOBILE RESPONSIVE
+==============================*/
+
+@media(max-width:768px){
+
+body{
+
+    padding:20px;
+
+    align-items:flex-start;
+
+    overflow-y:auto;
+
+}
+
+.login-container{
+
+    border-radius:22px;
+
+}
+
+.left-panel{
+
+    display:none;
+
+}
+
+.right-panel{
+
+    padding:25px;
+
+}
+
+.login-card{
+
+    padding:35px 25px;
+
+}
+
+.login-card h2{
+
+    font-size:24px;
+
+}
+
+.login-card p{
+
+    font-size:14px;
+
+}
+
+.input-box{
+
+    padding:14px;
+
+}
+
+.login-btn{
+
+    padding:14px;
+
+}
+
+}
+
+
+
+/*==============================
+        SMALL MOBILE
+==============================*/
+
+@media(max-width:480px){
+
+.admin-icon{
+
+    width:75px;
+
+    height:75px;
+
+    font-size:30px;
+
+}
+
+.login-card{
+
+    padding:25px 18px;
+
+}
+
+.login-card h2{
+
+    font-size:22px;
+
+}
+
+.options{
+
+    flex-direction:column;
+
+    gap:12px;
+
+    align-items:flex-start;
+
+}
+
+.footer-links{
+
+    font-size:14px;
+
+}
+
+}
+
+
+
+/*==============================
+        VERY SMALL HEIGHT
+==============================*/
+
+@media(max-height:700px){
+
+body{
+
+    align-items:flex-start;
+
+    padding:30px 0;
+
+}
+
+}
+
+
+
+/*==============================
+        SELECTION COLOR
+==============================*/
+
+::selection{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+/*==============================
+        TOAST MESSAGE
+==============================*/
+
+.toast{
+
+    position:fixed;
+
+    top:30px;
+
+    right:30px;
+
+    padding:15px 25px;
+
+    color:white;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transform:translateX(350px);
+
+    transition:.4s;
+
+    z-index:9999;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.toast.show{
+
+    transform:translateX(0);
+
+}
+
+.toast.success{
+
+    background:#16a34a;
+
+}
+
+.toast.error{
+
+    background:#dc2626;
+
+}
